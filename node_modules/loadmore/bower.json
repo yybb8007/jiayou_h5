@@ -1,0 +1,28 @@
+{
+    "name": "loadMore",
+    "version": "0.1.0",
+    "authors": [
+        "Ahmad Zuhdi <ahmad.zuhdi.y@gmail.com>"
+    ],
+    "description": "load more helper",
+    "main": "loadMore.js",
+    "moduleType": [
+        "amd",
+        "globals",
+        "node"
+    ],
+    "keywords": [
+        "load",
+        "more",
+        "loadmore"
+    ],
+    "license": "MIT",
+    "homepage": "",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}

@@ -1,0 +1,256 @@
+@font-face {
+  font-family: 'jyzx-h5';  /* project id 210635 */
+  src: url('https://at.alicdn.com/t/font_i71spnx1beghkt9.eot');
+  src: url('https://at.alicdn.com/t/font_i71spnx1beghkt9.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_i71spnx1beghkt9.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_i71spnx1beghkt9.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_i71spnx1beghkt9.svg#jyzx-h5') format('svg');
+}
+.jy_iconfont{
+	font-family: 'jyzx-h5';
+	font-style:normal;
+	font-size: .4rem;
+}
+/*头部的*/
+.icon_xinxi::before{
+	content: "\e649";
+	color: #999;
+	font-size: .45rem;
+}
+.icon_sousuo::before{
+	content: "\e61c";
+	color: #999;
+	font-size: .49rem;
+}
+/*导航内的*/
+.icon_down::before{
+	content: "\e635";
+	color: #999;
+	font-weight: 700;
+}
+.icon_up::before{
+	content: "\e623";
+	font-size: .4rem;
+	color: #666;
+}
+/*轮播下面的喇叭*/
+
+.notice::before{
+	font-family: 'jyzx-h5';
+	content: "\e60b";
+	font-size: .4rem;
+	margin-right: 12px;
+	color: #84b83a;
+}
+
+/*主体中样式*/
+.icon_main{
+	font-size: .45rem;
+	margin-right: 10px;
+	font-family: 'jyzx-h5';
+}
+.main_pintuan::before{
+	content: "\e64d";
+	/*color: #f85f51;*/
+}
+.main_banshou::before{
+	content: "\e8eb";
+	color: #fea758;
+}
+.main_shengtai::before{
+	content: "\e61d";
+	color: #84b738;
+	position: relative;
+	top: 2px;
+}
+.main_diqu::before{
+	content: "\e779";
+	color: #6f5640;
+}
+.main_meishi::before{
+	content: "\e63a";
+	color: #ff7d07;
+	font-size: .52rem;
+}
+.main_chajiu::before{
+	content: "\e621";
+	color: #5f8fb3;
+	font-size: .4rem;
+}
+.main_shuiguo::before{
+	content: "\e633";
+	color: #83b739;
+	font-size: .4rem;
+	position: relative;
+	top: 2px;
+}
+.main_gongyi::before{
+	content: "\e61f";
+	color: #769ace;
+}
+.main_meizhuang::before{
+	content: "\e60c";
+	color: #d56397;
+}
+.main_muying::before{
+	content: "\e615";
+	color: #f8a24f;
+	font-size: .4rem;
+}
+.main_yiliao::before{
+	content: "\e6a8";
+	color: #46b9ef;
+	font-size: .4rem;
+}
+.main_jiaju::before{
+	content: "\e657";
+	color: #e39c5a;
+}
+.data_icon_pintuan::before{
+	font-family: 'jyzx-h5';
+	content: "\e64d";
+	color: #666;
+	font-size: .4rem;
+}
+
+ .banshou_lashou::before{
+	font-family: 'jyzx-h5';
+ 	content: "\e63b";
+ 	font-size: .4rem;
+ }
+
+ .icon_shopping::before{
+	font-family: 'jyzx-h5';
+ 	content:"\e625";
+ 	font-size: .8rem;
+ }
+
+/*饮品中每日推荐图标*/
+.xinxing_title::before{
+	content: "\e620";
+	color: #8fc24b;
+	font-size: .58rem;
+}
+#meizhuang_icon::before{
+	color: #efbfd5;
+}
+
+/*页脚中的图标*/
+#footer_icon{
+	font-size: .5rem;
+	font-weight: 100;
+
+}
+.icon-liwu1::before{
+	font-family: 'jyzx-h5';
+	content: '\e6b4';
+}
+.icon-fenlei1::before{
+	font-family: 'jyzx-h5';
+	content: '\e761';
+}
+.icon-fenzu::before{
+	font-family: 'jyzx-h5';
+	content: '\e646';
+}
+.icon-tubiao4::before{
+	font-family: 'jyzx-h5';
+	content: '\e627';
+}
+.icon-gerenzhongxin::before{
+	font-family: 'jyzx-h5';
+	content: '\e637';
+}
+
+/*下载页的头部分享*/
+.icon_download::before{
+	content: '\e609';
+	font-size: .9rem;
+}
+.icon_close::before{
+	content: '\e653';
+}
+
+/*推荐景区-------点赞图标*/
+.icon_more::before{
+	content: '\e629';
+}
+.icon_right::before{
+	content: '\e65f';
+}
+.icon_eatery::before{
+	font-family: 'jyzx-h5';
+	content: '\e628';
+}
+/* 地址 */
+.icon_address::before{
+	font-family: 'jyzx-h5';
+	content: '\e779';
+}
+.icon-zhumingjingdian::before{
+	font-family: 'jyzx-h5';
+	content: '\e62a';
+}
+.icon-jingdianjibie::before{
+	font-family: 'jyzx-h5';
+	content: '\e62d';
+}
+.icon-naozhong::before{
+	font-family: 'jyzx-h5';
+	content: '\e66d';
+}
+/*上拉图标*/
+.icon_upload::before{
+	font-family: 'jyzx-h5';
+	content: '\e69c';
+}
+
+.icon_header::before{
+	font-family: 'jyzx-h5';
+	content: "\e701";
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

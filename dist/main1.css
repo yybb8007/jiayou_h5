@@ -1,0 +1,452 @@
+
+section[data-v-26ccd3f0] {
+  /*background: rgb(255,255,255);*/
+}/*@import url("../assets/iconfonts/iconfont.css");*/
+
+/*header*/
+.rightButton[data-v-075bb5fd] {
+  position: absolute;
+  right: 0.26666667rem;
+  top: 0;
+  color: #666666;
+  letter-spacing: 0;
+}
+[data-dpr="1"] .rightButton[data-v-075bb5fd] {
+  font-size: 13px;
+}
+[data-dpr="2"] .rightButton[data-v-075bb5fd] {
+  font-size: 26px;
+}
+[data-dpr="3"] .rightButton[data-v-075bb5fd] {
+  font-size: 39px;
+}
+.black[data-v-075bb5fd] {
+  background: #F9F8F8;
+  box-shadow: 0 0.01333333rem 0 0 #959595;
+}
+.white[data-v-075bb5fd] {
+  color: #FFFFFF;
+}
+header[data-v-075bb5fd] {
+  width: 100%;
+  height: 1.17333333rem;
+  line-height: 1.17333333rem;
+}
+[data-dpr="1"] header[data-v-075bb5fd] {
+  font-size: 18px;
+}
+[data-dpr="2"] header[data-v-075bb5fd] {
+  font-size: 36px;
+}
+[data-dpr="3"] header[data-v-075bb5fd] {
+  font-size: 54px;
+}
+header a[data-v-075bb5fd]:nth-of-type(1) {
+  width: 0.26666667rem;
+  height: 0.45333333rem;
+  position: absolute;
+  left: 0.26666667rem;
+  top: 0.36rem;
+}
+header a:nth-of-type(1).back[data-v-075bb5fd] {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAA+CAYAAABDTbllAAAAAXNSR0IArs4c6QAAA15JREFUaAXN2Mlu00AYB/DGSQjn5EDZBALEcuIVEnoABKKBVkFwQcoeiRsHHiV7RA8VKLS0gBrEqXkBLnAAxHJhl0rOLFn4fzROHdupZ+zxOCO59iye+Xm+sWN3ZmbKks8LT7FYPIpxb0cikbuJRKKnNSjajIzjIaaNse50Op2lZrPp144rdYY0mCMqwufzLYfD4VvqTEkDmWHMUFJAu2H0KNdBLBgN6p6ri5oHA1QX24ZrM8SLweK+kc/nV1wB2cVQ6ISDnGCEg5xihIJEYISBRGGEgERiHINEYxyB3MDYBrmFsQVyE8MNchvDBZKBYQbJwjCBZGIsQbIxu4K8wEwEeYUxBXmJMYC8xoyBpgEzAk0L5j9omjAEUvD5cRb7g5RhSFt+v/8FQzvbTRR8Cz2mbyL0QB9qVmm21+u1G43GMauGdutHn0GlUmlxMBjcR0cBhs4+hUKhaDKZ/MjQlqvJCERnVSqVBczAAxx6hhoD2UEpihLL5XIf6FwRyfDPhmw2u4o1dR3bX4YBDiPM7XK5fJyhLVMTA4jOwkJ/hIGYUGh3SCTKFESoQqGwxouq1Won6FwnybCG9J0hHHHAmtiC+jp9HmH+EggEoul0+r2+jjVvCaKOZKKYQITCc2oeu4esM4W2MazFd3QuT2IGUacyUFwgQuHheaXf76+wzBSaf8W6ivLM1MS7jAY3S3hOPcHDcBED/TGr15UdALyNizipK5+Y5QZRT4TCjhmFn6NNVpQtEKEQhqc8KISZaaZsg1QUwrfAEj6Ebj+h6vX6KTp3UuJe1GYdIRyXMdgqBt1jVq8tA/5bMBiMpVKpt9py9VgIiDrDw/MSQPQbaIlC8+/Dt4Q3KkTdOwqZ2gnt8Qqygau/hsPf2vIJx7OY0U1cxGl9vTAQdSwCJRREKNx9Ld6ZqlarZ+hcSsLW0HZ3O3+x0C/i+bOGktBOqfkRLuAHvmZimUzmtfAZUofEw/MZBrmKvOWawo2wr9vt0iuOzzUQwQiFq49bodBmC3fdTewHroWMQGrCW8IFXP068obwEQbbOdwQr6i9FBANhDV1Hrf6OmB7KU+JMAjrHNbOy+0SfEqrB27vEb7nCEsciF/DsX7qMVQuDUSDEQqgeWyfsY3NDNV7llqtlmEteYaxGvgf1vXLaz+25wMAAAAASUVORK5CYII=) no-repeat;
+  background-size: 100% 100%;
+}
+header a:nth-of-type(1).backWhite[data-v-075bb5fd] {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAA+CAYAAABDTbllAAAAAXNSR0IArs4c6QAAAY1JREFUaAXtmEtOwzAQQAMsOAQbVP4L4Bb8/+2xuAObXocVF+APEt3zW4RnVEvViFFtyXEcMSON0rGmnpcXb5Kqsqiquq4XyUtyrnUfY5hbri6GZHtQDHdmPAw/f6MdKEb/BTNmymxqCkxeqEAYD3XV6CGPhPmmf9AYkMFoas2MmdEMaOt2ZsyMZkBbtzNjZjQD2rqdGTOjGdDW7cyYGc2Atl7UmQFyltwmFzRgsT6ivhZr6UssDUj3ohYSdzT10lOIHRkSA3WfC6rPoFBTxUItCdnpSyxdkF9kSDzQlAXqnEGdh1pO/7zEjlg6izD1SO//hTqNNLUiZKcvASoS6iTC1BO9WUw5qE8yJBzUavrnJXZkyDHZaajnXKaOIkw5qDUhO33JkCKhDiNMvdC7nl6N2JEhDuqDDIlsUAfQdB5qQ8hOX2JpP8LUK73FQd0ANZNejdiRIXsBpt7o2RR/ba6cApUXxt8mULvkOzkZDmbL92S/MnwSatQqjL97IHZI9+rkvimUEcDMl0ESQPED8V1q2922dg4AAAAASUVORK5CYII=) no-repeat;
+  background-size: 100% 100%;
+}
+header span[data-v-075bb5fd] {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+@font-face {
+  font-family: 'jyzx-iconfont';  /* project id 210635 */
+  src: url('http://at.alicdn.com/t/font_dcgvhgpbe5t57b9.eot');
+  src: url('http://at.alicdn.com/t/font_dcgvhgpbe5t57b9.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_dcgvhgpbe5t57b9.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_dcgvhgpbe5t57b9.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_dcgvhgpbe5t57b9.svg#jyzx-iconfont') format('svg');
+}
+.iconfont {
+  font-family:"jyzx-iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon_dingdan::before{
+    	 				font-family: iconfont;
+    	 				content: "\e62f";
+    	 			}
+.icon-xiangyou:before { content: "\E601"; }
+
+.icon-shezhi1:before { content: "\E602"; }
+
+.icon-tubiao4:before { content: "\E6E4"; }
+
+.icon-gengduo:before { content: "\E65E"; }
+
+.icon-icon:before { content: "\E63D"; }
+
+.icon-share:before { content: "\E648"; }
+
+.icon-daifukuan1:before { content: "\E60E"; }
+
+.icon-jia:before { content: "\E695"; }
+
+.icon-yanshichuli:before { content: "\E609"; }
+
+.icon-10:before { content: "\E60D"; }
+
+.icon-dingdan:before { content: "\E607"; }
+
+.icon-xiaoxi:before { content: "\E649"; }
+
+.icon-quxiao:before { content: "\E636"; }
+
+.icon-shengxianshuiguoline:before { content: "\E714"; }
+
+.icon-icon3:before { content: "\E634"; }
+
+.icon-jinlingyingcaiwangtubiao14:before { content: "\E797"; }
+
+.icon-bianji:before { content: "\E603"; }
+
+.icon-camera:before { content: "\E641"; }
+
+.icon-icon052:before { content: "\E63E"; }
+
+.icon-gouwuche:before { content: "\E616"; }
+
+.icon-naozhong3:before { content: "\E66C"; }
+
+.icon-shezhi:before { content: "\E635"; }
+
+.icon-guanbi:before { content: "\E61D"; }
+
+.icon-daishouhuo:before { content: "\E656"; }
+
+.icon-key:before { content: "\E633"; }
+
+.icon-clock:before { content: "\E624"; }
+
+.icon-wodedingdan06:before { content: "\E620"; }
+
+.icon-daipingjia:before { content: "\E701"; }
+
+.icon-daishouhuo1:before { content: "\E622"; }
+
+.icon-bofang:before { content: "\E605"; }
+
+.icon-huijijiayuanshoucangicon01:before { content: "\E645"; }
+
+.icon-duigou:before { content: "\E60B"; }
+
+.icon-iconfonttaobaozhongchoudisiqiqiche:before { content: "\E614"; }
+
+.icon-youhui:before { content: "\E657"; }
+
+.icon-fenlei1:before { content: "\E610"; }
+
+.icon-user:before { content: "\E63C"; }
+
+.icon-wenxintishi:before { content: "\E62E"; }
+
+.icon-home:before { content: "\E604"; }
+
+.icon-fenlei:before { content: "\E761"; }
+
+.icon-zhengyanicon:before { content: "\E62B"; }
+
+.icon-huangguan:before { content: "\E628"; }
+
+.icon-youhuiquan1:before { content: "\E66B"; }
+
+.icon-icon1460188752552:before { content: "\E627"; }
+
+.icon-1:before { content: "\E615"; }
+
+.icon-liwu1:before { content: "\E600"; }
+
+.icon-shaixuan:before { content: "\E6FC"; }
+
+.icon-wodedingdan:before { content: "\E629"; }
+
+.icon-guanbi1:before { content: "\E66D"; }
+
+.icon-lipin01:before { content: "\E6B4"; }
+
+.icon-daipingjia2:before { content: "\E6C3"; }
+
+.icon-daipingjia1:before { content: "\E686"; }
+
+.icon-yijianfankui:before { content: "\E623"; }
+
+.icon-daifukuan:before { content: "\E6E1"; }
+
+.icon-kefu:before { content: "\E60C"; }
+
+.icon-refund:before { content: "\E68D"; }
+
+.icon-gouwuche-copy:before { content: "\E606"; }
+
+.icon-youhuiquan:before { content: "\E6E6"; }
+
+.icon-denglumima:before { content: "\E611"; }
+
+.icon-dianmingdan:before { content: "\E608"; }
+
+.icon-gouwuchekong:before { content: "\E631"; }
+
+.icon-gouwuche1:before { content: "\E613"; }
+
+.icon-gerenzhongxin:before { content: "\E637"; }
+
+.icon-guize:before { content: "\E64D"; }
+
+.icon-zhanghaobangding:before { content: "\E733"; }
+
+.icon-lajitong:before { content: "\E68C"; }
+
+.icon-editor-zhaopian-copy:before { content: "\E612"; }
+
+.icon-qianbao:before { content: "\E744"; }
+
+.icon-gerenzhongxin1:before { content: "\E6FE"; }
+
+.icon-icon170:before { content: "\E6A8"; }
+
+.icon-iconfontshibai:before { content: "\E69C"; }
+
+.icon-xiangce:before { content: "\E65A"; }
+
+.icon-fenzu:before { content: "\E6B0"; }
+
+.icon-chenggong:before { content: "\E6A5"; }
+
+.icon-shouhou:before { content: "\E60A"; }
+
+.icon-jiageshaixuan:before { content: "\E665"; }
+
+.icon-liebiao-on:before { content: "\E618"; }
+
+.icon-baoshuicang:before { content: "\E667"; }
+
+.icon-biyan:before { content: "\E60F"; }
+
+.icon-icon-yxj-unhappy:before { content: "\E625"; }
+
+.icon-queding:before { content: "\E632"; }
+
+.icon-switch::before {content: "\e7b7";}
+
+/*首页部分*/
+.icon_sousuo::before { content: "\E608"; }
+
+
+footer[data-v-33ad5bea] {
+  /*position:fixed;
+		left:0;
+		right:0;
+		bottom:0;*/
+  display: flex;
+  height: 1.33333333rem;
+  width: 100%;
+  background: #fff;
+  border-top: solid #999 0.01333333rem;
+  max-width: 13.65333333rem;
+  margin: 0 auto;
+  /*px*/
+}
+footer a[data-v-33ad5bea] {
+  flex: 1;
+  text-align: center;
+  padding-top: 0.13333333rem;
+  height: 1.33333333rem;
+}
+footer a i[data-v-33ad5bea] {
+  height: 0.58666667rem;
+  color: #999;
+}
+[data-dpr="1"] footer a i[data-v-33ad5bea] {
+  font-size: 20px;
+}
+[data-dpr="2"] footer a i[data-v-33ad5bea] {
+  font-size: 40px;
+}
+[data-dpr="3"] footer a i[data-v-33ad5bea] {
+  font-size: 60px;
+}
+footer a p[data-v-33ad5bea] {
+  height: 0.32rem;
+  color: #333;
+}
+[data-dpr="1"] footer a p[data-v-33ad5bea] {
+  font-size: 11px;
+}
+[data-dpr="2"] footer a p[data-v-33ad5bea] {
+  font-size: 22px;
+}
+[data-dpr="3"] footer a p[data-v-33ad5bea] {
+  font-size: 33px;
+}
+footer a.router-link-active i[data-v-33ad5bea] {
+  color: #84b83a;
+}
+
+/*footer*/
+section[data-v-76b45466] {
+  /*background: rgb(255,255,255);*/
+}
+section[data-v-1ee78745] {
+  /*background: rgb(255,255,255);*/
+}
+.myhomeTop[data-v-1ee78745] {
+  position: relative;
+  height: 4.4rem;
+  background: url(/dist/assets/bg@2x.png?v=db0629c8) no-repeat top;
+  background-size: 100%;
+}
+.myhomeTop .setting[data-v-1ee78745] {
+  position: absolute;
+  top: 0.53333333rem;
+  right: 0;
+}
+.myhomeTop .setting i[data-v-1ee78745] {
+  font-size: 0.48rem;
+  padding-right: 0.26666667rem;
+  color: #6a6965;
+}
+.myhomeTop .info[data-v-1ee78745] {
+  width: 100%;
+  text-align: center;
+  padding-top: 1.06666667rem;
+}
+.myhomeTop .info .photoImg[data-v-1ee78745] {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #ccc;
+}
+.myhomeTop .info p[data-v-1ee78745] {
+  font-size: 0.4rem;
+  color: #333;
+}
+.mylayer[data-v-1ee78745] {
+  padding: 0 0.32rem;
+  background: #fff;
+}
+.mylayer .layer1[data-v-1ee78745] {
+  height: 1.17333333rem;
+  padding: 0.37333333rem 0;
+  display: flex;
+  border-bottom: solid 1px #d1d1d1;
+}
+.mylayer .layer1 h2[data-v-1ee78745] {
+  flex: 1;
+  padding-left: 0.32rem;
+}
+[data-dpr="1"] .mylayer .layer1 h2[data-v-1ee78745] {
+  font-size: 15px;
+}
+[data-dpr="2"] .mylayer .layer1 h2[data-v-1ee78745] {
+  font-size: 30px;
+}
+[data-dpr="3"] .mylayer .layer1 h2[data-v-1ee78745] {
+  font-size: 45px;
+}
+.mylayer .layer1 .allorder[data-v-1ee78745] {
+  padding-right: 0.32rem;
+  padding-top: 0.10666667rem;
+  color: #999;
+}
+[data-dpr="1"] .mylayer .layer1 .allorder[data-v-1ee78745] {
+  font-size: 9px;
+}
+[data-dpr="2"] .mylayer .layer1 .allorder[data-v-1ee78745] {
+  font-size: 18px;
+}
+[data-dpr="3"] .mylayer .layer1 .allorder[data-v-1ee78745] {
+  font-size: 27px;
+}
+[data-dpr="1"] .mylayer .layer1 .dingdan[data-v-1ee78745] {
+  font-size: 17px;
+}
+[data-dpr="2"] .mylayer .layer1 .dingdan[data-v-1ee78745] {
+  font-size: 34px;
+}
+[data-dpr="3"] .mylayer .layer1 .dingdan[data-v-1ee78745] {
+  font-size: 51px;
+}
+.mylayer .layer1 .numb[data-v-1ee78745] {
+  padding-right: 0.32rem;
+  color: #999;
+}
+[data-dpr="1"] .mylayer .layer1 .numb[data-v-1ee78745] {
+  font-size: 15px;
+}
+[data-dpr="2"] .mylayer .layer1 .numb[data-v-1ee78745] {
+  font-size: 30px;
+}
+[data-dpr="3"] .mylayer .layer1 .numb[data-v-1ee78745] {
+  font-size: 45px;
+}
+.mylayer .layer2[data-v-1ee78745] {
+  display: flex;
+  padding: 0.4rem 0;
+}
+.mylayer .layer2 li[data-v-1ee78745] {
+  flex: 1;
+  text-align: center;
+  color: #999;
+}
+[data-dpr="1"] .mylayer .layer2 li i[data-v-1ee78745] {
+  font-size: 20px;
+}
+[data-dpr="2"] .mylayer .layer2 li i[data-v-1ee78745] {
+  font-size: 40px;
+}
+[data-dpr="3"] .mylayer .layer2 li i[data-v-1ee78745] {
+  font-size: 60px;
+}
+.mylayer .icon-xiangyou[data-v-1ee78745] {
+  font-size: 0.37333333rem;
+  color: #999;
+}
+[data-dpr="1"] .mylayer .listIcon[data-v-1ee78745] {
+  font-size: 20px;
+}
+[data-dpr="2"] .mylayer .listIcon[data-v-1ee78745] {
+  font-size: 40px;
+}
+[data-dpr="3"] .mylayer .listIcon[data-v-1ee78745] {
+  font-size: 60px;
+}
+.mylayer .lightred[data-v-1ee78745] {
+  color: #ff7786;
+}
+.mylayer .lightblue[data-v-1ee78745] {
+  color: #64a7eb;
+}
+.mylayer .lightpurple[data-v-1ee78745] {
+  color: #f1729f;
+}
+.mylayer .lightgren[data-v-1ee78745] {
+  color: #67b4ac;
+}
+.mylayer .lightpurple2[data-v-1ee78745] {
+  color: #928aef;
+}
+.mt16[data-v-1ee78745] {
+  margin-top: 0.21333333rem;
+}
+section[data-v-025d6fe5] {
+  /*background: rgb(255,255,255);*/
+}
+section[data-v-553e2e6d] {
+  /*background: rgb(255,255,255);*/
+}
+/*# sourceMappingURL=main.css.map*/
