@@ -68,7 +68,7 @@ const pinpin = r => require.ensure([], () => r(require('./views/team/children/pi
 const orderGoods = r => require.ensure([], () => r(require('./views/team/children/orderGoods')), 'orderGoods') //拼拼商详页面
 const orderGoods1 = r => require.ensure([], () => r(require('./views/team/children/orderGoods1')), 'orderGoods1') //拼拼商详页面
 const pintuan = r => require.ensure([], () => r(require('./views/team/children/pintuan')), 'pintuan') //拼拼2人团页面
-const pintuan1 = r => require.ensure([], () => r(require('./views/team/children/pintuan1')), 'pintuan1') //拼拼参团页面
+const pintuanwanfa = r => require.ensure([], () => r(require('./views/team/children/pintuanwanfa')), 'pintuanwanfa') //拼拼参团页面
 const pintuan2 = r => require.ensure([], () => r(require('./views/team/children/pintuan2')), 'pintuan2') //拼拼开团页面
 const pintuan3 = r => require.ensure([], () => r(require('./views/team/children/pintuan3')), 'pintuan3') //拼拼抢光页面
 const dingdan = r => require.ensure([], () => r(require('./views/team/children/dingdan')), 'dingdan') //拼拼填写订单页面
@@ -302,8 +302,8 @@ export default [{
 			component: pintuan
 		},
 		{
-			path: "/pintuan1",
-			component: pintuan1
+			path: "/pintuanwanfa",
+			component: pintuanwanfa
 		},
 		{
 			path: "/pintuan2",

@@ -160,6 +160,8 @@ webpackJsonp([43],{
 	//
 	//
 	//
+	//
+	//
 
 	var user_id = localStorage.getItem("user_id");
 	var userId = localStorage.getItem("userId");
@@ -216,6 +218,7 @@ webpackJsonp([43],{
 					this.data1 = res.body.data;
 					this.data2 = res.body.data.group_user_list.reverse();
 					console.log(this.data2);
+					// 设置商品右侧大图标、最下方按钮文字
 					var tuan = function tuan() {
 						if (res.body.data.status == "1") {
 							$(".chenggongtuan").attr("src", "../../../../dist/assets/chenggongtuan.png");
@@ -249,7 +252,7 @@ webpackJsonp([43],{
 						var now = new Date();
 						// 结束时间
 						//					        var ending = new Date("2017/5/25");
-						var ending = new Date("2017/5/25").valueOf();
+						var ending = new Date("2017/5/26").valueOf();
 						//					      	var ending = res.body.data.end_time;
 						if (now >= ending) {
 							clearTimeout(this.timeout);
@@ -279,7 +282,6 @@ webpackJsonp([43],{
 						this.timeout = setTimeout(countdown, 1000);
 					};
 					onload = countdown;
-					//					    onload = tuan;
 				});
 			});
 		}
@@ -342,7 +344,25 @@ webpackJsonp([43],{
 	    attrs: {
 	      "src": __webpack_require__(276)
 	    }
-	  })]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('div', {
+	  })]), _vm._v(" "), _c('div', {
+	    staticClass: "pintuanwanfa"
+	  }, [_c('router-link', {
+	    attrs: {
+	      "to": "/pintuanwanfa"
+	    }
+	  }, [_c('div', {
+	    staticClass: "title"
+	  }, [_vm._v("拼团玩法\n\t\t\t\t\t"), _c('span', [_vm._v("查看详情　>")])]), _vm._v(" "), _c('div', {
+	    staticClass: "pt_main"
+	  }, [_c('span', {
+	    staticClass: "span1"
+	  }, [_vm._v("选择商品")]), _vm._v(">\n\t\t\t\t\t"), _c('span', {
+	    staticClass: "span2"
+	  }, [_vm._v("支付开团")]), _vm._v(">\n\t\t\t\t\t"), _c('span', {
+	    staticClass: "span3"
+	  }, [_vm._v("等待好友参团支付")]), _vm._v(">\n\t\t\t\t\t"), _c('span', {
+	    staticClass: "span4"
+	  }, [_vm._v("达到人数参团成功")])])])], 1), _vm._v(" "), _c('div', {
 	    staticClass: "cantuan"
 	  }, [_c('h3', [_c('span', [_vm._v(_vm._s(_vm.data1.tuan_preson_num))]), _vm._v("人团")]), _vm._v(" "), _c('div', {
 	    staticClass: "touxiang"
@@ -354,7 +374,7 @@ webpackJsonp([43],{
 	        "src": i.headportrait
 	      }
 	    })])
-	  })), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('div', {
+	  })), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('div', {
 	    staticClass: "xiangqing",
 	    on: {
 	      "click": _vm.show
@@ -381,7 +401,7 @@ webpackJsonp([43],{
 	    }, [_vm._v("参团")])])])
 	  }))])]), _vm._v(" "), _c('div', {
 	    staticClass: "bottom"
-	  }, [_vm._m(4), _vm._v(" "), _c('span', {
+	  }, [_vm._m(3), _vm._v(" "), _c('span', {
 	    staticClass: "bottom_right"
 	  }, [_vm._v("还差" + _vm._s(Number(_vm.data1.tuan_preson_num) - _vm.data1.group_user_list.length) + "人拼团成功")])])])])
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -392,22 +412,6 @@ webpackJsonp([43],{
 	      "href": "http://m.t.jiayou9.com/#/download1"
 	    }
 	  }, [_vm._v("去下载")])])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "pintuanwanfa"
-	  }, [_c('div', {
-	    staticClass: "title"
-	  }, [_vm._v("拼团玩法\n\t\t\t\t\t"), _c('span', [_vm._v("查看详情　>")])]), _vm._v(" "), _c('div', {
-	    staticClass: "pt_main"
-	  }, [_c('span', {
-	    staticClass: "span1"
-	  }, [_vm._v("选择商品")]), _vm._v(">\n\t\t\t\t\t"), _c('span', {
-	    staticClass: "span2"
-	  }, [_vm._v("支付开团")]), _vm._v(">\n\t\t\t\t\t"), _c('span', {
-	    staticClass: "span3"
-	  }, [_vm._v("等待好友参团支付")]), _vm._v(">\n\t\t\t\t\t"), _c('span', {
-	    staticClass: "span4"
-	  }, [_vm._v("达到人数参团成功")])])])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: "xinxi"
@@ -446,7 +450,7 @@ webpackJsonp([43],{
 /***/ 276:
 /***/ function(module, exports) {
 
-	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAtCAYAAAA+7zKnAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxM0VEM0JGMUZBNEExMUU2QTg1RTk1ODc1NDVFQkVEMCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxM0VEM0JGMkZBNEExMUU2QTg1RTk1ODc1NDVFQkVEMCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjEzRUQzQkVGRkE0QTExRTZBODVFOTU4NzU0NUVCRUQwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjEzRUQzQkYwRkE0QTExRTZBODVFOTU4NzU0NUVCRUQwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+BThBbQAABI1JREFUeNrUWX1oVmUUv5szSUsUV2ra0mxrzmlqUupIggT/CAw11Fh+zbUIEabi/vATzYWC2gchguZMxOhrQkHkF6ZQoIVfNTfdEvNrk/yKRPDb32G/K8fTe/d+3OedtwM/3ud57n3v83uee855zjk3Y9mPw700iDz0O6AdcAcoAb6NdeP8UT+nPEmmlx75EugCPAZ0BKrSMUk6yD8H9DRjjwOD/g/k5waMvx918r2AMtVfClxj+3VgQJTJr1Xt7cBiYLMa2xRV8qLro2KoT6UaewEoiiL5j1Rb/N8Rtk8B1erax1Ejn0ud9mW2uV6h2i8Cw6JEfotqHwf2m+t/Ar+51n0X5F8GhiTgEiuMfYyJAnmt6+eMd9GyGzim+qseNvn+wFDVXxDnfm0LvYFXw0yekWRgJvFKVyAb6AwsAgbzWhPQPYFnHOGi/bacBVeAv4ELCNTOhyWfBzzDE/N57lIBkAO0D3iW+O9fEpgzz6iPluvAX8BR4DRQw/5JoAELu2XJ98HvmyT3LEk/neQbLE/Sf79lPFQico4LqefifxDyN9HISvJB17gbB4BPgF9TUFnZrFm0mV4Mn5OSLEP8rrwN1ZeVngVqudoTQB31+2JIYxfVeEeSkcptRWI/3YB8LqSA6voUtcHndBtoo8lrucFXehi4Sb1Lu2ABl/FzmZv0gGBhPfDzKG3lK6CDdpVfq3slbSvmDrcK8QQWdhZoQHOCJg7ZJeTHm+N6HLDTi5Bg98W4J2viWNBI/5CaYk7G14AdESFeTVX25XshbnV+EtCo4vCR9NvyZs48BNJixBuB0Wp4A4hPDwoPKkwOKqHr7wx5W5O4nOJ/GOIfaOJBsc1K4FPV7wQcNMaSbjlEN3m/lALi8xMNzGYCq1W/A7OjrFbY9b30+fdzBRCfmGxUOQf40OSf+80h5pr4Hvy8ooaqQLw41ZB4tillSOFoa5qIS+VhhBpaCOIlYeP5dcBYr7nmKPIGMyHXnuVdNVQK4stcJSNbjbvs73jj+6l2I4h/5jKTEj1vq/qXHJPXz3vEdRr4JDMojwHbYcfk61SU2gVqlOuSfF91bw3TNpfB1x3mBr4McUm+wMTh6ZBas1nOyPcLmMSl1ATMF5p8forkuyVx77GA+UKRz+Tp6ks8Y33Jay51n6B7lVSyyhxAsUSe61cH8uj7Q5PPZb1GRGoqDS0Y9efAPh44vZlvSrlkKiBHf7UX8HkHRntF7b7EUANckC8wLs2KlEnW0JAnm2u3TH8MvcoG5qSxkvKEjTYzpL7P85orwO+Z8ePMznKYVlpVm8ZdXgL1yAjYHCfkC1Xb/0jwNr1DpTl5pQKwgmWLTczM5D8DvebSYJN5tozVYwGlgKjKNyqGKky13Gf9bz5VQIjIx4E+MTzFck5+tYVntWN2NI8L0iL1oZ+oWu25Edk8wFLa+Se4i74RjTfEZYIZXNzGOMRFrrPUIkZbwhKeLz1YdvFroZ3j+ft45Du1kHyso16uSfFQquKiW6pxZochfzKGa/yC+lhG1xlG/oValDM/WG+u/eM9+CnoP3JPgAEAcXEXdcMZgAIAAAAASUVORK5CYII="
+	module.exports = "data:image/gif;base64,R0lGODlhkACQAIAAAP///wAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4zLWMwMTEgNjYuMTQ1NjYxLCAyMDEyLzAyLzA2LTE0OjU2OjI3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBMERFQTZGMjQwRkMxMUU3OUQ5OTg5QTMwNTY4RUZCRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBMERFQTZGMzQwRkMxMUU3OUQ5OTg5QTMwNTY4RUZCRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkEwREVBNkYwNDBGQzExRTc5RDk5ODlBMzA1NjhFRkJFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkEwREVBNkYxNDBGQzExRTc5RDk5ODlBMzA1NjhFRkJFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAAAsAAAAAJAAkAAAArKEj6nL7Q+jnLTai7PevPsPhuJIluaJpurKtu4Lx/JM1/aN5/rO9/4PDAqHxKLxiEwql8ym8wmNSqfUqvWKzWq33K73Cw6Lx+Sy+YxOq9fstvsNj8vn9Lr9js/r9/y+/w8YKDhIWGh4iJiouMjY6PgIGSk5SVlpeYmZqbnJ2en5CRoqOkpaanqKmqq6ytrq+gobKztLW2t7i5uru8vb6/sLHCw8TFxsfIycrLzM3Oz8LFIAADs="
 
 /***/ }
 

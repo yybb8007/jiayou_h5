@@ -152,18 +152,18 @@ webpackJsonp([58],{
 
 /***/ },
 
-/***/ 337:
+/***/ 346:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(338)
+	__webpack_require__(347)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(339),
+	  __webpack_require__(348),
 	  /* template */
-	  __webpack_require__(340),
+	  __webpack_require__(349),
 	  /* scopeId */
 	  "data-v-1e720f4e",
 	  /* cssModules */
@@ -191,14 +191,14 @@ webpackJsonp([58],{
 
 /***/ },
 
-/***/ 338:
+/***/ 347:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 339:
+/***/ 348:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -268,7 +268,7 @@ webpackJsonp([58],{
 
 /***/ },
 
-/***/ 340:
+/***/ 349:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -309,19 +309,19 @@ webpackJsonp([58],{
 	    staticClass: "img"
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(341)
+	      "src": __webpack_require__(350)
 	    }
 	  }), _vm._v(" "), _c('span', [_vm._v("-")])]), _vm._v(" "), _c('div', {
 	    staticClass: "img"
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(341)
+	      "src": __webpack_require__(350)
 	    }
 	  }), _vm._v(" "), _c('span', [_vm._v("-")])]), _vm._v(" "), _c('div', {
 	    staticClass: "img"
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(341)
+	      "src": __webpack_require__(350)
 	    }
 	  }), _vm._v(" "), _c('span', [_vm._v("-")])])])]), _vm._v(" "), _c('div', {
 	    staticClass: "submit"
@@ -342,7 +342,7 @@ webpackJsonp([58],{
 
 /***/ },
 
-/***/ 341:
+/***/ 350:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/pintuan.jpg?v=60ff1d72";

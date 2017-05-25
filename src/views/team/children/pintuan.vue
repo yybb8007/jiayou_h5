@@ -26,13 +26,14 @@
 					<p class="shop_price">￥<span>{{ data1.tuan_price }}</span></p>
 					<p class="market_price"><span>￥{{ data1.shop_price }}</span></p>
 				</div>
-				<img class="dengdaichengtuan" src="../../../../dist/assets/icon_xingyunxing@3x.png" />
-				<img class="chenggongtuan" src="../../../../dist/assets/icon_xingyunxing@3x.png" />
-				<img class="shibaituan" src="../../../../dist/assets/icon_xingyunxing@3x.png" />
+				<img class="dengdaichengtuan" src="../../../../dist/assets/touming.gif" />
+				<img class="chenggongtuan" src="../../../../dist/assets/touming.gif" />
+				<img class="shibaituan" src="../../../../dist/assets/touming.gif" />
 			</div>
 			
 			<!-- 拼团玩法 -->
 			<div class="pintuanwanfa">
+				<router-link to="/pintuanwanfa">
 				<div class="title">拼团玩法
 					<span>查看详情　></span>
 				</div>
@@ -42,6 +43,7 @@
 					<span class="span3">等待好友参团支付</span>>
 					<span class="span4">达到人数参团成功</span>
 				</div>
+				</router-link>
 			</div>
 			
 			<div class="cantuan">
@@ -142,6 +144,7 @@
 						this.data1 = res.body.data;
 						this.data2 = res.body.data.group_user_list.reverse();
 						console.log(this.data2);
+						// 设置商品右侧大图标、最下方按钮文字
 						var tuan = function () {
 							if (res.body.data.status == "1") {
 								$(".chenggongtuan").attr("src","../../../../dist/assets/chenggongtuan.png");
@@ -175,7 +178,7 @@
 					        var now = new Date;
 					        // 结束时间
 //					        var ending = new Date("2017/5/25");
-					        var ending = new Date("2017/5/25").valueOf();
+					        var ending = new Date("2017/5/26").valueOf();
 //					      	var ending = res.body.data.end_time;
 					        if (now >= ending) {
 					            clearTimeout(this.timeout);
@@ -205,7 +208,6 @@
 							this.timeout = setTimeout (countdown, 1000);
 						}
 					    onload = countdown;
-//					    onload = tuan;
 						
 					});
 				});

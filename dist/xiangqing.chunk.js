@@ -120,6 +120,7 @@ webpackJsonp([21],{
 			});
 		}
 	};
+	// 设置页面缩放
 
 	document.getElementById('view').setAttribute('content', 'user-scalable=yes, width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5');
 

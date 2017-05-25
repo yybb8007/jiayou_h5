@@ -152,14 +152,12 @@ export default {
 			city: function() {
 				this.$http.get("dist/datacity1.json").then(function(res) {
 					this.datacity = res.body;
-	//				console.log(res.body);
 				});
 			},
 			// 市级点击事件，县级获取数据
 			qu: function() {
 				this.$http.get("dist/dataqu.json").then(function(res) {
 					this.dataqu = res.body;
-	//				console.log(res.body);
 				});
 			},
 			// 保存地址
@@ -241,10 +239,6 @@ export default {
 								success: function(data6) {
 									var datazf = data6.data
 									console.log(datazf.appid);
-//									alert(datazf.noncestr);
-//									alert(datazf.prepayid);
-//									alert(datazf.sign);
-//									alert(datazf.timestamp);
 									var appId = datazf.appid;
 									var paySign = datazf.noncestr;
 									var pg = datazf.package;
@@ -377,14 +371,6 @@ export default {
 				this.dataprovince = res.body;
 //				console.log(res.body);
 			});
-//			this.$http.get("dist/datacity1.json").then(function(res) {
-//				this.datacity = res.body;
-////				console.log(res.body);
-//			});
-//			this.$http.get("dist/dataqu.json").then(function(res) {
-//				this.dataqu = res.body;
-////				console.log(res.body);
-//			});
 			
 //			$(".youfei span")[0].innerHTML = shipping_fee;
 			var shop_price = localStorage.getItem("shop_price1");
@@ -399,55 +385,6 @@ export default {
 		},
 		
 }
-/*var appId1 = localStorage.getItem("appId");
-var paySign1 = localStorage.getItem("paySign");
-var timeStamp1 = localStorage.getItem("timeStamp");
-var nonceStr1 = localStorage.getItem("nonceStr");
-var prepay_id1 = localStorage.getItem("prepay_id");
-wx.config({
-            debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-            appId: appId1, // 必填，公众号的唯一标识
-            timestamp: timeStamp1, // 必填，生成签名的时间戳
-            nonceStr: nonceStr1, // 必填，生成签名的随机串
-            signature: paySign1,// 必填，签名
-            jsApiList: ['checkJsApi',
-            'chooseWXPay'] // 必填，需要使用的JS接口列表
-        });
- 
-        //通过ready接口处理成功验证
-        wx.ready(function () {
-            // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后
- 
-            $('#queren').on("click",function () {
-                wx.chooseWXPay({
-                    timestamp: timeStamp1, // 支付签名时间戳 注意这里的s 文档新版大写 但是我的小写才好使
-                    nonceStr: nonceStr1, // 支付签名随机串
-                    package: prepay_id1, // 统一支付接口返回的package包
-                    signType: "MD5", // 签名方式，'MD5'
-                    paySign: paySign1, // 支付签名
-                 success: function (res) {
-                     if (res.err_msg == "get_brand_wcpay_request:ok") {
-                         alert("支付成功");
-                         // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。 
-                     }
-                     else if (res.err_msg == "get_brand_wcpay_request:cancel") {
-                         alert("cancel");
-                         // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。 
-                     }
-                     else if (res.err_msg == "get_brand_wcpay_request:fail") {
-                         alert("fail");
-                         // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。 
-                     }
-                 },
-                  cancel:function(res){
-                  	alert(JSON.stringify(res));
-                  },
-                  fail: function(res){
-                  	alert(JSON.stringify(res));
-                  }
-                });
-            });
-        });*/
 </script>
 <style lang="sass" scoped>section {
 	/*background: rgb(255,255,255);*/

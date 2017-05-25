@@ -21,7 +21,7 @@ webpackJsonp([0],{
 
 	var _router2 = _interopRequireDefault(_router);
 
-	var _filters = __webpack_require__(394);
+	var _filters = __webpack_require__(403);
 
 	var _filters2 = _interopRequireDefault(_filters);
 
@@ -29,29 +29,29 @@ webpackJsonp([0],{
 
 	var _env2 = _interopRequireDefault(_env);
 
-	var _fastclick = __webpack_require__(395);
+	var _fastclick = __webpack_require__(404);
 
 	var _fastclick2 = _interopRequireDefault(_fastclick);
 
-	var _vueLazyload = __webpack_require__(396);
+	var _vueLazyload = __webpack_require__(405);
 
 	var _vueLazyload2 = _interopRequireDefault(_vueLazyload);
 
-	var _vueResource = __webpack_require__(397);
+	var _vueResource = __webpack_require__(406);
 
 	var _vueResource2 = _interopRequireDefault(_vueResource);
 
-	var _mintUi = __webpack_require__(399);
+	var _mintUi = __webpack_require__(408);
 
 	var _mintUi2 = _interopRequireDefault(_mintUi);
 
-	__webpack_require__(402);
+	__webpack_require__(411);
 
 	var _app = __webpack_require__(40);
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _vueScroll = __webpack_require__(404);
+	var _vueScroll = __webpack_require__(413);
 
 	var _vueScroll2 = _interopRequireDefault(_vueScroll);
 
@@ -907,148 +907,148 @@ webpackJsonp([0],{
 			return r(__webpack_require__(272));
 		});
 	}; //拼拼2人团页面
-	var pintuan1 = function pintuan1(r) {
+	var pintuanwanfa = function pintuanwanfa(r) {
 		return __webpack_require__.e/* nsure */(44, function () {
 			return r(__webpack_require__(277));
 		});
 	}; //拼拼参团页面
 	var pintuan2 = function pintuan2(r) {
 		return __webpack_require__.e/* nsure */(45, function () {
-			return r(__webpack_require__(284));
+			return r(__webpack_require__(290));
 		});
 	}; //拼拼开团页面
 	var pintuan3 = function pintuan3(r) {
 		return __webpack_require__.e/* nsure */(46, function () {
-			return r(__webpack_require__(288));
+			return r(__webpack_require__(297));
 		});
 	}; //拼拼抢光页面
 	var dingdan = function dingdan(r) {
 		return __webpack_require__.e/* nsure */(47, function () {
-			return r(__webpack_require__(292));
+			return r(__webpack_require__(301));
 		});
 	}; //拼拼填写订单页面
 
 	var share = function share(r) {
 		return __webpack_require__.e/* nsure */(48, function () {
-			return r(__webpack_require__(296));
+			return r(__webpack_require__(305));
 		});
 	}; //拼拼分享
 
 	// 拼团
 	var qbpinglun = function qbpinglun(r) {
 		return __webpack_require__.e/* nsure */(49, function () {
-			return r(__webpack_require__(300));
+			return r(__webpack_require__(309));
 		});
 	}; //拼团详情--全部评论
 
 	// 我的家里面的路由
 	var shezhi = function shezhi(r) {
 		return __webpack_require__.e/* nsure */(50, function () {
-			return r(__webpack_require__(304));
+			return r(__webpack_require__(313));
 		});
 	}; //我的家--设置
 	var xiaoxi = function xiaoxi(r) {
 		return __webpack_require__.e/* nsure */(51, function () {
-			return r(__webpack_require__(308));
+			return r(__webpack_require__(317));
 		});
 	}; //我的家--消息
 	var zhuce = function zhuce(r) {
 		return __webpack_require__.e/* nsure */(52, function () {
-			return r(__webpack_require__(312));
+			return r(__webpack_require__(321));
 		});
 	}; //我的家--登录注册
 	var myOrder = function myOrder(r) {
 		return __webpack_require__.e/* nsure */(53, function () {
-			return r(__webpack_require__(317));
+			return r(__webpack_require__(326));
 		});
 	}; //我的家--全部订单
 	var myYouhui = function myYouhui(r) {
 		return __webpack_require__.e/* nsure */(54, function () {
-			return r(__webpack_require__(321));
+			return r(__webpack_require__(330));
 		});
 	}; //我的家--优惠券
 	var myGroup = function myGroup(r) {
 		return __webpack_require__.e/* nsure */(55, function () {
-			return r(__webpack_require__(325));
+			return r(__webpack_require__(334));
 		});
 	}; //我的家--我的团
 	var myGuanzhu = function myGuanzhu(r) {
 		return __webpack_require__.e/* nsure */(56, function () {
-			return r(__webpack_require__(329));
+			return r(__webpack_require__(338));
 		});
 	}; //我的家--我的关注
 	var myKefu = function myKefu(r) {
 		return __webpack_require__.e/* nsure */(57, function () {
-			return r(__webpack_require__(333));
+			return r(__webpack_require__(342));
 		});
 	}; //我的家--家的客服
 	var myYijian = function myYijian(r) {
 		return __webpack_require__.e/* nsure */(58, function () {
-			return r(__webpack_require__(337));
+			return r(__webpack_require__(346));
 		});
 	}; //我的家--意见反馈
 	var myJiayou = function myJiayou(r) {
 		return __webpack_require__.e/* nsure */(59, function () {
-			return r(__webpack_require__(342));
+			return r(__webpack_require__(351));
 		});
 	}; //我的家--关于家有
 	// 我的家的全部订单里面的路由
 	var allOrder = function allOrder(r) {
 		return __webpack_require__.e/* nsure */(60, function () {
-			return r(__webpack_require__(346));
+			return r(__webpack_require__(355));
 		});
 	}; //我的家--全部订单--全部订单
 	var obligation = function obligation(r) {
 		return __webpack_require__.e/* nsure */(61, function () {
-			return r(__webpack_require__(353));
+			return r(__webpack_require__(362));
 		});
 	}; //我的家--全部订单--待付款
 	var goods = function goods(r) {
 		return __webpack_require__.e/* nsure */(62, function () {
-			return r(__webpack_require__(357));
+			return r(__webpack_require__(366));
 		});
 	}; //我的家--全部订单--待收货
 	var complete = function complete(r) {
 		return __webpack_require__.e/* nsure */(63, function () {
-			return r(__webpack_require__(361));
+			return r(__webpack_require__(370));
 		});
 	}; //我的家--全部订单--已完成
 	// 我的团里面的路由
 	var allGroup = function allGroup(r) {
 		return __webpack_require__.e/* nsure */(64, function () {
-			return r(__webpack_require__(365));
+			return r(__webpack_require__(374));
 		});
 	}; //我的家--我的团--全部团
 	var weatGroup = function weatGroup(r) {
 		return __webpack_require__.e/* nsure */(65, function () {
-			return r(__webpack_require__(370));
+			return r(__webpack_require__(379));
 		});
 	}; //我的家--我的团--待成团
 	var endGroup = function endGroup(r) {
 		return __webpack_require__.e/* nsure */(66, function () {
-			return r(__webpack_require__(374));
+			return r(__webpack_require__(383));
 		});
 	}; //我的家--我的团--已成 团
 	var failGroup = function failGroup(r) {
 		return __webpack_require__.e/* nsure */(67, function () {
-			return r(__webpack_require__(378));
+			return r(__webpack_require__(387));
 		});
 	}; //我的家--我的团--失败团
 
 	// 我的家/优惠券中的路由
 	var unused = function unused(r) {
 		return __webpack_require__.e/* nsure */(68, function () {
-			return r(__webpack_require__(382));
+			return r(__webpack_require__(391));
 		});
 	}; //我的家--优惠券--未使用
 	var used = function used(r) {
 		return __webpack_require__.e/* nsure */(69, function () {
-			return r(__webpack_require__(386));
+			return r(__webpack_require__(395));
 		});
 	}; //我的家--优惠券--已使用
 	var guoqi = function guoqi(r) {
 		return __webpack_require__.e/* nsure */(70, function () {
-			return r(__webpack_require__(390));
+			return r(__webpack_require__(399));
 		});
 	}; //我的家--优惠券--已过期
 
@@ -1241,8 +1241,8 @@ webpackJsonp([0],{
 			path: "/pintuan",
 			component: pintuan
 		}, {
-			path: "/pintuan1",
-			component: pintuan1
+			path: "/pintuanwanfa",
+			component: pintuanwanfa
 		}, {
 			path: "/pintuan2",
 			component: pintuan2
@@ -1867,7 +1867,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 394:
+/***/ 403:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1898,7 +1898,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 395:
+/***/ 404:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {
@@ -2746,7 +2746,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 396:
+/***/ 405:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -2758,7 +2758,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 397:
+/***/ 406:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -3838,7 +3838,7 @@ webpackJsonp([0],{
 
 	var nodeClient = function (request) {
 
-	    var client = __webpack_require__(398);
+	    var client = __webpack_require__(407);
 
 	    return new PromiseObj(function (resolve) {
 
@@ -4293,14 +4293,14 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 398:
+/***/ 407:
 /***/ function(module, exports) {
 
 	/* (ignored) */
 
 /***/ },
 
-/***/ 399:
+/***/ 408:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports =
@@ -14298,19 +14298,19 @@ webpackJsonp([0],{
 	/* 198 */
 	/***/ function(module, exports) {
 
-	module.exports = __webpack_require__(400);
+	module.exports = __webpack_require__(409);
 
 	/***/ },
 	/* 199 */
 	/***/ function(module, exports) {
 
-	module.exports = __webpack_require__(401);
+	module.exports = __webpack_require__(410);
 
 	/***/ },
 	/* 200 */
 	/***/ function(module, exports) {
 
-	module.exports = __webpack_require__(396);
+	module.exports = __webpack_require__(405);
 
 	/***/ },
 	/* 201 */
@@ -14324,7 +14324,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 400:
+/***/ 409:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -14356,7 +14356,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 401:
+/***/ 410:
 /***/ function(module, exports) {
 
 	/*
@@ -14404,13 +14404,13 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 402:
+/***/ 411:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(403);
+	var content = __webpack_require__(412);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(47)(content, {});
@@ -14431,7 +14431,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 403:
+/***/ 412:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(46)();
@@ -14446,15 +14446,15 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 404:
+/***/ 413:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(405);
+	module.exports = __webpack_require__(414);
 
 
 /***/ },
 
-/***/ 405:
+/***/ 414:
 /***/ function(module, exports, __webpack_require__) {
 
 	(function(){
@@ -14464,7 +14464,7 @@ webpackJsonp([0],{
 	    if(false){
 	        Vue = Window.Vue;
 	    }else{
-	        Vue = __webpack_require__(406);
+	        Vue = __webpack_require__(415);
 	    }
 
 	    if(!Vue) {
@@ -14597,7 +14597,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 406:
+/***/ 415:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process, global) {/*!
