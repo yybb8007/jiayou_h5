@@ -4060,6 +4060,101 @@ section div ul li .indent[data-v-549626f8] {
   text-indent: 2em;
 }
 @charset "UTF-8";
+section[data-v-269393c3] {
+  /*background: rgb(255,255,255);*/
+  /* 主体 */
+  /* 立刻邀请按钮 */
+  /*底部信息*/
+}
+section #all_header[data-v-269393c3] {
+  width: 100%;
+  height: 1.17333333rem;
+  line-height: 1.17333333rem;
+  padding: 0 0.32rem;
+  font-size: 0.48rem;
+  background: #fff;
+  text-align: center;
+  z-index: 100;
+  border-bottom: 0.01333333rem solid #ededed;
+  over-flow: hidden;
+  position: relative;
+}
+section #all_header .icon_header[data-v-269393c3]::before {
+  font-family: 'jyzx-iconfont';
+  content: "\E604";
+  font-size: 0.48rem;
+}
+section #all_header #back[data-v-269393c3] {
+  float: left;
+}
+section #all_header #guize[data-v-269393c3] {
+  float: right;
+  font-size: 0.37333333rem;
+  color: #333333;
+  position: absolute;
+  right: 0.32rem;
+  top: 0.06666667rem;
+}
+section .main1[data-v-269393c3] {
+  width: 100%;
+  height: 9.38666667rem;
+  background: skyblue;
+  padding-top: 3.86666667rem;
+}
+section .main1 .box1[data-v-269393c3] {
+  width: 8.32rem;
+  height: 2.29333333rem;
+  border-radius: 0.2rem;
+  background: #fff;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 0.38666667rem;
+}
+section .main1 .box1 .title1[data-v-269393c3] {
+  font-size: 0.49333333rem;
+  color: #717370;
+}
+section .main1 .box1 .title1 span[data-v-269393c3] {
+  color: #d2d2d2;
+}
+section .main1 .box1 .title2[data-v-269393c3] {
+  font-size: 0.77333333rem;
+  color: #92cb40;
+  font-weight: bolder;
+}
+section .main1 .box2[data-v-269393c3] {
+  width: 8.32rem;
+  height: 7rem;
+  border-radius: 0.2rem;
+  background: #fff;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 0.06666667rem;
+}
+section .menu[data-v-269393c3] {
+  height: 1.06666667rem;
+  width: 8.53333333rem;
+  margin-top: 0.37333333rem;
+  margin-left: 0.73333333rem;
+  line-height: 1.06666667rem;
+  text-align: center;
+  border-radius: 0.06666667rem;
+  background: #84b83a;
+  font-size: 0.44rem;
+  color: #fff;
+}
+section #footer[data-v-269393c3] {
+  text-align: center;
+  font-size: 0.37333333rem;
+  color: #979795;
+  margin-top: 0.26666667rem;
+}
+section #footer a[data-v-269393c3] {
+  font-size: 0.32rem;
+  font-weight: bolder;
+  color: #85b93a;
+}
+@charset "UTF-8";
 section[data-v-319a86ac] {
   background: black;
   /* 顶部标题行 */
@@ -4121,6 +4216,100 @@ section main h3[data-v-319a86ac] {
   font-size: 0.44rem;
   color: #424441;
   font-weight: bolder;
+}
+section main ul[data-v-319a86ac] {
+  margin: 0.53333333rem 0.66666667rem;
+  font-size: 0.29333333rem;
+  color: #979797;
+  line-height: 0.48rem;
+}
+section main ul li[data-v-319a86ac] {
+  margin-bottom: 0.26666667rem;
+}
+@charset "UTF-8";
+section[data-v-1f84c673] {
+  /*background: rgb(255,255,255);*/
+  /* 主体 */
+  /* 立刻邀请按钮 */
+}
+section #all_header[data-v-1f84c673] {
+  width: 100%;
+  height: 1.17333333rem;
+  line-height: 1.17333333rem;
+  padding: 0 0.32rem;
+  font-size: 0.48rem;
+  background: #fff;
+  text-align: center;
+  z-index: 100;
+  border-bottom: 0.01333333rem solid #ededed;
+  over-flow: hidden;
+  position: relative;
+}
+section #all_header .icon_header[data-v-1f84c673]::before {
+  font-family: 'jyzx-iconfont';
+  content: "\E604";
+  font-size: 0.48rem;
+}
+section #all_header #back[data-v-1f84c673] {
+  float: left;
+}
+section #all_header #guize[data-v-1f84c673] {
+  float: right;
+  font-size: 0.37333333rem;
+  color: #333333;
+  position: absolute;
+  right: 0.32rem;
+  top: 0.06666667rem;
+}
+section .main1[data-v-1f84c673] {
+  width: 100%;
+  height: 5.08rem;
+  background: skyblue;
+  padding-top: 8.17333333rem;
+}
+section .main1 .box1[data-v-1f84c673] {
+  width: 8.32rem;
+  height: 2.73333333rem;
+  border-radius: 0.2rem;
+  border-top-left-radius: 0.02666667rem;
+  border-top-right-radius: 0.02666667rem;
+  background: #fff;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 0.38666667rem;
+}
+section .main1 .box1 .title1[data-v-1f84c673] {
+  font-size: 0.49333333rem;
+  color: #717370;
+}
+section .main1 .box1 .title1 span[data-v-1f84c673] {
+  color: #d2d2d2;
+}
+section .main1 .box1 .title2[data-v-1f84c673] {
+  font-size: 0.77333333rem;
+  color: #92cb40;
+  font-weight: bolder;
+}
+section .main1 .box2[data-v-1f84c673] {
+  margin-top: 0.54666667rem;
+  font-size: 0.41333333rem;
+  color: #fff;
+  text-decoration: underline;
+  text-align: center;
+  letter-spacing: 0.12rem;
+  font-weight: bold;
+}
+section .menu[data-v-1f84c673] {
+  height: 1.06666667rem;
+  width: 8.53333333rem;
+  margin-top: 0.37333333rem;
+  margin-left: 0.73333333rem;
+  line-height: 1.06666667rem;
+  text-align: center;
+  border-radius: 0.06666667rem;
+  background: #84b83a;
+  font-size: 0.44rem;
+  color: #fff;
 }
 @charset "UTF-8";
 section[data-v-0f2ebcb8] {

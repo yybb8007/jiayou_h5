@@ -711,7 +711,7 @@ webpackJsonp([6],{
 	        "alt": "",
 	        "ID": item.data,
 	        "target": item.target,
-	        "title": "小满活动"
+	        "title": "端午活动"
 	      }
 	    })])
 	  }))]), _vm._v(" "), _c('article', {

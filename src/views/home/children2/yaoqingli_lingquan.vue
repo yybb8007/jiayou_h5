@@ -12,15 +12,10 @@
         			<p class="title1"><span>—</span> 邀请新朋友各得 <span>—</span></p>
         			<p class="title2">满99减80元券</p>
         		</div>
-        		<div class="box2">
-        			
-        		</div>
-        		
+        		<div class="box2">老用户可领取5折优惠券</div>
         	</main>
         	
-        	<div class="menu">立刻邀请</div>
-        	
-        	<p id="footer">您已成功邀请<router-link id="person" to="/">12</router-link>人，累计获得<router-link id="quan" to="/">12</router-link>张券</p>
+        	<div class="menu">点击领取</div>
 		</section>
 	</div>
 </template>
@@ -72,13 +67,15 @@
 	    /* 主体 */
 	    .main1{
 		   	width: 100%;
-		   	height: 704px;
+		   	height: 381px;
 		   	background: skyblue;
-		   	padding-top: 290px;
+		   	padding-top: 613px;
 		   	.box1{
 		   		width: 624px;
-		   		height: 172px;
+		   		height: 205px;
 		   		border-radius: 15px;
+		   		border-top-left-radius: 2px;
+		   		border-top-right-radius: 2px;
 		   		background: #fff;
 		   		margin: 0 auto;
 		   		text-align: center;
@@ -97,13 +94,13 @@
 		    	}
 		   	}
 		   	.box2{
-		   		width: 624px;
-		   		height: 525px;
-		   		border-radius: 15px;
-		   		background: #fff;
-		   		margin: 0 auto;
+		   		margin-top: 41px;
+		   		font-size: 31px;
+		   		color: #fff;
+		   		text-decoration: underline;
 		   		text-align: center;
-		   		margin-top: 5px;
+		   		letter-spacing: 9px;
+		   		font-weight: bold;
 		   	}
 	    }
 	   /* 立刻邀请按钮 */
@@ -118,18 +115,6 @@
 		  	background: #84b83a;
 		  	font-size: 33px;
 		  	color: #fff;
-		}
-	  /*底部信息*/
-		#footer{
-		 	text-align: center;
-		 	font-size: 28px;
-		 	color: #979795;
-		 	margin-top: 20px;
-		 	a{
-		 		font-size: 24px;
-		 		font-weight: bolder;
-		 		color: #85b93a;
-		 	}
 		}
 	}
 </style>

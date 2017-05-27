@@ -6,7 +6,7 @@
 				<!-- 轮播图 -->
 				<div class="swiper-wrapper" @click="eight">
 					<div class="swiper-slide" v-for="item in data[2]">
-						<img v-lazy="item.logo" alt="" :ID="item.data" :target="item.target" title="小满活动" />
+						<img v-lazy="item.logo" alt="" :ID="item.data" :target="item.target" title="端午活动" />
 					</div>
 				</div>
 			</div>

@@ -39,7 +39,6 @@
 			computed: {},
 			methods: {},
 			components: {
-				"nvHead": require('../../../components/header.vue'),
 			},
 	}
 </script>
@@ -101,6 +100,15 @@
 	    		font-size: 33px;
 	    		color: #424441;
 	    		font-weight: bolder;
+	    	}
+	    	ul{
+	    		margin: 40px 50px;
+	    		font-size: 22px;
+	    		color: #979797;
+	    		line-height: 36px;
+	    		li{
+	    			margin-bottom: 20px;
+	    		}
 	    	}
 	    }
 	    
