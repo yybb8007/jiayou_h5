@@ -5,7 +5,9 @@
 			<div id="home_banner" class="swiper-container">
 				<!-- 轮播图 -->
 				<div class="swiper-wrapper" @click="eight">
-					<div class="swiper-slide" v-for="item in data[2]"><img src="../../../assets/images/components/xiaoman.jpg" alt="" ID="https://m2.t.jiayou9.com/#/teaProject" :target="item.target" title="小满活动" /></div>
+					<div class="swiper-slide" v-for="item in data[2]">
+						<img v-lazy="item.logo" alt="" :ID="item.data" :target="item.target" title="小满活动" />
+					</div>
 				</div>
 			</div>
 
@@ -74,7 +76,7 @@
 									<!--<p class="title_massage title_st">源 于 自 然    纯 粹 健 康</p>-->
 								</div>
 								<div class="title_img" v-for="item in data[8]" @click="eight">
-									<img src="../../../assets/images/components/shengtai-banner.jpg" alt="" ID="https://m2.t.jiayou9.com/#/3/12" :target="item.target" title="生态馆" @click="eight" />
+									<img v-lazy="item.logo" alt="" ID="https://m2.t.jiayou9.com/#/3/12" :target="item.target" title="生态馆" @click="eight" />
 								</div>
 							</article>
 							<article class="main_data">
@@ -469,7 +471,7 @@
 			mounted: function() {
 				this.$http.jsonp('https://a1.t.jiayou9.com/page/index?debug=1&format=jsonp').then(function(res) {
 					this.data = res.body.data;
-//					console.log(JSON.parse(JSON.stringify(this.data)));
+					console.log(JSON.parse(JSON.stringify(this.data)));
 					// 轮播图
 					var mySwiper = new Swiper('.swiper-container', {
 						direction: 'horizontal',

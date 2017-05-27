@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section id="box" @scroll="onscroll_fixed">
 		<!--<header id="goods_header" name = "goods_header">
 			<i class="jy_iconfont icon_close"></i>
 			<i class="jy_iconfont icon_more"></i>
@@ -22,12 +22,38 @@
 			</article>
 			
 			<article class="upLoad">图文详情</article>
-			<article class="goods_img" v-html="data2.goods_desc"></article>
+			<header>
+				<ul id="fixedtop">
+					<li class="left" @click="left">商品</li>
+					<li class="right" @click="right">规格参数</li>
+				</ul>
+			</header>
+			<article id="wrapper1" class="goods_img" v-html="data2.goods_desc"></article>
+			<section id="wrapper2">
+				<table border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<th>主体</th>
+						<td>贵州特产万康乐苦荞茶五行黑茶</td>
+					</tr>
+					<tr>
+						<th>品牌</th>
+						<td>万康乐</td>
+					</tr>
+					<tr>
+						<th>规格</th>
+						<td>120g/盒</td>
+					</tr>
+					<tr>
+						<th>储存方法</th>
+						<td>干燥阴凉环境下保存</td>
+					</tr>
+					<tr>
+						<th>适用人群</th>
+						<td>全部人群</td>
+					</tr>
+				</table>
+			</section>
 				
-				
-			<!--<a href="#jf_banner" id="maodian">
-				<span><i class="jy_iconfont icon_upload"></i></span>
-			</a>-->
 		</main>
 		<div class="download">
 			<p>下载app优惠更多哦！</p>
@@ -44,12 +70,53 @@
 				}
 			},
 			computed: {},
-			methods: {},
+			methods: {
+				left: function(){
+					$(".left").css("color","#ff4b3a");
+					$(".right").css("color","#333333");
+					$("#wrapper1").css("display","block");
+					$("#wrapper2").css("display","none");
+				},
+				right: function(){
+					$(".left").css("color","#333333");
+					$(".right").css("color","#ff4b3a");
+					$("#wrapper1").css("display","none");
+					$("#wrapper2").css("display","block");
+				},
+				onscroll_fixed: function(){
+					var top = $("#box").scrollTop();
+					console.log(top)
+					if (top >= 629) {
+						$("#fixedtop").css({
+							"position":"fixed",
+							"top": "0",
+							"left": "0",
+							"right": "0",
+							"background": "#fff"
+						});
+						$("#wrapper1").css("margin-top",$("#fixedtop").height() + "px");
+						$("#wrapper2").css("margin-top",$("#fixedtop").height() + "px");
+//						console.log($("#fixedtop").height())
+					} else if (top < 629) {
+						$("#fixedtop").css({
+							"position":"static",
+							"background": "#fff"
+						});
+						$("#wrapper1").css("margin-top", 0);
+						$("#wrapper2").css("margin-top", 0);
+					}
+				},
+				onScroll(){
+					console.log("aa")
+								},
+			},
 			components: {
 //				"nvHead": require('../../components/header.vue'),
 //				"nvFooter": require('../../components/footer.vue')
 			},
 			mounted: function(){
+				
+				
 				var str = location.href; //取得整个地址栏
 
 				var goods_id = str.split('goods_id=')[1];
@@ -94,8 +161,30 @@
 //					console.log(res.body.data.goods_id);
 //					console.log(res.body.data[8]);
 					
-				})
-				
+				});
+//				setInterval(function(){
+//					var top = $("#goods_main").offset().top;
+////					console.log(top)
+//					if (top <= (-626)) {
+//						$("#fixedtop").css({
+//							"position":"fixed",
+//							"top": "0",
+//							"left": "0",
+//							"right": "0",
+//							"background": "#fff"
+//						});
+//						$("#wrapper1").css("margin-top",$("#fixedtop").height() + "px");
+//						$("#wrapper2").css("margin-top",$("#fixedtop").height() + "px");
+////						console.log($("#fixedtop").height())
+//					} else if (top > (-626)) {
+//						$("#fixedtop").css({
+//							"position":"static",
+//							"background": "#fff"
+//						});
+//						$("#wrapper1").css("margin-top", 0);
+//						$("#wrapper2").css("margin-top", 0);
+//					}
+//				},1)
 			}
 	}
 </script>
@@ -212,6 +301,7 @@
 					}
 				}
 				ul{
+					background: #fff;
 					li{
 						border-top: 1px solid #eee;
 						padding: 0 24px;
@@ -262,6 +352,32 @@
 					}
 				}
 			}
+			header{
+				/*position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;*/
+				z-index: 100;
+				background: #fff;
+				ul{
+					height: 88px;
+					li{
+						margin: 22px 0;
+						display: inline-block;
+						height: 44px;
+						line-height: 44px;
+						text-align: center;
+						width: 49%;
+						font-size: 28px;
+						color: #333;
+					}
+					li:first-of-type{
+						border-right: 1px solid #c3c3c3;
+						color: #ff4b3a;
+						width: 49%;
+					}
+				}
+			}
 			.goods_img{
 				background: #fff;
 				img{
@@ -276,23 +392,34 @@
 				color: #999;
 				background: #fff;
 				margin-top: 24px;
+				border-bottom: 1px solid #ededed;
 			}
-			#maodian{
-				position: fixed;
-				right: 24px;
-				bottom: 110px;
-				span{
-					display: block;
-					height: 60px;
-					width: 60px;
-					border: 1px solid #84b83a;
-					border-radius: 50%;
-					line-height: 55px;
-					text-align: center;
-					color: #84B83A;
+			#wrapper2{
+				width: 100%;
+				color: #666;
+				height: 1160px;
+				background: #fff;
+				font-size: 24px;
+				display: none;
+				table{
+					height: 440px;
+					width: 700px;
+					margin-left: 24px;
+					tr{
+						td{
+							border: 1px solid #e6e6e6;
+							vertical-align: middle;
+							padding-left: 50px;
+						}
+						th{
+							border: 1px solid #e6e6e6;
+							vertical-align: middle;
+							padding-left: 50px;
+							color: #333;
+						}
+					}
 				}
 			}
-			
 		}
 		#goods_footer{
 			height: 98px;

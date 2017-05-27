@@ -172,18 +172,18 @@ webpackJsonp([15],{
 
 /***/ },
 
-/***/ 131:
+/***/ 129:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(132)
+	__webpack_require__(130)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(133),
+	  __webpack_require__(131),
 	  /* template */
-	  __webpack_require__(134),
+	  __webpack_require__(132),
 	  /* scopeId */
 	  "data-v-769fadd6",
 	  /* cssModules */
@@ -211,14 +211,14 @@ webpackJsonp([15],{
 
 /***/ },
 
-/***/ 132:
+/***/ 130:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 133:
+/***/ 131:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -339,7 +339,7 @@ webpackJsonp([15],{
 
 /***/ },
 
-/***/ 134:
+/***/ 132:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -363,6 +363,20 @@ webpackJsonp([15],{
 	      staticClass: "swiper-slide"
 	    }, [_c('img', {
 	      attrs: {
+	        "src": __webpack_require__(133),
+	        "alt": "",
+	        "ID": item.data,
+	        "target": item.target
+	      }
+	    }), _vm._v(" "), _c('img', {
+	      attrs: {
+	        "src": __webpack_require__(134),
+	        "alt": "",
+	        "ID": item.data,
+	        "target": item.target
+	      }
+	    }), _vm._v(" "), _c('img', {
+	      attrs: {
 	        "src": __webpack_require__(135),
 	        "alt": "",
 	        "ID": item.data,
@@ -378,20 +392,6 @@ webpackJsonp([15],{
 	    }), _vm._v(" "), _c('img', {
 	      attrs: {
 	        "src": __webpack_require__(137),
-	        "alt": "",
-	        "ID": item.data,
-	        "target": item.target
-	      }
-	    }), _vm._v(" "), _c('img', {
-	      attrs: {
-	        "src": __webpack_require__(138),
-	        "alt": "",
-	        "ID": item.data,
-	        "target": item.target
-	      }
-	    }), _vm._v(" "), _c('img', {
-	      attrs: {
-	        "src": __webpack_require__(139),
 	        "alt": "",
 	        "ID": item.data,
 	        "target": item.target
@@ -506,35 +506,35 @@ webpackJsonp([15],{
 
 /***/ },
 
-/***/ 135:
+/***/ 133:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/banshou1.jpg?v=cd8fbff4";
 
 /***/ },
 
-/***/ 136:
+/***/ 134:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/banshou2.jpg?v=ca2d4961";
 
 /***/ },
 
-/***/ 137:
+/***/ 135:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/banshou3.jpg?v=c844a8f0";
 
 /***/ },
 
-/***/ 138:
+/***/ 136:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/banshou4.jpg?v=4b1359af";
 
 /***/ },
 
-/***/ 139:
+/***/ 137:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/banshou5.jpg?v=791c77e7";

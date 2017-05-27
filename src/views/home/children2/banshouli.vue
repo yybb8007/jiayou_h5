@@ -170,7 +170,6 @@
 							background: #fff;
 							a{
 								flex: 1;
-
 								li{
 									text-align: center;
 									span{

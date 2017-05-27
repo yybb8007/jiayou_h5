@@ -31,7 +31,7 @@ webpackJsonp([6],{
 	  /* script */
 	  __webpack_require__(88),
 	  /* template */
-	  __webpack_require__(93),
+	  __webpack_require__(95),
 	  /* scopeId */
 	  "data-v-71d2edf9",
 	  /* cssModules */
@@ -79,10 +79,16 @@ webpackJsonp([6],{
 
 	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
+	var _stringify = __webpack_require__(93);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
 	var _data$computed$method;
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	//
+	//
 	//
 	//
 	//
@@ -549,7 +555,7 @@ webpackJsonp([6],{
 	}), (0, _defineProperty3.default)(_data$computed$method, 'components', {}), (0, _defineProperty3.default)(_data$computed$method, 'mounted', function mounted() {
 		this.$http.jsonp('https://a1.t.jiayou9.com/page/index?debug=1&format=jsonp').then(function (res) {
 			this.data = res.body.data;
-			//					console.log(JSON.parse(JSON.stringify(this.data)));
+			console.log(JSON.parse((0, _stringify2.default)(this.data)));
 			// 轮播图
 			var mySwiper = new Swiper('.swiper-container', {
 				direction: 'horizontal',
@@ -652,6 +658,24 @@ webpackJsonp([6],{
 /***/ 93:
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = { "default": __webpack_require__(94), __esModule: true };
+
+/***/ },
+
+/***/ 94:
+/***/ function(module, exports, __webpack_require__) {
+
+	var core  = __webpack_require__(23)
+	  , $JSON = core.JSON || (core.JSON = {stringify: JSON.stringify});
+	module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
+	  return $JSON.stringify.apply($JSON, arguments);
+	};
+
+/***/ },
+
+/***/ 95:
+/***/ function(module, exports, __webpack_require__) {
+
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: "wrap-top"
@@ -677,10 +701,15 @@ webpackJsonp([6],{
 	    return _c('div', {
 	      staticClass: "swiper-slide"
 	    }, [_c('img', {
+	      directives: [{
+	        name: "lazy",
+	        rawName: "v-lazy",
+	        value: (item.logo),
+	        expression: "item.logo"
+	      }],
 	      attrs: {
-	        "src": __webpack_require__(94),
 	        "alt": "",
-	        "ID": "https://m2.t.jiayou9.com/#/teaProject",
+	        "ID": item.data,
 	        "target": item.target,
 	        "title": "小满活动"
 	      }
@@ -738,8 +767,13 @@ webpackJsonp([6],{
 	        "click": _vm.eight
 	      }
 	    }, [_c('img', {
+	      directives: [{
+	        name: "lazy",
+	        rawName: "v-lazy",
+	        value: (item.logo),
+	        expression: "item.logo"
+	      }],
 	      attrs: {
-	        "src": __webpack_require__(95),
 	        "alt": "",
 	        "ID": "https://m2.t.jiayou9.com/#/3/12",
 	        "target": item.target,
@@ -1951,20 +1985,6 @@ webpackJsonp([6],{
 	     require("vue-hot-reload-api").rerender("data-v-71d2edf9", module.exports)
 	  }
 	}
-
-/***/ },
-
-/***/ 94:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "assets/xiaoman.jpg?v=959ce903";
-
-/***/ },
-
-/***/ 95:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "assets/shengtai-banner.jpg?v=6e2a5e59";
 
 /***/ },
 

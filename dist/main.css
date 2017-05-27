@@ -3780,24 +3780,74 @@ div[data-v-1f1780b0] {
   overflow: hidden;
   overflow-y: auto;
   font-size: 0;
+  background: #fff;
 }
-div section[data-v-1f1780b0] {
+div header[data-v-1f1780b0] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #fff;
+}
+div header ul[data-v-1f1780b0] {
+  height: 1.17333333rem;
+}
+div header ul li[data-v-1f1780b0] {
+  margin: 0.29333333rem 0;
+  display: inline-block;
+  height: 0.58666667rem;
+  line-height: 0.58666667rem;
+  text-align: center;
+  width: 50%;
+  font-size: 0.37333333rem;
+  color: #333;
+}
+div header ul li[data-v-1f1780b0]:first-of-type {
+  border-right: 0.01333333rem solid #c3c3c3;
+  color: #ff4b3a;
+}
+div #wrapper1[data-v-1f1780b0] {
   overflow-y: auto;
   width: 100%;
+  margin-top: 1.17333333rem;
 }
-div section div[data-v-1f1780b0] {
+div #wrapper1 div[data-v-1f1780b0] {
   overflow-y: auto;
   font-size: 0;
   width: 100%;
 }
-div section div p[data-v-1f1780b0] {
+div #wrapper1 div p[data-v-1f1780b0] {
   width: 100%;
 }
-div section div p span[data-v-1f1780b0] {
+div #wrapper1 div p span[data-v-1f1780b0] {
   display: none;
 }
-div section div p img[data-v-1f1780b0] {
+div #wrapper1 div p img[data-v-1f1780b0] {
   width: 100%;
+}
+div #wrapper2[data-v-1f1780b0] {
+  width: 100%;
+  margin-top: 1.17333333rem;
+  color: #666;
+  font-size: 0.32rem;
+  display: none;
+}
+div #wrapper2 table[data-v-1f1780b0] {
+  height: 5.86666667rem;
+  width: 9.33333333rem;
+  margin-left: 0.32rem;
+}
+div #wrapper2 table tr td[data-v-1f1780b0] {
+  border: 0.01333333rem solid #e6e6e6;
+  vertical-align: middle;
+  padding-left: 0.66666667rem;
+}
+div #wrapper2 table tr th[data-v-1f1780b0] {
+  border: 0.01333333rem solid #e6e6e6;
+  vertical-align: middle;
+  padding-left: 0.66666667rem;
+  color: #333;
 }
 *[data-v-474d28ea] {
   -webkit-touch-callout: none;
@@ -3937,7 +3987,7 @@ section ul li .main .content .goods_img[data-v-4911ee4b] {
 }
 section ul li .main .content .goods_img img[data-v-4911ee4b] {
   /*width: 80%;
-							margin-top: 13%;*/
+                            margin-top: 13%;*/
   width: 4.4rem;
   margin-top: 15%;
 }
@@ -4008,6 +4058,69 @@ section div ul li .content[data-v-549626f8] {
 }
 section div ul li .indent[data-v-549626f8] {
   text-indent: 2em;
+}
+@charset "UTF-8";
+section[data-v-319a86ac] {
+  background: black;
+  /* 顶部标题行 */
+  /* 主体 */
+}
+section #all_header[data-v-319a86ac] {
+  width: 100%;
+  height: 1.17333333rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.32rem;
+  align-items: center;
+  font-size: 0.48rem;
+  /*position: fixed;
+    	top: 0;
+    	left: 0;*/
+  background: #fff;
+  z-index: 100;
+  border-bottom: 0.01333333rem solid #ededed;
+}
+section #all_header .icon_header[data-v-319a86ac]::before {
+  font-family: 'jyzx-iconfont';
+  content: "\E604";
+  font-size: 0.48rem;
+}
+section #all_header .icon_fenxiang[data-v-319a86ac]::before {
+  content: "\E648";
+  font-size: 0.66666667rem;
+  color: #c3c3c3;
+}
+section main[data-v-319a86ac] {
+  width: 8.49333333rem;
+  height: 12.66666667rem;
+  background: #fff;
+  border-radius: 0.24rem;
+  margin: 1.57333333rem auto;
+  padding-top: 0.66666667rem;
+}
+section main .title1[data-v-319a86ac],
+section main .title2[data-v-319a86ac],
+section main .title3[data-v-319a86ac] {
+  text-align: center;
+}
+section main .title1[data-v-319a86ac] {
+  font-size: 0.49333333rem;
+  color: #717370;
+}
+section main .title2[data-v-319a86ac] {
+  font-size: 0.77333333rem;
+  color: #92cb40;
+  font-weight: bolder;
+}
+section main .title3[data-v-319a86ac] {
+  font-size: 0.37333333rem;
+  color: #a4d361;
+}
+section main h3[data-v-319a86ac] {
+  text-align: center;
+  font-size: 0.44rem;
+  color: #424441;
+  font-weight: bolder;
 }
 @charset "UTF-8";
 section[data-v-0f2ebcb8] {
@@ -7127,6 +7240,9 @@ section #goods_main .evaluate .title .right i[data-v-64c9fa12] {
   margin-left: 0.10666667rem;
   font-size: 0.48rem;
 }
+section #goods_main .evaluate ul[data-v-64c9fa12] {
+  background: #fff;
+}
 section #goods_main .evaluate ul li[data-v-64c9fa12] {
   border-top: 0.01333333rem solid #eee;
   padding: 0 0.32rem;
@@ -7175,6 +7291,32 @@ section #goods_main .evaluate .lookMore i[data-v-64c9fa12] {
   margin-left: 0.16rem;
   font-size: 0.53333333rem;
 }
+section #goods_main header[data-v-64c9fa12] {
+  /*position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;*/
+  z-index: 100;
+  background: #fff;
+}
+section #goods_main header ul[data-v-64c9fa12] {
+  height: 1.17333333rem;
+}
+section #goods_main header ul li[data-v-64c9fa12] {
+  margin: 0.29333333rem 0;
+  display: inline-block;
+  height: 0.58666667rem;
+  line-height: 0.58666667rem;
+  text-align: center;
+  width: 49%;
+  font-size: 0.37333333rem;
+  color: #333;
+}
+section #goods_main header ul li[data-v-64c9fa12]:first-of-type {
+  border-right: 0.01333333rem solid #c3c3c3;
+  color: #ff4b3a;
+  width: 49%;
+}
 section #goods_main .goods_img[data-v-64c9fa12] {
   background: #fff;
 }
@@ -7189,21 +7331,31 @@ section #goods_main .upLoad[data-v-64c9fa12] {
   color: #999;
   background: #fff;
   margin-top: 0.32rem;
+  border-bottom: 0.01333333rem solid #ededed;
 }
-section #goods_main #maodian[data-v-64c9fa12] {
-  position: fixed;
-  right: 0.32rem;
-  bottom: 1.46666667rem;
+section #goods_main #wrapper2[data-v-64c9fa12] {
+  width: 100%;
+  color: #666;
+  height: 15.46666667rem;
+  background: #fff;
+  font-size: 0.32rem;
+  display: none;
 }
-section #goods_main #maodian span[data-v-64c9fa12] {
-  display: block;
-  height: 0.8rem;
-  width: 0.8rem;
-  border: 0.01333333rem solid #84b83a;
-  border-radius: 50%;
-  line-height: 0.73333333rem;
-  text-align: center;
-  color: #84B83A;
+section #goods_main #wrapper2 table[data-v-64c9fa12] {
+  height: 5.86666667rem;
+  width: 9.33333333rem;
+  margin-left: 0.32rem;
+}
+section #goods_main #wrapper2 table tr td[data-v-64c9fa12] {
+  border: 0.01333333rem solid #e6e6e6;
+  vertical-align: middle;
+  padding-left: 0.66666667rem;
+}
+section #goods_main #wrapper2 table tr th[data-v-64c9fa12] {
+  border: 0.01333333rem solid #e6e6e6;
+  vertical-align: middle;
+  padding-left: 0.66666667rem;
+  color: #333;
 }
 section #goods_footer[data-v-64c9fa12] {
   height: 1.30666667rem;

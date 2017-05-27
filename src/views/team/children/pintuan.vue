@@ -178,7 +178,7 @@
 					        var now = new Date;
 					        // 结束时间
 //					        var ending = new Date("2017/5/25");
-					        var ending = new Date("2017/5/26").valueOf();
+					        var ending = new Date("2017/5/27").valueOf();
 //					      	var ending = res.body.data.end_time;
 					        if (now >= ending) {
 					            clearTimeout(this.timeout);

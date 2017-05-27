@@ -40,6 +40,7 @@ const download = r => require.ensure([], () => r(require('./views/home/children2
 const download1 = r => require.ensure([], () => r(require('./views/home/children2/download1')), 'download1') //下载页
 const teaProject = r => require.ensure([], () => r(require('./views/home/children2/teaProject')), 'teaProject') //茶专题 
 const Agreement = r => require.ensure([], () => r(require('./views/home/children2/Agreement')), 'Agreement') //用户协议 
+const yaoqingli_guize = r => require.ensure([], () => r(require('./views/home/children2/yaoqingli_guize')), 'yaoqingli_guize') // 邀请有礼--奖励规则
 
 //首页伴手礼中的价格分类路由
 const banshouli_one = r => require.ensure([], () => r(require('./views/home/children2/banshouli_children/banshouli_one')),'banshouli_one')//伴手礼--100以内
@@ -231,6 +232,9 @@ export default [{
 		}, {
 			path: 'meishi1', //首页---美食 二级路由
 			component: meishi
+		}, {
+			path: 'yaoqingli_guize', //首页---邀请有礼--奖励规则
+			component: yaoqingli_guize
 		},
 		//分类页
 		{

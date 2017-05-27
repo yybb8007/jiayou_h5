@@ -20,18 +20,18 @@ webpackJsonp([22],{
 
 /***/ },
 
-/***/ 164:
+/***/ 162:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(165)
+	__webpack_require__(163)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(166),
+	  __webpack_require__(164),
 	  /* template */
-	  __webpack_require__(167),
+	  __webpack_require__(165),
 	  /* scopeId */
 	  "data-v-474d28ea",
 	  /* cssModules */
@@ -59,14 +59,14 @@ webpackJsonp([22],{
 
 /***/ },
 
-/***/ 165:
+/***/ 163:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 166:
+/***/ 164:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -136,7 +136,7 @@ webpackJsonp([22],{
 
 /***/ },
 
-/***/ 167:
+/***/ 165:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -147,7 +147,7 @@ webpackJsonp([22],{
 	    }
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(168),
+	      "src": __webpack_require__(166),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('article', {
@@ -198,7 +198,7 @@ webpackJsonp([22],{
 
 /***/ },
 
-/***/ 168:
+/***/ 166:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/download.jpg?v=91e48066";
