@@ -13,7 +13,18 @@
         			<p class="title2">满99减80元券</p>
         		</div>
         		<div class="box2">
-        			
+        			<header>活动时间：2017.1.18至2017.1.18</header>
+        			<main>
+        				<div class="left">
+        					<img src="../../../../dist/assets/iphone7.jpg"/>
+        				</div>
+        				<div class="right">
+        					<p class="first">分享达20人</p>
+        					<p class="second">可赢得价值</p>
+        					<p class="third"><span>￥</span>7199</p>
+        					<p class="fourth">iphone 7 plus</p>
+        				</div>
+        			</main>
         		</div>
         		
         	</main>
@@ -104,6 +115,55 @@
 		   		margin: 0 auto;
 		   		text-align: center;
 		   		margin-top: 5px;
+		   		header{
+		   			height: 87px;
+		   			text-align: center;
+		   			font-size: 28px;
+		   			color: #939393;
+		   			line-height: 87px;
+		   		}
+		   		main{
+		   			.left{
+		   				height: 435px;
+		   				width: 297px;
+		   				background: aquamarine;
+		   				float: left;
+		   				margin-left: 57px;
+		   				img{
+		   					width: 100%;
+		   					height: 100%;
+		   				}
+		   			}
+		   			.right{
+		   				float: right;
+		   				height: 435px;
+		   				width: 230px;
+		   				margin-right: 38px;
+		   				text-align: right;
+		   				.first{
+		   					font-size: 23px;
+		   					color: #6f6f6f;
+		   					margin-top: 65px;
+		   				}
+		   				.second{
+		   					font-size: 36px;
+		   					color: #737572;
+		   					font-weight: bold;
+		   				}
+		   				.third{
+		   					font-size: 53px;
+		   					color: #85b93a;
+		   					font-weight: bolder;
+		   					span{
+		   						font-size: 36px;
+		   					}
+		   				}
+		   				.fourth{
+		   					font-size: 27px;
+		   					color: #6e706f;
+		   				}
+		   			}
+		   		}
 		   	}
 	    }
 	   /* 立刻邀请按钮 */
@@ -119,7 +179,7 @@
 		  	font-size: 33px;
 		  	color: #fff;
 		}
-	  /*底部信息*/
+	  	/* 底部信息 */
 		#footer{
 		 	text-align: center;
 		 	font-size: 28px;
