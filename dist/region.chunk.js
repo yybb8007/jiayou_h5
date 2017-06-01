@@ -1,17 +1,17 @@
-webpackJsonp([42],{
+webpackJsonp([43],{
 
-/***/ 258:
+/***/ 264:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(259)
+	__webpack_require__(265)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(260),
+	  __webpack_require__(266),
 	  /* template */
-	  __webpack_require__(261),
+	  __webpack_require__(267),
 	  /* scopeId */
 	  "data-v-64383cac",
 	  /* cssModules */
@@ -39,14 +39,14 @@ webpackJsonp([42],{
 
 /***/ },
 
-/***/ 259:
+/***/ 265:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 260:
+/***/ 266:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -145,7 +145,7 @@ webpackJsonp([42],{
 
 /***/ },
 
-/***/ 261:
+/***/ 267:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -160,7 +160,7 @@ webpackJsonp([42],{
 	    staticClass: "gp_region"
 	  }, [_c('ul', [_c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(262),
+	      "src": __webpack_require__(268),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -169,7 +169,7 @@ webpackJsonp([42],{
 	    staticClass: "reg_explain"
 	  }, [_vm._v("贵州西部旅游中心")])])]), _vm._v(" "), _c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(262),
+	      "src": __webpack_require__(268),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -178,7 +178,7 @@ webpackJsonp([42],{
 	    staticClass: "reg_explain"
 	  }, [_vm._v("贵州西部旅游中心")])])]), _vm._v(" "), _c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(262),
+	      "src": __webpack_require__(268),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -187,7 +187,7 @@ webpackJsonp([42],{
 	    staticClass: "reg_explain"
 	  }, [_vm._v("贵州西部旅游中心")])])]), _vm._v(" "), _c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(262),
+	      "src": __webpack_require__(268),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -196,7 +196,7 @@ webpackJsonp([42],{
 	    staticClass: "reg_explain"
 	  }, [_vm._v("贵州西部旅游中心")])])]), _vm._v(" "), _c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(262),
+	      "src": __webpack_require__(268),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -205,7 +205,7 @@ webpackJsonp([42],{
 	    staticClass: "reg_explain"
 	  }, [_vm._v("贵州西部旅游中心")])])]), _vm._v(" "), _c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(262),
+	      "src": __webpack_require__(268),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -214,7 +214,7 @@ webpackJsonp([42],{
 	    staticClass: "reg_explain"
 	  }, [_vm._v("贵州西部旅游中心")])])]), _vm._v(" "), _c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(262),
+	      "src": __webpack_require__(268),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -223,7 +223,7 @@ webpackJsonp([42],{
 	    staticClass: "reg_explain"
 	  }, [_vm._v("贵州西部旅游中心")])])]), _vm._v(" "), _c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(262),
+	      "src": __webpack_require__(268),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -232,7 +232,7 @@ webpackJsonp([42],{
 	    staticClass: "reg_explain"
 	  }, [_vm._v("贵州西部旅游中心")])])]), _vm._v(" "), _c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(262),
+	      "src": __webpack_require__(268),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -251,7 +251,7 @@ webpackJsonp([42],{
 
 /***/ },
 
-/***/ 262:
+/***/ 268:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/region.png?v=5af19ecd";

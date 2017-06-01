@@ -1,14 +1,14 @@
 <template>
 	<div id="xiangqingye">
-		<header>
+		<!--<header>
 			<ul>
 				<li class="left" @click="left">商品</li>
 				<li class="right" @click="right">规格参数</li>
 			</ul>
 		</header>
-		<section id="wrapper1">
+		<section id="wrapper1">-->
 			<div v-html="data.goods_desc"></div>
-		</section>
+		<!--</section>
 		<section id="wrapper2">
 			<table border="1" cellspacing="0" cellpadding="0">
 				<tr>
@@ -31,7 +31,7 @@
 					<th>适用人群</th>
 					<td>全部人群</td>
 				</tr>
-			</table>
+			</table>-->
 		</section>
 	</div>
 </template>
@@ -105,7 +105,6 @@
 				// 获取数据
 				this.$http.jsonp(changeURLArg('https://a1.t.jiayou9.com/product/description?id=378&debug=1&device_type=3&format=jsonp','id',Request.goods_id)).then(function(res) {
 					this.data = res.body.data;
-					
 				})
 
 			}

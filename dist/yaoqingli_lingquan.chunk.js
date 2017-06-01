@@ -1,17 +1,17 @@
 webpackJsonp([28],{
 
-/***/ 200:
+/***/ 201:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(201)
+	__webpack_require__(202)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(202),
-	  /* template */
 	  __webpack_require__(203),
+	  /* template */
+	  __webpack_require__(204),
 	  /* scopeId */
 	  "data-v-1f84c673",
 	  /* cssModules */
@@ -39,14 +39,14 @@ webpackJsonp([28],{
 
 /***/ },
 
-/***/ 201:
+/***/ 202:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 202:
+/***/ 203:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -54,6 +54,33 @@ webpackJsonp([28],{
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	//
 	//
 	//
@@ -88,35 +115,17 @@ webpackJsonp([28],{
 
 /***/ },
 
-/***/ 203:
+/***/ 204:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _vm._m(0)
+	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', [_c('section', {
 	    attrs: {
 	      "id": "wrapper"
 	    }
-	  }, [_c('header', {
-	    attrs: {
-	      "id": "all_header"
-	    }
-	  }, [_c('router-link', {
-	    attrs: {
-	      "id": "back",
-	      "to": "/"
-	    }
-	  }, [_c('i', {
-	    staticClass: "iconfont icon_header"
-	  })]), _vm._v(" "), _c('p', [_vm._v("邀请有礼")]), _vm._v(" "), _c('router-link', {
-	    attrs: {
-	      "id": "guize",
-	      "to": "/yaoqingli_guize"
-	    }
-	  }, [_c('span', [_vm._v("奖励规则")])])], 1), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('div', {
-	    staticClass: "menu"
-	  }, [_vm._v("点击领取")])])])
-	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('main', {
+	  }, [_c('main', {
 	    staticClass: "main1"
 	  }, [_c('div', {
 	    staticClass: "box1"
@@ -126,7 +135,25 @@ webpackJsonp([28],{
 	    staticClass: "title2"
 	  }, [_vm._v("满99减80元券")])]), _vm._v(" "), _c('div', {
 	    staticClass: "box2"
-	  }, [_vm._v("老用户可领取5折优惠券")])])
+	  }, [_vm._v("老用户可领取5折优惠券")])]), _vm._v(" "), _c('div', {
+	    staticClass: "menu"
+	  }, [_vm._v("点击领取")])]), _vm._v(" "), _c('div', {
+	    staticClass: "fuceng1"
+	  }, [_c('div', {
+	    staticClass: "lingquan"
+	  }, [_c('div', {
+	    staticClass: "fuceng1_top"
+	  }, [_c('div', {
+	    staticClass: "left"
+	  }, [_c('span', [_vm._v("￥")]), _vm._v("100\n\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+	    staticClass: "right"
+	  }, [_c('header', [_vm._v("限量限时领取")]), _vm._v(" "), _c('main', [_vm._v("单笔订单满200 元使用")])])]), _vm._v(" "), _c('div', {
+	    staticClass: "fuceng1_bottom"
+	  }, [_vm._v("立即领取")])])]), _vm._v(" "), _c('div', {
+	    staticClass: "fuceng2"
+	  }, [_c('main', [_vm._v("\n\t\t\t\t恭喜您获得价值"), _c('span', [_vm._v("200")]), _vm._v("的优惠券\n\t\t\t")])]), _vm._v(" "), _c('div', {
+	    staticClass: "fuceng3"
+	  }, [_c('main', [_vm._v("\n\t\t\t\t亲~您的礼包已经领过了，"), _c('br'), _vm._v("赶紧去商城买买买！\n\t\t\t")])])])
 	}]}
 	module.exports.render._withStripped = true
 	if (false) {

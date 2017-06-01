@@ -1,4 +1,4 @@
-webpackJsonp([50],{
+webpackJsonp([29],{
 
 /***/ 52:
 /***/ function(module, exports, __webpack_require__) {
@@ -20,47 +20,26 @@ webpackJsonp([50],{
 
 /***/ },
 
-/***/ 303:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "assets/juzi.jpg?v=d487ee7c";
-
-/***/ },
-
-/***/ 304:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "assets/dengdaichengtuan.png?v=23e4f7fe";
-
-/***/ },
-
-/***/ 305:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "assets/wawa@2x.png?v=19fea42d";
-
-/***/ },
-
-/***/ 306:
+/***/ 205:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(307)
+	__webpack_require__(206)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(308),
+	  __webpack_require__(207),
 	  /* template */
-	  __webpack_require__(309),
+	  __webpack_require__(208),
 	  /* scopeId */
-	  "data-v-e2fc14b0",
+	  "data-v-00169872",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\team\\children\\pintuan3.vue"
+	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\home\\children2\\yaoqingli_phone.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-	if (Component.options.functional) {console.error("[vue-loader] pintuan3.vue: functional components are not supported with templates, they should use render functions.")}
+	if (Component.options.functional) {console.error("[vue-loader] yaoqingli_phone.vue: functional components are not supported with templates, they should use render functions.")}
 
 	/* hot reload */
 	if (false) {(function () {
@@ -69,9 +48,9 @@ webpackJsonp([50],{
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-e2fc14b0", Component.options)
+	    hotAPI.createRecord("data-v-00169872", Component.options)
 	  } else {
-	    hotAPI.reload("data-v-e2fc14b0", Component.options)
+	    hotAPI.reload("data-v-00169872", Component.options)
 	  }
 	})()}
 
@@ -80,17 +59,17 @@ webpackJsonp([50],{
 
 /***/ },
 
-/***/ 307:
+/***/ 206:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 308:
+/***/ 207:
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+	/* WEBPACK VAR INJECTION */(function($) {"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -129,293 +108,219 @@ webpackJsonp([50],{
 	//
 	//
 	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
 
+	var countdown = 60; // 全局定义倒计时时间
+	var code; //在全局定义验证码   
 	exports.default = {
 		data: function data() {
-			return {
-				headTit: {
-					title: '我的家有',
-					back: 'ok'
-				}
-			};
+			return {};
 		},
 
 		computed: {},
 		methods: {
-			// 参团详情显示隐藏
-			show: function show() {
-				if ($(".xiangqingye").css("display") == "none") {
-					$(".xiangqingye").show();
-					$(".sanjiao").css({
-						"transform": "rotateZ(180deg)",
-						"position": "relative",
-						"top": "0"
-					});
+			settime: function settime(val) {
+				var timer = setInterval(function () {
+					if (countdown == 0) {
+						$("#obtain")[0].innerHTML = "获取验证码";
+						countdown = 60;
+						alert("重新获取");
+						// 清除定时器
+						clearInterval(timer);
+						console.log($("#obtain")[0].innerHTML);
+					} else {
+						$("#obtain")[0].innerHTML = countdown + "秒后重新获取";
+						countdown--;
+						console.log(countdown);
+						console.log($("#obtain")[0].innerHTML);
+					};
+				}, 1000);
+			},
+
+			//校验验证码  
+			validate: function validate() {
+				var inputCode = document.getElementById("input").value.toUpperCase(); //取得输入的验证码并转化为大写        
+				if (inputCode.length <= 0) {
+					//若输入的验证码长度为0  
+					alert("请输入验证码！"); //则弹出请输入验证码  
+				} else if (inputCode != code.toUpperCase()) {
+					//若输入的验证码与产生的验证码不一致时  
+					alert("验证码输入错误！@_@"); //则弹出验证码输入错误  
+					createCode(); //刷新验证码  
+					document.getElementById("input").value = ""; //清空文本框  
 				} else {
-					$(".xiangqingye").hide();
-					$(".sanjiao").css({
-						"transform": "rotateZ(0)",
-						"position": "relative",
-						"top": "4px"
-					});
+					//输入正确时  
+					alert("^-^"); //弹出^-^  
 				}
+				// 产生验证码
+				function createCode() {
+					code = "";
+					var codeLength = 4; //验证码的长度  
+					var checkCode = document.getElementById("code");
+					var random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); // 随机数  
+					for (var i = 0; i < codeLength; i++) {
+						//循环操作  
+						var index = Math.floor(Math.random() * 61); //取得随机数的索引（0~35）  
+						code += random[index]; //根据索引取得随机数加到code上  
+					}
+					var r = parseInt(Math.random(0, 255) * 255);
+					var g = parseInt(Math.random(0, 255) * 255);
+					var b = parseInt(Math.random(0, 255) * 255);
+					checkCode.style.color = "rgb(" + r + "," + g + "," + b + ")";
+					checkCode.innerHTML = code; //把code值赋给验证码
+					checkCode.style.borderColor = "rgb(" + r + "," + g + "," + b + ")";
+					// 图片验证码位置
+					var rz = parseInt(Math.random(-45, 45) * 90 - 45);
+					checkCode.style.transform = "rotateZ(" + rz + "deg)";
+				}
+			},
+
+			// 产生验证码
+			createCode: function createCode() {
+				code = "";
+				var codeLength = 4; //验证码的长度  
+				var checkCode = document.getElementById("code");
+				var random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); // 随机数  
+				for (var i = 0; i < codeLength; i++) {
+					//循环操作  
+					var index = Math.floor(Math.random() * 61); //取得随机数的索引（0~60）  
+					code += random[index]; //根据索引取得随机数加到code上  
+				}
+				var r = parseInt(Math.random(0, 255) * 255);
+				var g = parseInt(Math.random(0, 255) * 255);
+				var b = parseInt(Math.random(0, 255) * 255);
+				checkCode.style.color = "rgb(" + r + "," + g + "," + b + ")";
+				checkCode.innerHTML = code; //把code值赋给验证码  
+				checkCode.style.borderColor = "rgb(" + r + "," + g + "," + b + ")";
+				// 图片验证码位置
+				var rz = parseInt(Math.random(-45, 45) * 90 - 45);
+				checkCode.style.transform = "rotateZ(" + rz + "deg)";
 			}
 		},
-		components: {
-			//				"nvHead": require('../../../components/header.vue'),
-		}
+		components: {}
 	};
+	// 产生验证码
 
-	// 倒计时
-
-	var countdown = function countdown() {
-		var reg = /^\d{2}$/;
-		// 当前时间
-		var now = new Date();
-		// 结束时间
-		var ending = new Date("2017/5/10");
-		//      var ending = new Date(new Date().getTime() + 86400000);
-		if (now >= ending) {
-			clearTimeout(this.timeout);
-			return;
+	window.onload = function createCode() {
+		code = "";
+		var codeLength = 4; //验证码的长度  
+		var checkCode = document.getElementById("code");
+		var random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); //随机数  
+		for (var i = 0; i < codeLength; i++) {
+			//循环操作  
+			var index = Math.floor(Math.random() * 61); //取得随机数的索引（0~60）  
+			code += random[index]; //根据索引取得随机数加到code上  
 		}
-		var disc = ending - now;
-		// 天数
-		var day = parseInt(disc / 1000 / 60 / 60 / 24);
-		// 小时数
-		//      var hour = parseInt (disc / 1000 / 60 / 60 % 24);
-		var hour = parseInt(disc / 1000 / 60 / 60);
-		hour = !reg.test(hour) ? "0" + hour : hour;
-		// 分钟数
-		var minute = parseInt(disc / 1000 / 60 % 60);
-		minute = !reg.test(minute) ? "0" + minute : minute;
-		// 秒数
-		var second = parseInt(disc / 1000 % 60);
-		second = !reg.test(second) ? "0" + second : second;
-		// 获取到时、分、秒
-		var hours = document.querySelector(".hour");
-		var minutes = document.querySelector(".minute");
-		var seconds = document.querySelector(".second");
-		// 赋值给时、分、秒
-		hours.innerHTML = hour;
-		minutes.innerHTML = minute;
-		seconds.innerHTML = second;
-		this.timeout = setTimeout(countdown, 1000);
+		var r = parseInt(Math.random(0, 255) * 255);
+		var g = parseInt(Math.random(0, 255) * 255);
+		var b = parseInt(Math.random(0, 255) * 255);
+		checkCode.style.color = "rgb(" + r + "," + g + "," + b + ")";
+		checkCode.innerHTML = code; //把code值赋给验证码  
+		checkCode.style.borderColor = "rgb(" + r + "," + g + "," + b + ")";
+		// 图片验证码位置
+		var rz = parseInt(Math.random(-45, 45) * 90 - 45);
+		checkCode.style.transform = "rotateZ(" + rz + "deg)";
 	};
-	onload = countdown;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)))
 
 /***/ },
 
-/***/ 309:
+/***/ 208:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', [_c('section', {
-	    staticClass: "jy_main",
 	    attrs: {
 	      "id": "wrapper"
 	    }
-	  }, [_c('header', {
+	  }, [_vm._m(0), _vm._v(" "), _c('main', {
+	    staticClass: "main1"
+	  }, [_vm._m(1), _vm._v(" "), _c('form', {
+	    attrs: {
+	      "action": ""
+	    }
+	  }, [_c('ul', [_c('li', {
+	    staticClass: "phone"
+	  }, [_vm._v("手机号\n        \t\t\t\t\t"), _c('input', {
+	    attrs: {
+	      "type": "tel",
+	      "placeholder": "请填写绑定手机号"
+	    }
+	  }), _vm._v(" "), _c('span', {
+	    attrs: {
+	      "id": "obtain"
+	    },
+	    on: {
+	      "click": function($event) {
+	        _vm.settime(this)
+	      }
+	    }
+	  }, [_vm._v("获取验证码")])]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('li', {
+	    staticClass: "images"
+	  }, [_vm._v("图片验证码\n        \t\t\t\t \t"), _c('input', {
+	    attrs: {
+	      "id": "input",
+	      "type": "text",
+	      "placeholder": "(点击图片刷新)"
+	    }
+	  }), _vm._v(" "), _c('span', {
+	    attrs: {
+	      "id": "code"
+	    },
+	    on: {
+	      "click": _vm.createCode
+	    }
+	  })])])])]), _vm._v(" "), _c('div', {
+	    staticClass: "menu",
+	    on: {
+	      "click": _vm.validate
+	    }
+	  }, [_vm._v("立刻绑定")]), _vm._v(" "), _vm._m(3)])])
+	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('header', {
 	    attrs: {
 	      "id": "all_header"
 	    }
-	  }, [_c('router-link', {
-	    attrs: {
-	      "to": "/"
-	    }
-	  }, [_c('i', {
-	    staticClass: "jy_iconfont icon_header"
-	  })]), _vm._v(" "), _c('p', {
-	    staticClass: "all_title"
-	  }, [_vm._v("拼拼")]), _vm._v(" "), _c('i', {
-	    staticClass: "iconfont icon_fenxiang"
-	  })], 1), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('div', {
-	    staticClass: "cantuan"
-	  }, [_vm._m(3), _vm._v(" "), _vm._m(4), _vm._v(" "), _vm._m(5), _vm._v(" "), _vm._m(6), _vm._v(" "), _c('div', {
-	    staticClass: "xiangqing",
-	    on: {
-	      "click": _vm.show
-	    }
-	  }, [_vm._v("\n\t\t\t\t\t查看全部参团详情"), _c('span', {
-	    staticClass: "sanjiao"
-	  })]), _vm._v(" "), _vm._m(7)]), _vm._v(" "), _vm._m(8)])])
-	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "download"
-	  }, [_c('p', [_vm._v("下载app优惠更多哦！")]), _vm._v(" "), _c('a', {
-	    attrs: {
-	      "href": "http://m2.t.jiayou9.com/#/download"
-	    }
-	  }, [_vm._v("去下载")])])
+	  }, [_c('p', [_vm._v("绑定手机")])])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "main"
-	  }, [_c('div', {
-	    staticClass: "main_img"
-	  }, [_c('img', {
+	  return _c('header', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(303)
+	      "src": __webpack_require__(209)
 	    }
-	  })]), _vm._v(" "), _c('div', {
-	    staticClass: "main_message"
-	  }, [_c('h3', [_vm._v("老锄头复合红稗羹礼盒精装纯天然保健品补钙补气血滋补养生品")]), _vm._v(" "), _c('p', {
-	    staticClass: "tuan"
-	  }, [_vm._v("2人团")]), _vm._v(" "), _c('p', {
-	    staticClass: "shop_price"
-	  }, [_vm._v("￥"), _c('span', [_vm._v("99.00")])]), _vm._v(" "), _c('p', {
-	    staticClass: "market_price"
-	  }, [_c('span', [_vm._v("￥199.00")])])]), _vm._v(" "), _c('img', {
-	    staticClass: "dengdaichengtuan",
+	  }), _vm._v("为了您的账号安全，请及时绑定手机号")])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('li', {
+	    staticClass: "verification"
+	  }, [_vm._v("验证码\n        \t\t\t\t\t"), _c('input', {
 	    attrs: {
-	      "src": __webpack_require__(304)
+	      "type": "text",
+	      "placeholder": "请填写验证码"
 	    }
 	  })])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "pintuanwanfa"
-	  }, [_c('div', {
-	    staticClass: "title"
-	  }, [_vm._v("拼团玩法\n\t\t\t\t\t"), _c('span', [_vm._v("查看详情　>")])]), _vm._v(" "), _c('div', {
-	    staticClass: "pt_main"
-	  }, [_c('span', {
-	    staticClass: "span1"
-	  }, [_vm._v("选择商品")]), _vm._v(">\n\t\t\t\t\t"), _c('span', {
-	    staticClass: "span2"
-	  }, [_vm._v("支付开团")]), _vm._v(">\n\t\t\t\t\t"), _c('span', {
-	    staticClass: "span3"
-	  }, [_vm._v("等待好友参团支付")]), _vm._v(">\n\t\t\t\t\t"), _c('span', {
-	    staticClass: "span4"
-	  }, [_vm._v("达到人数参团成功")])])])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('h3', [_c('span', [_vm._v("2")]), _vm._v("人团")])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "touxiang"
-	  }, [_c('div', {
-	    staticClass: "touxiang1"
-	  }, [_c('img', {
+	  return _c('p', {
 	    attrs: {
-	      "src": __webpack_require__(305)
+	      "id": "footer"
 	    }
-	  })]), _vm._v(" "), _c('div', {
-	    staticClass: "touxiang2"
-	  })])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "xinxi"
-	  }, [_vm._v("\n\t\t\t\t\t还差"), _c('span', [_vm._v("1")]), _vm._v("人，盼你如盼年底的年终奖~\n\t\t\t\t")])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "time"
-	  }, [_c('span', {
-	    staticClass: "left"
-	  }), _vm._v("剩余"), _c('span', {
-	    staticClass: "hour"
-	  }, [_vm._v("00")]), _vm._v(" : "), _c('span', {
-	    staticClass: "minute"
-	  }, [_vm._v("00")]), _vm._v(" : "), _c('span', {
-	    staticClass: "second"
-	  }, [_vm._v("00")]), _vm._v("结束"), _c('span', {
-	    staticClass: "right"
-	  })])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "xiangqingye xianshi"
-	  }, [_c('ul', [_c('li', [_c('div', {
-	    staticClass: "touxiang1"
-	  }, [_c('img', {
+	  }, [_vm._v("收不到短信？请拨打"), _c('a', {
 	    attrs: {
-	      "src": __webpack_require__(305)
+	      "href": "tel:"
 	    }
-	  })]), _vm._v(" "), _c('div', {
-	    staticClass: "name"
-	  }, [_vm._v("猴纸先森")]), _vm._v(" "), _c('div', {
-	    staticClass: "cttime"
-	  }, [_vm._v("2017-1-10 16:56:06组团")])]), _vm._v(" "), _c('li', [_c('div', {
-	    staticClass: "touxiang2"
-	  }, [_c('img', {
-	    attrs: {
-	      "src": __webpack_require__(305)
-	    }
-	  })]), _vm._v(" "), _c('div', {
-	    staticClass: "name"
-	  }, [_vm._v("猴纸先森")]), _vm._v(" "), _c('div', {
-	    staticClass: "cttime"
-	  }, [_vm._v("2017-1-10 16:56:06参团")])])])])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "bottom"
-	  }, [_c('span', {
-	    staticClass: "bottom_left"
-	  }, [_c('i', {
-	    staticClass: "jy_iconfont main_pintuan"
-	  }), _vm._v("更多拼团")]), _vm._v(" "), _c('span', {
-	    staticClass: "bottom_right"
-	  }, [_vm._v("抢光了")])])
+	  }, [_vm._v("客服")])])
 	}]}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-e2fc14b0", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-00169872", module.exports)
 	  }
 	}
+
+/***/ },
+
+/***/ 209:
+/***/ function(module, exports) {
+
+	module.exports = "data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QMraHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkVCN0ZGNUY2NDY5RjExRTdBNDFEQzg3NEFGN0Y4ODdCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkVCN0ZGNUY3NDY5RjExRTdBNDFEQzg3NEFGN0Y4ODdCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RUI2RjFFQTA0NjlGMTFFN0E0MURDODc0QUY3Rjg4N0IiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RUI2RjFFQTE0NjlGMTFFN0E0MURDODc0QUY3Rjg4N0IiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAAGBAQEBQQGBQUGCQYFBgkLCAYGCAsMCgoLCgoMEAwMDAwMDBAMDg8QDw4MExMUFBMTHBsbGxwfHx8fHx8fHx8fAQcHBw0MDRgQEBgaFREVGh8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAAsACwDAREAAhEBAxEB/8QAegAAAQQDAQAAAAAAAAAAAAAABgADBAUBAgcIAQEBAAAAAAAAAAAAAAAAAAAAARAAAQIEAwUDBg8BAAAAAAAAAQIDABESBCETBTFBFBUGUXEWYaGxMqIzgZHB0SJSgrIjQ2OjRIQlJhEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A9LwAz1F1bwTyrSySlb6feuKxSk9gG8wFA31lryHKlPJcT9RSEgeyEnzwBjoOusatblSRlvtyDrU5ynsI8hgLSAUAoDkTy3HHnFue8UoqXPtJmYK0gL/olbidbCU+qttYX3DH0iCOgwCgFAA/UvS10i6cvLJsusukrW2gTUhRxMhvHdAD7Wn3zrmW3buKXspCFT9EFHHSvTy9NbXcXMuLdFNIxoTtlPtO+CCCAUBC1PVrLTWM25XKeCEJxUo+QQA0/wBfuVEW9oAncXFEn4gB6YBkdfahPG2Zl9r54CbZ9e261hN3bFoH8xBrA70kAwBQy80+0l1lYW2sTSsYgiA3gObdVXi7nW7gEzQycpsdgTt9qcBUQVO020t3EXF1dVG2tUpKm0GSlqWZJTPcO0wRdL0R5DOc5pFuy0ACVO3LglPZM5gEBZaMu/asrm305hLdyw8EuWr6ypCJgzKFDEg4YTgM+Kb2rgeFTzfNysur8OUp1z+ScBFvvBXG3HE5nEZi86WbKuo1bMNsAx/wX6n7sA+jwhy6+4fMyqE50q5zq+hTXhVVAYtOYcrvee53LspOVVTXOoUy31TltgIrfiekZXG5MhR6tUpYT+CAX+VwX8rnef8A2M2X3fPAf//Z"
 
 /***/ }
 

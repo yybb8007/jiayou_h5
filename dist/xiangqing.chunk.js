@@ -37,7 +37,7 @@ webpackJsonp([21],{
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\home\\children2\\xiangqing.vue"
+	Component.options.__file = "D:\\mywork\\jiayou_h5\\src\\views\\home\\children2\\xiangqing.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] xiangqing.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -140,11 +140,11 @@ webpackJsonp([21],{
 			// 截取id
 			function UrlSearch() {
 				var name, value;
-				var str = location.href; //取得整个地址栏
+				var str = location.href; // 取得整个地址栏
 				var num = str.indexOf("?");
-				str = str.substr(num + 1); //取得所有参数   stringvar.substr(start [, length ]
+				str = str.substr(num + 1); // 取得所有参数   stringvar.substr(start [, length ]
 
-				var arr = str.split("&"); //各个参数放到数组里
+				var arr = str.split("&"); // 各个参数放到数组里
 				for (var i = 0; i < arr.length; i++) {
 					num = arr[i].indexOf("=");
 					if (num > 0) {
@@ -154,7 +154,7 @@ webpackJsonp([21],{
 					}
 				}
 			}
-			var Request = new UrlSearch(); //实例化
+			var Request = new UrlSearch(); // 实例化
 			console.log(Request.goods_id);
 
 			// 替换id
@@ -198,38 +198,12 @@ webpackJsonp([21],{
 	    attrs: {
 	      "id": "xiangqingye"
 	    }
-	  }, [_c('header', [_c('ul', [_c('li', {
-	    staticClass: "left",
-	    on: {
-	      "click": _vm.left
-	    }
-	  }, [_vm._v("商品")]), _vm._v(" "), _c('li', {
-	    staticClass: "right",
-	    on: {
-	      "click": _vm.right
-	    }
-	  }, [_vm._v("规格参数")])])]), _vm._v(" "), _c('section', {
-	    attrs: {
-	      "id": "wrapper1"
-	    }
 	  }, [_c('div', {
 	    domProps: {
 	      "innerHTML": _vm._s(_vm.data.goods_desc)
 	    }
-	  })]), _vm._v(" "), _vm._m(0)])
-	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('section', {
-	    attrs: {
-	      "id": "wrapper2"
-	    }
-	  }, [_c('table', {
-	    attrs: {
-	      "border": "1",
-	      "cellspacing": "0",
-	      "cellpadding": "0"
-	    }
-	  }, [_c('tr', [_c('th', [_vm._v("主体")]), _vm._v(" "), _c('td', [_vm._v("贵州特产万康乐苦荞茶五行黑茶")])]), _vm._v(" "), _c('tr', [_c('th', [_vm._v("品牌")]), _vm._v(" "), _c('td', [_vm._v("万康乐")])]), _vm._v(" "), _c('tr', [_c('th', [_vm._v("规格")]), _vm._v(" "), _c('td', [_vm._v("120g/盒")])]), _vm._v(" "), _c('tr', [_c('th', [_vm._v("储存方法")]), _vm._v(" "), _c('td', [_vm._v("干燥阴凉环境下保存")])]), _vm._v(" "), _c('tr', [_c('th', [_vm._v("适用人群")]), _vm._v(" "), _c('td', [_vm._v("全部人群")])])])])
-	}]}
+	  })])
+	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()

@@ -201,9 +201,9 @@
 					var URL = url + '\n' + arg + '\n' + arg_val;
 					return URL;
 				};
-				changeURLArg('https://a2.t.jiayou9.com/region/pavilionDetail?debug=1&regionId=5&format=jsonp','regionId',regionId);
+				changeURLArg('https://a1.t.jiayou9.com/region/pavilionDetail?debug=1&regionId=5&format=jsonp','regionId',regionId);
 
-				this.$http.jsonp(changeURLArg('https://a2.t.jiayou9.com/region/pavilionDetail?debug=1&regionId=5&format=jsonp','regionId',regionId)).then(function(res) {
+				this.$http.jsonp(changeURLArg('https://a1.t.jiayou9.com/region/pavilionDetail?debug=1&regionId=5&format=jsonp','regionId',regionId)).then(function(res) {
 					this.data = res.body.data;
 					console.log(JSON.parse(JSON.stringify(this.data)));
 					

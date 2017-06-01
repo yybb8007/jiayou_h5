@@ -1,4 +1,4 @@
-webpackJsonp([48],{
+webpackJsonp([49],{
 
 /***/ 52:
 /***/ function(module, exports, __webpack_require__) {
@@ -172,18 +172,18 @@ webpackJsonp([48],{
 
 /***/ },
 
-/***/ 293:
+/***/ 299:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(294)
+	__webpack_require__(300)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(295),
+	  __webpack_require__(301),
 	  /* template */
-	  __webpack_require__(296),
+	  __webpack_require__(302),
 	  /* scopeId */
 	  "data-v-e31843b2",
 	  /* cssModules */
@@ -211,14 +211,14 @@ webpackJsonp([48],{
 
 /***/ },
 
-/***/ 294:
+/***/ 300:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 295:
+/***/ 301:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -393,7 +393,7 @@ webpackJsonp([48],{
 
 /***/ },
 
-/***/ 296:
+/***/ 302:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -446,7 +446,7 @@ webpackJsonp([48],{
 	    staticClass: "main_img"
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(297)
+	      "src": __webpack_require__(303)
 	    }
 	  })]), _vm._v(" "), _c('div', {
 	    staticClass: "main_message"
@@ -459,7 +459,7 @@ webpackJsonp([48],{
 	  }, [_c('span', [_vm._v("￥199.00")])])]), _vm._v(" "), _c('img', {
 	    staticClass: "dengdaichengtuan",
 	    attrs: {
-	      "src": __webpack_require__(298)
+	      "src": __webpack_require__(304)
 	    }
 	  })])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -487,7 +487,7 @@ webpackJsonp([48],{
 	    staticClass: "touxiang1"
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(299)
+	      "src": __webpack_require__(305)
 	    }
 	  })]), _vm._v(" "), _c('div', {
 	    staticClass: "touxiang2"
@@ -517,7 +517,7 @@ webpackJsonp([48],{
 	    staticClass: "touxiang1"
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(299)
+	      "src": __webpack_require__(305)
 	    }
 	  })]), _vm._v(" "), _c('div', {
 	    staticClass: "name"
@@ -527,7 +527,7 @@ webpackJsonp([48],{
 	    staticClass: "touxiang2"
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(299)
+	      "src": __webpack_require__(305)
 	    }
 	  })]), _vm._v(" "), _c('div', {
 	    staticClass: "name"
@@ -555,21 +555,21 @@ webpackJsonp([48],{
 
 /***/ },
 
-/***/ 297:
+/***/ 303:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/juzi.jpg?v=d487ee7c";
 
 /***/ },
 
-/***/ 298:
+/***/ 304:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/dengdaichengtuan.png?v=23e4f7fe";
 
 /***/ },
 
-/***/ 299:
+/***/ 305:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/wawa@2x.png?v=19fea42d";

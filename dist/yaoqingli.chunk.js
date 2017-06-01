@@ -80,6 +80,17 @@ webpackJsonp([26],{
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
 		data: function data() {
@@ -145,7 +156,23 @@ webpackJsonp([26],{
 	    staticClass: "title2"
 	  }, [_vm._v("满99减80元券")])]), _vm._v(" "), _c('div', {
 	    staticClass: "box2"
-	  })])
+	  }, [_c('header', [_vm._v("活动时间：2017.1.18至2017.1.18")]), _vm._v(" "), _c('main', [_c('div', {
+	    staticClass: "left"
+	  }, [_c('img', {
+	    attrs: {
+	      "src": __webpack_require__(196)
+	    }
+	  })]), _vm._v(" "), _c('div', {
+	    staticClass: "right"
+	  }, [_c('p', {
+	    staticClass: "first"
+	  }, [_vm._v("分享达20人")]), _vm._v(" "), _c('p', {
+	    staticClass: "second"
+	  }, [_vm._v("可赢得价值")]), _vm._v(" "), _c('p', {
+	    staticClass: "third"
+	  }, [_c('span', [_vm._v("￥")]), _vm._v("7199")]), _vm._v(" "), _c('p', {
+	    staticClass: "fourth"
+	  }, [_vm._v("iphone 7 plus")])])])])])
 	}]}
 	module.exports.render._withStripped = true
 	if (false) {
@@ -154,6 +181,13 @@ webpackJsonp([26],{
 	     require("vue-hot-reload-api").rerender("data-v-269393c3", module.exports)
 	  }
 	}
+
+/***/ },
+
+/***/ 196:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "assets/iphone7.jpg?v=a9ac04a6";
 
 /***/ }
 

@@ -142,7 +142,7 @@
 				};
 //				changeURLArg('https://a2.t.jiayou9.com/product/info?id=330&debug=1&data_format=1','id',id);
 				
-				this.$http.jsonp(changeURLArg('https://a2.t.jiayou9.com/product/info?id=330&debug=1&data_format=1','id',goods_id)).then(function(res){
+				this.$http.jsonp(changeURLArg('https://a1.t.jiayou9.com/product/info?id=330&debug=1&data_format=1','id',goods_id)).then(function(res){
 					this.data=res.body.data;
 //					console.log(res.body.data.goods_id);
 //					console.log(res.body.data[8]);
@@ -162,29 +162,6 @@
 //					console.log(res.body.data[8]);
 					
 				});
-//				setInterval(function(){
-//					var top = $("#goods_main").offset().top;
-////					console.log(top)
-//					if (top <= (-626)) {
-//						$("#fixedtop").css({
-//							"position":"fixed",
-//							"top": "0",
-//							"left": "0",
-//							"right": "0",
-//							"background": "#fff"
-//						});
-//						$("#wrapper1").css("margin-top",$("#fixedtop").height() + "px");
-//						$("#wrapper2").css("margin-top",$("#fixedtop").height() + "px");
-////						console.log($("#fixedtop").height())
-//					} else if (top > (-626)) {
-//						$("#fixedtop").css({
-//							"position":"static",
-//							"background": "#fff"
-//						});
-//						$("#wrapper1").css("margin-top", 0);
-//						$("#wrapper2").css("margin-top", 0);
-//					}
-//				},1)
 			}
 	}
 </script>

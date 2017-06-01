@@ -1,17 +1,17 @@
-webpackJsonp([67],{
+webpackJsonp([68],{
 
-/***/ 377:
+/***/ 383:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(378)
+	__webpack_require__(384)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(379),
+	  __webpack_require__(385),
 	  /* template */
-	  __webpack_require__(380),
+	  __webpack_require__(386),
 	  /* scopeId */
 	  "data-v-af7a1b00",
 	  /* cssModules */
@@ -39,14 +39,14 @@ webpackJsonp([67],{
 
 /***/ },
 
-/***/ 378:
+/***/ 384:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 379:
+/***/ 385:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -149,7 +149,7 @@ webpackJsonp([67],{
 
 /***/ },
 
-/***/ 380:
+/***/ 386:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -166,7 +166,7 @@ webpackJsonp([67],{
 	    staticClass: "gp_img"
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(381),
+	      "src": __webpack_require__(387),
 	      "alt": ""
 	    }
 	  })]), _vm._v(" "), _c('div', {
@@ -191,7 +191,7 @@ webpackJsonp([67],{
 	    staticClass: "gp_img"
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(381),
+	      "src": __webpack_require__(387),
 	      "alt": ""
 	    }
 	  })]), _vm._v(" "), _c('div', {
@@ -214,7 +214,7 @@ webpackJsonp([67],{
 	    staticClass: "gp_img"
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(381),
+	      "src": __webpack_require__(387),
 	      "alt": ""
 	    }
 	  })]), _vm._v(" "), _c('div', {
@@ -237,7 +237,7 @@ webpackJsonp([67],{
 	    staticClass: "gp_img"
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(381),
+	      "src": __webpack_require__(387),
 	      "alt": ""
 	    }
 	  })]), _vm._v(" "), _c('div', {
@@ -262,7 +262,7 @@ webpackJsonp([67],{
 	    staticClass: "gp_img"
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(381),
+	      "src": __webpack_require__(387),
 	      "alt": ""
 	    }
 	  })]), _vm._v(" "), _c('div', {
@@ -293,7 +293,7 @@ webpackJsonp([67],{
 
 /***/ },
 
-/***/ 381:
+/***/ 387:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/juzi.jpg?v=d487ee7c";

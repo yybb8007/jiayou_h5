@@ -1,4 +1,4 @@
-webpackJsonp([44],{
+webpackJsonp([45],{
 
 /***/ 52:
 /***/ function(module, exports, __webpack_require__) {
@@ -20,18 +20,18 @@ webpackJsonp([44],{
 
 /***/ },
 
-/***/ 267:
+/***/ 273:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(268)
+	__webpack_require__(274)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(269),
+	  __webpack_require__(275),
 	  /* template */
-	  __webpack_require__(270),
+	  __webpack_require__(276),
 	  /* scopeId */
 	  "data-v-a3b6d180",
 	  /* cssModules */
@@ -59,14 +59,14 @@ webpackJsonp([44],{
 
 /***/ },
 
-/***/ 268:
+/***/ 274:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 269:
+/***/ 275:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
@@ -230,9 +230,9 @@ webpackJsonp([44],{
 				localStorage.setItem("shop_price1", res.body.data.pintuan[0].tuan_price);
 				localStorage.setItem("tuan_rule_id", res.body.data.pintuan[0].tuan_rule_id);
 
-				var h = document.getElementById("want").getAttribute("href") + goods_id + "%26activity_id%3D" + activity_id + "%26product_id%3D" + product_id + "%26tuan_head_uid%3D" + tuan_head_uid + "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
-				$("#want").attr("href", h);
-				console.log(h);
+				//					var h = document.getElementById("want").getAttribute("href") + goods_id + "%26activity_id%3D" + activity_id + "%26product_id%3D" + product_id + "%26tuan_head_uid%3D" + tuan_head_uid + "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+				//					$("#want").attr("href",h);
+				//					console.log(h)
 
 				// 轮播图
 				var mySwiper = new Swiper('.swiper-container', {
@@ -260,7 +260,7 @@ webpackJsonp([44],{
 
 /***/ },
 
-/***/ 270:
+/***/ 276:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -362,7 +362,7 @@ webpackJsonp([44],{
 	    staticClass: "want",
 	    attrs: {
 	      "id": "want",
-	      "href": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx6ffe339870612437&redirect_uri=https%3A%2F%2Fm.t.jiayou9.com%2F%23%2ForderGoods1%3Fgoods_id%3D"
+	      "href": "https://m.t.jiayou9.com/#/download1"
 	    }
 	  }, [_vm._v("我要参团")])])
 	}]}
