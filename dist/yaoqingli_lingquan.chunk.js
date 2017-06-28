@@ -1,23 +1,23 @@
 webpackJsonp([28],{
 
-/***/ 201:
+/***/ 208:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(202)
+	__webpack_require__(209)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(203),
+	  __webpack_require__(210),
 	  /* template */
-	  __webpack_require__(204),
+	  __webpack_require__(211),
 	  /* scopeId */
 	  "data-v-1f84c673",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\home\\children2\\yaoqingli_lingquan.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\home\\children2\\yaoqingli_lingquan.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] yaoqingli_lingquan.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -39,14 +39,14 @@ webpackJsonp([28],{
 
 /***/ },
 
-/***/ 202:
+/***/ 209:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 203:
+/***/ 210:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -54,31 +54,6 @@ webpackJsonp([28],{
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
 	//
 	//
 	//
@@ -110,12 +85,21 @@ webpackJsonp([28],{
 
 		computed: {},
 		methods: {},
-		components: {}
+		components: {},
+		mounted: function mounted() {
+			var str = location.href; // 取得整个地址栏
+			var yq_name = str.split('user_id=')[1];
+			console.log(yq_name);
+			localStorage.setItem("yq_name", yq_name);
+			//				var h = document.getElementById("want").getAttribute("href") + yq_name + "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+			//					$("#want").attr("href",h);
+			//					console.log(h)
+		}
 	};
 
 /***/ },
 
-/***/ 204:
+/***/ 211:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -127,33 +111,13 @@ webpackJsonp([28],{
 	    }
 	  }, [_c('main', {
 	    staticClass: "main1"
-	  }, [_c('div', {
-	    staticClass: "box1"
-	  }, [_c('p', {
-	    staticClass: "title1"
-	  }, [_c('span', [_vm._v("—")]), _vm._v(" 邀请新朋友各得 "), _c('span', [_vm._v("—")])]), _vm._v(" "), _c('p', {
-	    staticClass: "title2"
-	  }, [_vm._v("满99减80元券")])]), _vm._v(" "), _c('div', {
-	    staticClass: "box2"
-	  }, [_vm._v("老用户可领取5折优惠券")])]), _vm._v(" "), _c('div', {
-	    staticClass: "menu"
-	  }, [_vm._v("点击领取")])]), _vm._v(" "), _c('div', {
-	    staticClass: "fuceng1"
-	  }, [_c('div', {
-	    staticClass: "lingquan"
-	  }, [_c('div', {
-	    staticClass: "fuceng1_top"
-	  }, [_c('div', {
-	    staticClass: "left"
-	  }, [_c('span', [_vm._v("￥")]), _vm._v("100\n\t\t\t\t\t")]), _vm._v(" "), _c('div', {
-	    staticClass: "right"
-	  }, [_c('header', [_vm._v("限量限时领取")]), _vm._v(" "), _c('main', [_vm._v("单笔订单满200 元使用")])])]), _vm._v(" "), _c('div', {
-	    staticClass: "fuceng1_bottom"
-	  }, [_vm._v("立即领取")])])]), _vm._v(" "), _c('div', {
-	    staticClass: "fuceng2"
-	  }, [_c('main', [_vm._v("\n\t\t\t\t恭喜您获得价值"), _c('span', [_vm._v("200")]), _vm._v("的优惠券\n\t\t\t")])]), _vm._v(" "), _c('div', {
-	    staticClass: "fuceng3"
-	  }, [_c('main', [_vm._v("\n\t\t\t\t亲~您的礼包已经领过了，"), _c('br'), _vm._v("赶紧去商城买买买！\n\t\t\t")])])])
+	  }), _vm._v(" "), _c('a', {
+	    staticClass: "menu",
+	    attrs: {
+	      "id": "want",
+	      "href": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx6ffe339870612437&redirect_uri=http%3A%2F%2Fm.t.jiayou9.com%2F%23%2Fyaoqingli_lingquan1&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect"
+	    }
+	  }, [_vm._v("点击领取")])])])
 	}]}
 	module.exports.render._withStripped = true
 	if (false) {

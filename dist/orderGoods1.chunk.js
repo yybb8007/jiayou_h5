@@ -1,4 +1,4 @@
-webpackJsonp([46],{
+webpackJsonp([48],{
 
 /***/ 52:
 /***/ function(module, exports, __webpack_require__) {
@@ -20,24 +20,24 @@ webpackJsonp([46],{
 
 /***/ },
 
-/***/ 277:
+/***/ 293:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(278)
+	__webpack_require__(294)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(279),
+	  __webpack_require__(295),
 	  /* template */
-	  __webpack_require__(280),
+	  __webpack_require__(296),
 	  /* scopeId */
 	  "data-v-1677e2a1",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\team\\children\\orderGoods1.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\team\\children\\orderGoods1.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] orderGoods1.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -59,14 +59,14 @@ webpackJsonp([46],{
 
 /***/ },
 
-/***/ 278:
+/***/ 294:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 279:
+/***/ 295:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
@@ -260,34 +260,36 @@ webpackJsonp([46],{
 			});
 			// 根据code获取用户信息
 			$.ajax({
-				type: "get", //数据发送的方式（post 或者 get）
-				url: "https://a2.t.jiayou9.com/group/wx_oauth?debug=1&format=jsonp", //要发送的后台地址
+				type: "get", // 数据发送的方式（post 或者 get）
+				url: this.baseUrl + '.t.jiayou9.com/group/wx_oauth?debug=1&format=jsonp', // 要发送的后台地址
 				data: {
 					"code": code
-				}, //要发送的数据（参数）格式为{'val1':"1","val2":"2"}
-				dataType: "jsonp", //后台处理后返回的数据格式
+				}, // 要发送的数据（参数）格式为{'val1':"1","val2":"2"}
+				dataType: "jsonp", // 后台处理后返回的数据格式
 				success: function success(data5) {
-					//ajax请求成功后触发的方法
+					// ajax请求成功后触发的方法
 					var userdata = data5.data;
 					var userOpenid = userdata.openid;
 					var userName = userdata.nickname;
 					var userImg = userdata.headimgurl;
 					var userSex = userdata.sex;
 					var userCity = userdata.city;
+					var userUnionid = userdata.unionid;
 					localStorage.setItem("userOpenid", userOpenid);
 					localStorage.setItem("userName", userName);
 					localStorage.setItem("userImg", userImg);
 					localStorage.setItem("userSex", userSex);
 					localStorage.setItem("userCity", userCity);
+					localStorage.setItem("userUnionid", userUnionid);
 					console.log(data5);
 					// 根据用户信息请求第三方登陆接口，获取user_id
 					$.ajax({
 						type: "get",
-						url: "https://a2.t.jiayou9.com/home/login/wechatlogin?debug=1&device_type=3",
+						url: this.baseUrl + '.t.jiayou9.com/home/login/wechatlogin?debug=1&device_type=3',
 						data: {
 							"name": userName,
 							"img": userImg,
-							"openids": userOpenid,
+							"openids": userUnionid,
 							"tool": "6"
 						},
 						dataType: "jsonp",
@@ -313,7 +315,7 @@ webpackJsonp([46],{
 
 /***/ },
 
-/***/ 280:
+/***/ 296:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -417,7 +419,7 @@ webpackJsonp([46],{
 	      "id": "want",
 	      "href": ""
 	    }
-	  }, [_vm._v("继续参团")])])
+	  }, [_vm._v("我要参团")])])
 	}]}
 	module.exports.render._withStripped = true
 	if (false) {

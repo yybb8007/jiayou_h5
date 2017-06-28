@@ -6,7 +6,7 @@
 				<!-- 轮播图 -->
 				<div class="swiper-wrapper" @click="eight">
 					<div class="swiper-slide" v-for="item in data[2]">
-						<img v-lazy="item.logo" alt="" :ID="item.data" :target="item.target" title="端午活动" />
+						<img v-lazy="item.logo" alt="" :ID="item.data" :target="item.target" title="低碳生活活动" />
 					</div>
 				</div>
 			</div>
@@ -15,36 +15,40 @@
 			<article id="home_eight">
 				<!-- 八个频道页 -->
 				<ul class="eight" @click="eight">
-                    <li ID="http://m2.t.jiayou9.com/#/3/12" target='8' title="生态馆">
-                        <img src="http://img.t.jiayou9.com/images/index/3/d79c53315f4abbee39269ead7ae60d94.jpg" alt="" ID="http://m2.t.jiayou9.com/#/3/12" target='8' title="生态馆" />
+                    <!--<li ID="http://m2.t.jiayou9.com/#/3/12" target='8' title="生态馆">
+                        <img src="http://img.t.jiayou9.com/upload/index/3/d79c53315f4abbee39269ead7ae60d94.jpg" alt="" ID="http://m2.t.jiayou9.com/#/3/12" target='8' title="生态馆" />
                         <p class="nav_name" ID="http://m2.t.jiayou9.com/#/3/12" target='8' title="生态馆">生态馆</p>
+                    </li>-->
+                    <li ID="http://m.t.jiayou9.com/#/yaoqingli" target='8' title="邀请有礼">
+                        <img src="../../../../dist/assets/yqyl_icon@2x.png" alt="" ID="http://m.t.jiayou9.com/#/yaoqingli" target='8' title="邀请有礼" />
+                        <p class="nav_name" ID="http://m.t.jiayou9.com/#/yaoqingli" target='8' title="邀请有礼">邀请有礼</p>
                     </li>
                     <li ID="111111" target='13' title="领券">
-                        <img src="http://img.t.jiayou9.com/images/index/3/f51e8dad8ed028c8267140def0489405.jpg" alt="" ID="111111" target='13' title="领券" />
+                        <img src="http://img.t.jiayou9.com/upload/index/3/f51e8dad8ed028c8267140def0489405.jpg" alt="" ID="111111" target='13' title="领券" />
                         <p class="nav_name" ID="111111" target='13' title="领券">领券</p>
                     </li>
                     <li ID="111111" target='9' title="秒杀">
-                        <img src="http://img.t.jiayou9.com/images/index/3/39881640c56634fb45b222ff5506b21d.jpg" alt="" ID="111111" target='9' title="秒杀" />
+                        <img src="http://img.t.jiayou9.com/upload/index/3/39881640c56634fb45b222ff5506b21d.jpg" alt="" ID="111111" target='9' title="秒杀" />
                         <p class="nav_name" ID="111111" target='9' title="秒杀">秒杀</p>
                     </li>
                     <li ID="http://m2.t.jiayou9.com/#/3/10" target='8' title="新品专区">
-                        <img src="http://img.t.jiayou9.com/images/index/3/cd7c9792cb621eda6feaa74eed0d2231.jpg" alt="" ID="http://m2.t.jiayou9.com/#/3/10" target='8' title="新品专区" />
+                        <img src="http://img.t.jiayou9.com/upload/index/3/cd7c9792cb621eda6feaa74eed0d2231.jpg" alt="" ID="http://m2.t.jiayou9.com/#/3/10" target='8' title="新品专区" />
                         <p class="nav_name" ID="http://m2.t.jiayou9.com/#/3/10" target='8' title="新品专区">新品专区</p>
                     </li>
-                    <li ID="http://m2.t.jiayou9.com/#/3/11/banshouli_one" target='8' title="伴手礼">
-                        <img src="http://img.t.jiayou9.com/images/index/3/7816a5c0c536544f0d891544b58dbbdf.jpg" alt="" ID="http://m2.t.jiayou9.com/#/3/11/banshouli_one" target='8' title="伴手礼" />
-                        <p class="nav_name" ID="http://m2.t.jiayou9.com/#/3/11/banshouli_one" target='8' title="伴手礼">伴手礼</p>
+                    <li ID="http://m.t.jiayou9.com/#/3/11/banshouli_one" target='8' title="伴手礼">
+                        <img src="http://img.t.jiayou9.com/upload/index/3/7816a5c0c536544f0d891544b58dbbdf.jpg" alt="" ID="http://m.t.jiayou9.com/#/3/11/banshouli_one" target='8' title="伴手礼" />
+                        <p class="nav_name" ID="http://m.t.jiayou9.com/#/3/11/banshouli_one" target='8' title="伴手礼">伴手礼</p>
                     </li>
                     <li ID="http://m2.t.jiayou9.com/#/3/13" target='8' title="地区馆">
-                        <img src="http://img.t.jiayou9.com/images/index/3/4cd6eabc084c311992f929646b454372.jpg" alt="" ID="http://m2.t.jiayou9.com/#/3/13" target='8' title="地区馆" />
+                        <img src="http://img.t.jiayou9.com/upload/index/3/4cd6eabc084c311992f929646b454372.jpg" alt="" ID="http://m2.t.jiayou9.com/#/3/13" target='8' title="地区馆" />
                         <p class="nav_name" ID="http://m2.t.jiayou9.com/#/3/13" target='8' title="地区馆">地区馆</p>
                     </li>
                     <li ID="http://m2.t.jiayou9.com/#/gongyi1" target='8' title="工艺馆">
-                        <img src="http://img.t.jiayou9.com/images/index/3/e592f662b4a1c776f1570daeb7614ad1.jpg" alt="" ID="http://m2.t.jiayou9.com/#/gongyi1" target='8' title="工艺馆" />
+                        <img src="http://img.t.jiayou9.com/upload/index/3/e592f662b4a1c776f1570daeb7614ad1.jpg" alt="" ID="http://m2.t.jiayou9.com/#/gongyi1" target='8' title="工艺馆" />
                         <p class="nav_name" ID="http://m2.t.jiayou9.com/#/gongyi1" target='8' title="工艺馆">工艺馆</p>
                     </li>
                     <li ID="http://m2.t.jiayou9.com/#/3/14" target='8' title="全球优品">
-                        <img src="http://img.t.jiayou9.com/images/index/3/935d33bc6550ab3c4380b85c5c29bfd5.jpg" alt="" ID="http://m2.t.jiayou9.com/#/3/14" target='8' title="全球优品" />
+                        <img src="http://img.t.jiayou9.com/upload/index/3/935d33bc6550ab3c4380b85c5c29bfd5.jpg" alt="" ID="http://m2.t.jiayou9.com/#/3/14" target='8' title="全球优品" />
                         <p class="nav_name" ID="http://m2.t.jiayou9.com/#/3/14" target='8' title="全球优品">全球优品</p>
                     </li>
                 </ul>
@@ -432,7 +436,7 @@
 						target = ($(e.target).attr("target")),
 						title = ($(e.target).attr("title")),
 						value = ('cmd:{"data":"' + id + '","target":"' + target + '","title":"' + title + '","shopping":"' + 1 + '"}');
-					if(title == '生态馆' || title == '伴手礼' || target == 6) {
+					if(title == '生态馆' || title == '伴手礼' || title == '邀请有礼' || target == 6) {
 						value = ('cmd:{"data":"' + id + '","target":"' + target + '","title":"' + title + '","shopping":"' + 0 + '"}');
 
 						if(target !== null) {
@@ -469,7 +473,7 @@
 
 			},
 			mounted: function() {
-				this.$http.jsonp('https://a1.t.jiayou9.com/page/index?debug=1&format=jsonp').then(function(res) {
+				this.$http.jsonp(this.baseUrl + '.t.jiayou9.com/page/index?debug=1&format=jsonp').then(function(res) {
 					this.data = res.body.data;
 					console.log(JSON.parse(JSON.stringify(this.data)));
 					// 轮播图

@@ -1,25 +1,23 @@
 <template>
 	<div >
 		<section id="wrapper">
-			<header id="all_header">
-        		<!--<i class="jy_iconfont icon_header"></i>-->
+			<!--<header id="all_header">
         		<i class="jy_iconfont"></i>
         		<p class="all_title">奖励规则</p>
-        		<!--<i class="iconfont icon_fenxiang"></i>-->
         		<i class="iconfont"></i>
-        	</header>
+        	</header>-->
+        		<!--<i class="jy_iconfont icon_header"></i>-->
+        		<!--<i class="iconfont icon_fenxiang"></i>-->
         	
         	<main>
         		<p class="title1">邀请新朋友各得</p>
         		<p class="title2">满99减80元券</p>
-        		<p class="title3">分享还有机会得iPhone7 plus</p>
-        		<p class="img"></p>
-        		<h3>奖励规则-活动规则</h3>
+        		<!--<p class="title3">分享还有机会得iPhone7 plus</p>-->
+        		<p class="img"><img src="../../../../dist/assets/yqyl_gz_x.png"/></p>
+        		<h3>奖励规则</h3>
         		<ul>
-        			<li>1.活动时间：2017.1.17至2017.1.18；</li>
-        			<li>2.活动期间，邀请新朋友下单各得满99减80元券，邀请新朋友下单且成功签收最多的用户，可获得IPHONE7PLUS手机；</li>
-        			<li>3.被邀请人需使用邀请人分享的优惠券下单并签收，方可认定邀请成功；</li>
-        			<li>4.同一登入账号、同一手机号、同一终端设备号、同一支付宝账号、同一收货地址、同一IP或其他合理显示同一用户的情形，均视为同一用户。</li>
+        			<li>1.被邀请人需使用邀请人分享的优惠券下单并签收且7日内未退货，方可认定邀请成功；</li>
+        			<li>2.同一登入账号、同一手机号、同一终端设备号、同一支付宝账号、同一收货地址、同一IP或其他合理显示同一用户的情形，均视为同一用户。</li>
         		</ul>
         	</main>
         	
@@ -44,7 +42,8 @@
 </script>
 <style lang="sass" scoped>
 	section {
-		background: rgb(0,0,0);
+		background: url(https://m2.t.jiayou9.com/dist/assets/yqyl_gz.jpg) no-repeat;
+		background-size: cover;
 		/* 顶部标题行 */
 		#all_header{
 	    	width: 100%;
@@ -74,10 +73,10 @@
 	    /* 主体 */
 	    main {
 	    	width: 637px;
-	    	height: 950px;
-	    	background: #fff;
+	    	height: 751px;
+	    	background: rgba(255,255,255,0.9);
 	    	border-radius: 18px;
-	    	margin: 118px auto;
+	    	margin: 158px auto;
 	    	padding-top: 50px;
 	    	.title1, .title2, .title3{
 	    		text-align: center;
@@ -95,19 +94,28 @@
 	    		font-size: 28px;
 	    		color: #a4d361;
 	    	}
+	    	.img{
+	    		width: 370px;
+	    		margin: 0 auto;
+	    		margin-top: 12px;
+	    		img{
+	    			width: 100%;
+	    		}
+	    	}
 	    	h3{
 	    		text-align: center;
 	    		font-size: 33px;
 	    		color: #424441;
 	    		font-weight: bolder;
+	    		margin-top: 51px;
 	    	}
 	    	ul{
 	    		margin: 40px 50px;
 	    		font-size: 22px;
 	    		color: #979797;
 	    		line-height: 36px;
-	    		li{
-	    			margin-bottom: 20px;
+	    		li:first-of-type{
+	    			margin-bottom: 51px;
 	    		}
 	    	}
 	    }

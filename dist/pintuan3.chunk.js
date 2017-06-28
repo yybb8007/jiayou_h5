@@ -1,4 +1,4 @@
-webpackJsonp([50],{
+webpackJsonp([52],{
 
 /***/ 52:
 /***/ function(module, exports, __webpack_require__) {
@@ -20,45 +20,45 @@ webpackJsonp([50],{
 
 /***/ },
 
-/***/ 303:
+/***/ 319:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/juzi.jpg?v=d487ee7c";
 
 /***/ },
 
-/***/ 304:
+/***/ 320:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/dengdaichengtuan.png?v=23e4f7fe";
 
 /***/ },
 
-/***/ 305:
+/***/ 321:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/wawa@2x.png?v=19fea42d";
 
 /***/ },
 
-/***/ 306:
+/***/ 322:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(307)
+	__webpack_require__(323)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(308),
+	  __webpack_require__(324),
 	  /* template */
-	  __webpack_require__(309),
+	  __webpack_require__(325),
 	  /* scopeId */
 	  "data-v-e2fc14b0",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\team\\children\\pintuan3.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\team\\children\\pintuan3.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] pintuan3.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -80,14 +80,14 @@ webpackJsonp([50],{
 
 /***/ },
 
-/***/ 307:
+/***/ 323:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 308:
+/***/ 324:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -262,7 +262,7 @@ webpackJsonp([50],{
 
 /***/ },
 
-/***/ 309:
+/***/ 325:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -310,7 +310,7 @@ webpackJsonp([50],{
 	    staticClass: "main_img"
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(303)
+	      "src": __webpack_require__(319)
 	    }
 	  })]), _vm._v(" "), _c('div', {
 	    staticClass: "main_message"
@@ -323,7 +323,7 @@ webpackJsonp([50],{
 	  }, [_c('span', [_vm._v("￥199.00")])])]), _vm._v(" "), _c('img', {
 	    staticClass: "dengdaichengtuan",
 	    attrs: {
-	      "src": __webpack_require__(304)
+	      "src": __webpack_require__(320)
 	    }
 	  })])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -351,7 +351,7 @@ webpackJsonp([50],{
 	    staticClass: "touxiang1"
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(305)
+	      "src": __webpack_require__(321)
 	    }
 	  })]), _vm._v(" "), _c('div', {
 	    staticClass: "touxiang2"
@@ -381,7 +381,7 @@ webpackJsonp([50],{
 	    staticClass: "touxiang1"
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(305)
+	      "src": __webpack_require__(321)
 	    }
 	  })]), _vm._v(" "), _c('div', {
 	    staticClass: "name"
@@ -391,7 +391,7 @@ webpackJsonp([50],{
 	    staticClass: "touxiang2"
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(305)
+	      "src": __webpack_require__(321)
 	    }
 	  })]), _vm._v(" "), _c('div', {
 	    staticClass: "name"

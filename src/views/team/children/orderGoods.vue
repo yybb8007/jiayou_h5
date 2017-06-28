@@ -59,8 +59,8 @@
 				<!--<router-link :to="'/dingdan?goods_id=' + data.goods_id" id="want1">
 					<button class="want">我要参团</button>
 				</router-link>-->
-				<!--<a id="want" class="want" href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx6ffe339870612437&redirect_uri=https%3A%2F%2Fm.t.jiayou9.com%2F%23%2ForderGoods1%3Fgoods_id%3D">我要参团</a>-->
-				<a id="want" class="want" href="https://m.t.jiayou9.com/#/download1">我要参团</a>
+				<a id="want" class="want" href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx6ffe339870612437&redirect_uri=https%3A%2F%2Fm.t.jiayou9.com%2F%23%2ForderGoods1%3Fgoods_id%3D">我要参团</a>
+				<!--<a id="want" class="want" href="https://m.t.jiayou9.com/#/download1">我要参团</a>-->
 			</footer>
 		</section>
 		
@@ -150,16 +150,16 @@
 //				changeURLArg('https://a2.t.jiayou9.com/product/info?id=330&debug=1&data_format=1','id',id);
 				
 				this.$http.jsonp(changeURLArg('https://a1.t.jiayou9.com/product/info?id=330&debug=1&device_type=3&data_format=1','id',goods_id)).then(function(res){
-					this.data=res.body.data;
+					this.data = res.body.data;
 					console.log(res.body.data)
 //					console.log(res.body.data.goods_id);
 //					console.log(res.body.data[8]);
 					localStorage.setItem("shop_price1",res.body.data.pintuan[0].tuan_price);
 					localStorage.setItem("tuan_rule_id",res.body.data.pintuan[0].tuan_rule_id);
 					
-//					var h = document.getElementById("want").getAttribute("href") + goods_id + "%26activity_id%3D" + activity_id + "%26product_id%3D" + product_id + "%26tuan_head_uid%3D" + tuan_head_uid + "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
-//					$("#want").attr("href",h);
-//					console.log(h)
+					var h = document.getElementById("want").getAttribute("href") + goods_id + "%26activity_id%3D" + activity_id + "%26product_id%3D" + product_id + "%26tuan_head_uid%3D" + tuan_head_uid + "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+					$("#want").attr("href",h);
+					console.log(h);
 					
 					// 轮播图
 					var mySwiper = new Swiper ('.swiper-container', {
@@ -171,14 +171,14 @@
 						pagination: '.swiper-pagination'
 					});
 				});
-				this.$http.jsonp(changeURLArg('https://a1.t.jiayou9.com/product/comment_text?debug=1&id=658&data_format=1','id',goods_id)).then(function(res){
-					this.data1=res.body.data;
+				this.$http.jsonp(changeURLArg(this.baseUrl + '.t.jiayou9.com/product/comment_text?debug=1&id=658&data_format=1','id',goods_id)).then(function(res){
+					this.data1 = res.body.data;
 					console.log(res.body.data);
 //					console.log(res.body.data[8]);
 					
 				})
-				this.$http.jsonp(changeURLArg('https://a1.t.jiayou9.com/product/description?id=410&debug=1&device_type=3&format=jsonp','id',goods_id)).then(function(res){
-					this.data2=res.body.data;
+				this.$http.jsonp(changeURLArg(this.baseUrl + '.t.jiayou9.com/product/description?id=410&debug=1&device_type=3&format=jsonp','id',goods_id)).then(function(res){
+					this.data2 = res.body.data;
 					console.log(res.body.data);
 //					console.log(res.body.data[8]);
 					

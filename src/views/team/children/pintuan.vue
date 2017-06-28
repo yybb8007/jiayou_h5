@@ -83,6 +83,7 @@
 				<!--<a href="http://m2.t.jiayou9.com/#/download" class="bottom_left"><i class="jy_iconfont main_pintuan"></i>更多拼团</a>-->
 				<span class="bottom_right">还差{{ Number(data1.tuan_preson_num) - data1.group_user_list.length }}人拼团成功</span>
 			</div>
+			
 		</section>
 	</div>
 </template>
@@ -118,26 +119,35 @@
 							"top":"4px"
 						});
 					}
+				},
+				callback:function(){
+					$("#countdowm")[0].endTime = new Date("2017/6/3").valueOf().substring(0,9);
+					console.log($("#countdowm")[0].endTime)
 				}
 			},
 			components: {
+				// "count-down": require('../../../components/countdown.vue'),
 			},
 			mounted: function(){
 				this.$http.jsonp('https://a2.t.jiayou9.com//group/h5_all_group?debug=1&device_type=3&format=jsonp',
 				 {//请求参数
 			        params: {
-			          user_id:user_id
+						// 用户id
+			        	user_id: userId
 			        },
 			        jsonp:'callback'
 				}).then(function(res) {
+					// 获取到最新一个团
 					this.data = res.body.data[res.body.data.length-1];
 					console.log(res.body.data[res.body.data.length-1]);
 					var data_order_sn = res.body.data[res.body.data.length-1].order_sn;
 					this.$http.jsonp('https://a2.t.jiayou9.com/group/h5_group_detail?debug=1&device_type=3&format=jsonp',
 					 {//请求参数
 				        params: {
-				        	user_id:user_id,
-				        	order_sn:data_order_sn
+							// 用户id
+				        	user_id: userId,
+							// 订单号
+				        	order_sn: data_order_sn
 				        },
 				        jsonp:'callback'
 					}).then(function(res) {
@@ -162,14 +172,8 @@
 								$(".shibaituan").attr("src","../../../../dist/assets/shibaituan.png");
 								$(".bottom_right")[0].innerHTML = "拼团失败";
 							};
-//							if (Number(res.body.data.tuan_preson_num) == res.body.data.group_user_list.length) {
-//								$(".bottom_right")[0].innerHTML = "拼团成功";
-//							} else if (Number(res.body.data.tuan_preson_num) > res.body.data.group_user_list.length) {
-//								$(".bottom_right")[0].innerHTML = "还差" + (Number(res.body.data.tuan_preson_num) - res.body.data.group_user_list.length) + "人拼团成功";
-//							} else if (Number(res.body.data.tuan_preson_num) < res.body.data.group_user_list.length) {
-//								$(".bottom_right")[0].innerHTML = "拼团失败";
-//							};
 						};
+						console.log($("#countdowm"))
 						// 倒计时
 						 var countdown = function (){
 						 	tuan();
@@ -178,8 +182,8 @@
 					        var now = new Date;
 					        // 结束时间
 //					        var ending = new Date("2017/5/25");
-					        var ending = new Date("2017/5/27").valueOf();
-//					      	var ending = res.body.data.end_time;
+//					        var ending = new Date("2017/6/3").valueOf();
+					      	var ending = res.body.data.end_time;
 					        if (now >= ending) {
 					            clearTimeout(this.timeout);
 					            return;

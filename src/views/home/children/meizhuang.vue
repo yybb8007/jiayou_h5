@@ -105,7 +105,7 @@
 			},
 			components: {},
 			mounted: function() {
-				this.$http.jsonp('https://a1.t.jiayou9.com/channel/beautiful?debug=1&format=jsonp').then(function(res) {
+				this.$http.jsonp(this.baseUrl + '.t.jiayou9.com/channel/beautiful?debug=1&format=jsonp').then(function(res) {
 					this.data = res.body.data;
 					console.log(JSON.parse(JSON.stringify(this.data)));
 					// 轮播图

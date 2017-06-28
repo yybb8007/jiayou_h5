@@ -1,4 +1,4 @@
-webpackJsonp([45],{
+webpackJsonp([47],{
 
 /***/ 52:
 /***/ function(module, exports, __webpack_require__) {
@@ -20,24 +20,24 @@ webpackJsonp([45],{
 
 /***/ },
 
-/***/ 273:
+/***/ 289:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(274)
+	__webpack_require__(290)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(275),
+	  __webpack_require__(291),
 	  /* template */
-	  __webpack_require__(276),
+	  __webpack_require__(292),
 	  /* scopeId */
 	  "data-v-a3b6d180",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\team\\children\\orderGoods.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\team\\children\\orderGoods.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] orderGoods.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -59,14 +59,14 @@ webpackJsonp([45],{
 
 /***/ },
 
-/***/ 274:
+/***/ 290:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 275:
+/***/ 291:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
@@ -230,9 +230,9 @@ webpackJsonp([45],{
 				localStorage.setItem("shop_price1", res.body.data.pintuan[0].tuan_price);
 				localStorage.setItem("tuan_rule_id", res.body.data.pintuan[0].tuan_rule_id);
 
-				//					var h = document.getElementById("want").getAttribute("href") + goods_id + "%26activity_id%3D" + activity_id + "%26product_id%3D" + product_id + "%26tuan_head_uid%3D" + tuan_head_uid + "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
-				//					$("#want").attr("href",h);
-				//					console.log(h)
+				var h = document.getElementById("want").getAttribute("href") + goods_id + "%26activity_id%3D" + activity_id + "%26product_id%3D" + product_id + "%26tuan_head_uid%3D" + tuan_head_uid + "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+				$("#want").attr("href", h);
+				console.log(h);
 
 				// 轮播图
 				var mySwiper = new Swiper('.swiper-container', {
@@ -244,12 +244,12 @@ webpackJsonp([45],{
 					pagination: '.swiper-pagination'
 				});
 			});
-			this.$http.jsonp(changeURLArg('https://a1.t.jiayou9.com/product/comment_text?debug=1&id=658&data_format=1', 'id', goods_id)).then(function (res) {
+			this.$http.jsonp(changeURLArg(this.baseUrl + '.t.jiayou9.com/product/comment_text?debug=1&id=658&data_format=1', 'id', goods_id)).then(function (res) {
 				this.data1 = res.body.data;
 				console.log(res.body.data);
 				//					console.log(res.body.data[8]);
 			});
-			this.$http.jsonp(changeURLArg('https://a1.t.jiayou9.com/product/description?id=410&debug=1&device_type=3&format=jsonp', 'id', goods_id)).then(function (res) {
+			this.$http.jsonp(changeURLArg(this.baseUrl + '.t.jiayou9.com/product/description?id=410&debug=1&device_type=3&format=jsonp', 'id', goods_id)).then(function (res) {
 				this.data2 = res.body.data;
 				console.log(res.body.data);
 				//					console.log(res.body.data[8]);
@@ -260,7 +260,7 @@ webpackJsonp([45],{
 
 /***/ },
 
-/***/ 276:
+/***/ 292:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -362,7 +362,7 @@ webpackJsonp([45],{
 	    staticClass: "want",
 	    attrs: {
 	      "id": "want",
-	      "href": "https://m.t.jiayou9.com/#/download1"
+	      "href": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx6ffe339870612437&redirect_uri=https%3A%2F%2Fm.t.jiayou9.com%2F%23%2ForderGoods1%3Fgoods_id%3D"
 	    }
 	  }, [_vm._v("我要参团")])])
 	}]}

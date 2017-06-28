@@ -1,4 +1,4 @@
-webpackJsonp([60],{
+webpackJsonp([62],{
 
 /***/ 69:
 /***/ function(module, exports, __webpack_require__) {
@@ -17,7 +17,7 @@ webpackJsonp([60],{
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\components\\header.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\components\\header.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] header.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -152,24 +152,24 @@ webpackJsonp([60],{
 
 /***/ },
 
-/***/ 347:
+/***/ 363:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(348)
+	__webpack_require__(364)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(349),
+	  __webpack_require__(365),
 	  /* template */
-	  __webpack_require__(350),
+	  __webpack_require__(366),
 	  /* scopeId */
 	  "data-v-bf9dd52c",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\myhome\\children\\myGuanzhu.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\myhome\\children\\myGuanzhu.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] myGuanzhu.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -191,14 +191,14 @@ webpackJsonp([60],{
 
 /***/ },
 
-/***/ 348:
+/***/ 364:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 349:
+/***/ 365:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -248,7 +248,7 @@ webpackJsonp([60],{
 
 /***/ },
 
-/***/ 350:
+/***/ 366:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

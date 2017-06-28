@@ -1,4 +1,4 @@
-webpackJsonp([47],{
+webpackJsonp([49],{
 
 /***/ 52:
 /***/ function(module, exports, __webpack_require__) {
@@ -20,24 +20,24 @@ webpackJsonp([47],{
 
 /***/ },
 
-/***/ 281:
+/***/ 297:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(282)
+	__webpack_require__(298)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(283),
+	  __webpack_require__(299),
 	  /* template */
-	  __webpack_require__(284),
+	  __webpack_require__(300),
 	  /* scopeId */
 	  "data-v-04979e9b",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\team\\children\\pintuan.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\team\\children\\pintuan.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] pintuan.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -59,14 +59,14 @@ webpackJsonp([47],{
 
 /***/ },
 
-/***/ 282:
+/***/ 298:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 283:
+/***/ 299:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
@@ -74,6 +74,7 @@ webpackJsonp([47],{
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
+	//
 	//
 	//
 	//
@@ -195,22 +196,32 @@ webpackJsonp([47],{
 						"top": "4px"
 					});
 				}
+			},
+			callback: function callback() {
+				$("#countdowm")[0].endTime = new Date("2017/6/3").valueOf().substring(0, 9);
+				console.log($("#countdowm")[0].endTime);
 			}
 		},
-		components: {},
+		components: {
+			// "count-down": require('../../../components/countdown.vue'),
+		},
 		mounted: function mounted() {
 			this.$http.jsonp('https://a2.t.jiayou9.com//group/h5_all_group?debug=1&device_type=3&format=jsonp', { //请求参数
 				params: {
-					user_id: user_id
+					// 用户id
+					user_id: userId
 				},
 				jsonp: 'callback'
 			}).then(function (res) {
+				// 获取到最新一个团
 				this.data = res.body.data[res.body.data.length - 1];
 				console.log(res.body.data[res.body.data.length - 1]);
 				var data_order_sn = res.body.data[res.body.data.length - 1].order_sn;
 				this.$http.jsonp('https://a2.t.jiayou9.com/group/h5_group_detail?debug=1&device_type=3&format=jsonp', { //请求参数
 					params: {
-						user_id: user_id,
+						// 用户id
+						user_id: userId,
+						// 订单号
 						order_sn: data_order_sn
 					},
 					jsonp: 'callback'
@@ -236,14 +247,8 @@ webpackJsonp([47],{
 							$(".shibaituan").attr("src", "../../../../dist/assets/shibaituan.png");
 							$(".bottom_right")[0].innerHTML = "拼团失败";
 						};
-						//							if (Number(res.body.data.tuan_preson_num) == res.body.data.group_user_list.length) {
-						//								$(".bottom_right")[0].innerHTML = "拼团成功";
-						//							} else if (Number(res.body.data.tuan_preson_num) > res.body.data.group_user_list.length) {
-						//								$(".bottom_right")[0].innerHTML = "还差" + (Number(res.body.data.tuan_preson_num) - res.body.data.group_user_list.length) + "人拼团成功";
-						//							} else if (Number(res.body.data.tuan_preson_num) < res.body.data.group_user_list.length) {
-						//								$(".bottom_right")[0].innerHTML = "拼团失败";
-						//							};
 					};
+					console.log($("#countdowm"));
 					// 倒计时
 					var countdown = function countdown() {
 						tuan();
@@ -252,8 +257,8 @@ webpackJsonp([47],{
 						var now = new Date();
 						// 结束时间
 						//					        var ending = new Date("2017/5/25");
-						var ending = new Date("2017/5/27").valueOf();
-						//					      	var ending = res.body.data.end_time;
+						//					        var ending = new Date("2017/6/3").valueOf();
+						var ending = res.body.data.end_time;
 						if (now >= ending) {
 							clearTimeout(this.timeout);
 							return;
@@ -290,7 +295,7 @@ webpackJsonp([47],{
 
 /***/ },
 
-/***/ 284:
+/***/ 300:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -332,17 +337,17 @@ webpackJsonp([47],{
 	  }, [_c('span', [_vm._v("￥" + _vm._s(_vm.data1.shop_price))])])]), _vm._v(" "), _c('img', {
 	    staticClass: "dengdaichengtuan",
 	    attrs: {
-	      "src": __webpack_require__(285)
+	      "src": __webpack_require__(301)
 	    }
 	  }), _vm._v(" "), _c('img', {
 	    staticClass: "chenggongtuan",
 	    attrs: {
-	      "src": __webpack_require__(285)
+	      "src": __webpack_require__(301)
 	    }
 	  }), _vm._v(" "), _c('img', {
 	    staticClass: "shibaituan",
 	    attrs: {
-	      "src": __webpack_require__(285)
+	      "src": __webpack_require__(301)
 	    }
 	  })]), _vm._v(" "), _c('div', {
 	    staticClass: "pintuanwanfa"
@@ -447,7 +452,7 @@ webpackJsonp([47],{
 
 /***/ },
 
-/***/ 285:
+/***/ 301:
 /***/ function(module, exports) {
 
 	module.exports = "data:image/gif;base64,R0lGODlhkACQAIAAAP///wAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4zLWMwMTEgNjYuMTQ1NjYxLCAyMDEyLzAyLzA2LTE0OjU2OjI3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBMERFQTZGMjQwRkMxMUU3OUQ5OTg5QTMwNTY4RUZCRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBMERFQTZGMzQwRkMxMUU3OUQ5OTg5QTMwNTY4RUZCRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkEwREVBNkYwNDBGQzExRTc5RDk5ODlBMzA1NjhFRkJFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkEwREVBNkYxNDBGQzExRTc5RDk5ODlBMzA1NjhFRkJFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAAAsAAAAAJAAkAAAArKEj6nL7Q+jnLTai7PevPsPhuJIluaJpurKtu4Lx/JM1/aN5/rO9/4PDAqHxKLxiEwql8ym8wmNSqfUqvWKzWq33K73Cw6Lx+Sy+YxOq9fstvsNj8vn9Lr9js/r9/y+/w8YKDhIWGh4iJiouMjY6PgIGSk5SVlpeYmZqbnJ2en5CRoqOkpaanqKmqq6ytrq+gobKztLW2t7i5uru8vb6/sLHCw8TFxsfIycrLzM3Oz8LFIAADs="

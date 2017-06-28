@@ -5,11 +5,11 @@
 				<li class="left" @click="left">商品</li>
 				<li class="right" @click="right">规格参数</li>
 			</ul>
-		</header>
-		<section id="wrapper1">-->
+		</header>-->
+		<section id="wrapper1">
 			<div v-html="data.goods_desc"></div>
-		<!--</section>
-		<section id="wrapper2">
+		</section>
+		<!--<section id="wrapper2">
 			<table border="1" cellspacing="0" cellpadding="0">
 				<tr>
 					<th>主体</th>
@@ -31,8 +31,8 @@
 					<th>适用人群</th>
 					<td>全部人群</td>
 				</tr>
-			</table>-->
-		</section>
+			</table>
+		</section>-->
 	</div>
 </template>
 <script>
@@ -98,13 +98,14 @@
 					var URL = url + '\n' + arg + '\n' + arg_val;
 					return URL;
 				};
-				changeURLArg('https://a1.t.jiayou9.com/product/description?id=378&debug=1&device_type=3&format=jsonp','id',Request.goods_id);
+				changeURLArg(this.baseUrl + '.t.jiayou9.com/product/description?id=378&debug=1&device_type=3&format=jsonp','id',Request.goods_id);
 				
 				
 				
 				// 获取数据
-				this.$http.jsonp(changeURLArg('https://a1.t.jiayou9.com/product/description?id=378&debug=1&device_type=3&format=jsonp','id',Request.goods_id)).then(function(res) {
+				this.$http.jsonp(changeURLArg(this.baseUrl + '.t.jiayou9.com/product/description?id=378&debug=1&device_type=3&format=jsonp','id',Request.goods_id)).then(function(res) {
 					this.data = res.body.data;
+					
 				})
 
 			}
@@ -160,7 +161,7 @@
 		#wrapper1{
 			overflow-y: auto;
 			width: 100%;
-			margin-top: 88px;
+			/*margin-top: 88px;*/
 			div {
 				overflow-y: auto;
 				font-size: 0;

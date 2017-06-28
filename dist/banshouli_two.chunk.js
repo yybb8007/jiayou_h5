@@ -1,4 +1,4 @@
-webpackJsonp([31],{
+webpackJsonp([33],{
 
 /***/ 52:
 /***/ function(module, exports, __webpack_require__) {
@@ -38,24 +38,24 @@ webpackJsonp([31],{
 
 /***/ },
 
-/***/ 214:
+/***/ 230:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(215)
+	__webpack_require__(231)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(216),
+	  __webpack_require__(232),
 	  /* template */
-	  __webpack_require__(217),
+	  __webpack_require__(233),
 	  /* scopeId */
 	  "data-v-27966d9e",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\home\\children2\\banshouli_children\\banshouli_two.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\home\\children2\\banshouli_children\\banshouli_two.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] banshouli_two.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -77,14 +77,14 @@ webpackJsonp([31],{
 
 /***/ },
 
-/***/ 215:
+/***/ 231:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 216:
+/***/ 232:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
@@ -145,7 +145,7 @@ webpackJsonp([31],{
 		},
 		components: {},
 		mounted: function mounted() {
-			this.$http.jsonp('https://a1.t.jiayou9.com/channel/banshouli_goods?debug=1&format=jsonp&tag=2').then(function (res) {
+			this.$http.jsonp(this.baseUrl + '.t.jiayou9.com/channel/banshouli_goods?debug=1&format=jsonp&tag=2').then(function (res) {
 				this.data = res.body;
 				console.log(JSON.parse((0, _stringify2.default)(this.data)));
 			});
@@ -155,7 +155,7 @@ webpackJsonp([31],{
 
 /***/ },
 
-/***/ 217:
+/***/ 233:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

@@ -17,7 +17,7 @@ webpackJsonp([2],{
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\components\\footer.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\components\\footer.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] footer.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -197,7 +197,7 @@ webpackJsonp([2],{
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\group\\grouping.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\group\\grouping.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] grouping.vue: functional components are not supported with templates, they should use render functions.")}
 

@@ -37,7 +37,7 @@ webpackJsonp([15],{
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\components\\header.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\components\\header.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] header.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -172,24 +172,24 @@ webpackJsonp([15],{
 
 /***/ },
 
-/***/ 129:
+/***/ 130:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(130)
+	__webpack_require__(131)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(131),
-	  /* template */
 	  __webpack_require__(132),
+	  /* template */
+	  __webpack_require__(133),
 	  /* scopeId */
 	  "data-v-769fadd6",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\home\\children2\\banshouli.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\home\\children2\\banshouli.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] banshouli.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -211,14 +211,14 @@ webpackJsonp([15],{
 
 /***/ },
 
-/***/ 130:
+/***/ 131:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 131:
+/***/ 132:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -329,9 +329,9 @@ webpackJsonp([15],{
 			"nvHead": __webpack_require__(69)
 		},
 		mounted: function mounted() {
-			this.$http.jsonp('https://a1.t.jiayou9.com/channel/banshouli?debug=1&format=jsonp').then(function (res) {
+			this.$http.jsonp(this.baseUrl + '.t.jiayou9.com/channel/banshouli?debug=1&format=jsonp').then(function (res) {
 				this.data = res.body.data;
-				console.log(res.body.data[0].goods_detaill_arr);
+				//				console.log(res.body.data[0].goods_detaill_arr);
 			});
 		}
 	};
@@ -339,7 +339,7 @@ webpackJsonp([15],{
 
 /***/ },
 
-/***/ 132:
+/***/ 133:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -363,13 +363,6 @@ webpackJsonp([15],{
 	      staticClass: "swiper-slide"
 	    }, [_c('img', {
 	      attrs: {
-	        "src": __webpack_require__(133),
-	        "alt": "",
-	        "ID": item.data,
-	        "target": item.target
-	      }
-	    }), _vm._v(" "), _c('img', {
-	      attrs: {
 	        "src": __webpack_require__(134),
 	        "alt": "",
 	        "ID": item.data,
@@ -392,6 +385,13 @@ webpackJsonp([15],{
 	    }), _vm._v(" "), _c('img', {
 	      attrs: {
 	        "src": __webpack_require__(137),
+	        "alt": "",
+	        "ID": item.data,
+	        "target": item.target
+	      }
+	    }), _vm._v(" "), _c('img', {
+	      attrs: {
+	        "src": __webpack_require__(138),
 	        "alt": "",
 	        "ID": item.data,
 	        "target": item.target
@@ -506,35 +506,35 @@ webpackJsonp([15],{
 
 /***/ },
 
-/***/ 133:
+/***/ 134:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/banshou1.jpg?v=cd8fbff4";
 
 /***/ },
 
-/***/ 134:
+/***/ 135:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/banshou2.jpg?v=ca2d4961";
 
 /***/ },
 
-/***/ 135:
+/***/ 136:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/banshou3.jpg?v=c844a8f0";
 
 /***/ },
 
-/***/ 136:
+/***/ 137:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/banshou4.jpg?v=4b1359af";
 
 /***/ },
 
-/***/ 137:
+/***/ 138:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/banshou5.jpg?v=791c77e7";

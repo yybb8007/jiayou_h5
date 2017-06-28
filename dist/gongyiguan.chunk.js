@@ -37,7 +37,7 @@ webpackJsonp([20],{
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\components\\header.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\components\\header.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] header.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -172,24 +172,24 @@ webpackJsonp([20],{
 
 /***/ },
 
-/***/ 154:
+/***/ 155:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(155)
+	__webpack_require__(156)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(156),
-	  /* template */
 	  __webpack_require__(157),
+	  /* template */
+	  __webpack_require__(158),
 	  /* scopeId */
 	  "data-v-2de7d46e",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\home\\children2\\gongyiguan.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\home\\children2\\gongyiguan.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] gongyiguan.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -211,14 +211,14 @@ webpackJsonp([20],{
 
 /***/ },
 
-/***/ 155:
+/***/ 156:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 156:
+/***/ 157:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -304,7 +304,7 @@ webpackJsonp([20],{
 			"nvHead": __webpack_require__(69)
 		},
 		mounted: function mounted() {
-			this.$http.jsonp('https://a2.t.jiayou9.com/channel/gongyiguan?debug=1&format=jsonp').then(function (res) {
+			this.$http.jsonp(this.baseUrl + '.t.jiayou9.com/channel/gongyiguan?debug=1&format=jsonp').then(function (res) {
 				this.data = res.body.data;
 				console.log(res.body.data);
 				// 轮播图
@@ -323,7 +323,7 @@ webpackJsonp([20],{
 
 /***/ },
 
-/***/ 157:
+/***/ 158:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

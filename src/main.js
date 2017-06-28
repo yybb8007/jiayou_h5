@@ -7,6 +7,7 @@ import FastClick from 'fastclick';
 import VueLazyload from 'vue-lazyload';
 import VueResource from 'vue-resource';
 //import $ from 'jquery';
+import baseUrl from '../config/baseUrl'
 
 import Mint from 'mint-ui'
 import 'mint-ui/lib/style.css'
@@ -19,28 +20,28 @@ Vue.use(VueScroll)
 // Vue.component('spinner', FadingCircle);
 // export default Loadmore;
 
-
 Vue.use(VueRouter);
-Vue.use(VueResource);//请求数据
+Vue.use(VueResource); // 请求数据
 
-//依赖组件
+Vue.use(baseUrl);	// 请求数据接口公共部分
+
+// 依赖组件
 Vue.use(Mint);
 
-
-Vue.use(VueLazyload, {//图片懒加载
+Vue.use(VueLazyload, {	// 图片懒加载
 	preload: 1.3,
 	attempt: 1,
-	try: 3 // default 1
+	try: 3	// default 1
 });
 
 Vue.http.options.emulateHTTP = true;
 Vue.http.options.emulateJSON = true;
 
-//实例化Vue的filter
+// 实例化Vue的filter
 Object.keys(filters).forEach(key => {
 	Vue.filter(key, filters[key])
 });
-  // 并且配置路由规则
+// 并且配置路由规则
 const router = new VueRouter({
 	mode: 'hash',
 	base: __dirname,

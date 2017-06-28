@@ -1,4 +1,4 @@
-webpackJsonp([51],{
+webpackJsonp([53],{
 
 /***/ 52:
 /***/ function(module, exports, __webpack_require__) {
@@ -37,7 +37,7 @@ webpackJsonp([51],{
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\components\\header.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\components\\header.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] header.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -190,24 +190,24 @@ webpackJsonp([51],{
 
 /***/ },
 
-/***/ 310:
+/***/ 326:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(311)
+	__webpack_require__(327)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(312),
+	  __webpack_require__(328),
 	  /* template */
-	  __webpack_require__(313),
+	  __webpack_require__(329),
 	  /* scopeId */
 	  "data-v-402606eb",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\team\\children\\dingdan.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\team\\children\\dingdan.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] dingdan.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -229,14 +229,14 @@ webpackJsonp([51],{
 
 /***/ },
 
-/***/ 311:
+/***/ 327:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 312:
+/***/ 328:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
@@ -358,7 +358,6 @@ webpackJsonp([51],{
 	//
 	//
 	//
-	//
 
 	var goods_id = localStorage.getItem("goods_id");
 	var product_id = localStorage.getItem("product_id");
@@ -367,6 +366,7 @@ webpackJsonp([51],{
 	var tuan_rule_id = localStorage.getItem("tuan_rule_id");
 	var tuan_head_uid = localStorage.getItem("tuan_head_uid");
 	var userOpenid = localStorage.getItem("userOpenid");
+	var userUnionid = localStorage.getItem("userUnionid");
 
 	exports.default = {
 		data: function data() {
@@ -389,18 +389,6 @@ webpackJsonp([51],{
 			// 填写地址
 			show: function show() {
 				$(".fuceng1").css("display", "block");
-			},
-			show1: function show1() {
-				if ($(".tjdizhi").css("display") == "none") {
-					setTimeout(function () {
-						$(".fuceng2").css("display", "block");
-					}, 3000);
-				} else {
-					$(".fuceng2").css("display", "none");
-				}
-			},
-			show2: function show2() {
-				$(".fuceng2").css("display", "none");
 			},
 			// 省级选框改变，市级获取数据
 			city: function city() {
@@ -455,8 +443,8 @@ webpackJsonp([51],{
 				if ($(".tjdizhi").css("display") == "none") {
 					// 请求订单接口
 					$.ajax({
-						type: "get", //数据发送的方式（post 或者 get）
-						url: "https://a2.t.jiayou9.com/home/orderinfo/orderinfo?debug=1&device_type=3", //要发送的后台地址
+						type: "get", // 数据发送的方式（post 或者 get）
+						url: 'http://a2.t.jiayou9.com/home/orderinfo/orderinfo?debug=1&device_type=3', // 要发送的后台地址
 						data: {
 							"user_id": userId,
 							"goods_id": goods_id,
@@ -474,15 +462,16 @@ webpackJsonp([51],{
 							"activity_id": activity_id,
 							"tuan_rule_id": tuan_rule_id,
 							"tuan_head_uid": tuan_head_uid
-						}, //要发送的数据（参数）格式为{'val1':"1","val2":"2"}
-						dataType: "jsonp", //后台处理后返回的数据格式
+						}, // 要发送的数据（参数）格式为{'val1':"1","val2":"2"}
+						dataType: "jsonp", // 后台处理后返回的数据格式
 						success: function success(data5) {
-							//ajax请求成功后触发的方法
-							alert(data5.data);
+							// ajax请求成功后触发的方法
+							// data5.data===订单号
+							//							alert(data5.data);
 							// 请求微信支付接口
 							$.ajax({
 								type: "get",
-								url: "https://wxp.t.jiayou9.com/WxpayAPI_php_v3/example/jsapi.php",
+								url: 'https://wxp.t.jiayou9.com/Wxpay/example/jsapi.php',
 								data: {
 									"order_sn": data5.data,
 									"allprice": $(".sfprice")[0].innerHTML,
@@ -491,89 +480,67 @@ webpackJsonp([51],{
 								},
 								dataType: "jsonp",
 								success: function success(data6) {
-									var datazf = data6.data;
-									console.log(datazf.appid);
-									var appId = datazf.appid;
-									var paySign = datazf.noncestr;
-									var pg = datazf.package;
-									var partnerid = datazf.partnerid;
-									var prepayid = datazf.prepayid;
-									var paySign = datazf.sign;
-									var timeStamp = datazf.timestamp;
-									var prepay_id = "prepay_id=" + prepayid;
-									localStorage.setItem("appId", appId);
-									localStorage.setItem("paySign", paySign);
-									localStorage.setItem("pg", pg);
-									localStorage.setItem("partnerid", partnerid);
-									localStorage.setItem("prepayid", prepayid);
-									localStorage.setItem("paySign", paySign);
-									localStorage.setItem("timeStamp", timeStamp);
-									localStorage.setItem("prepay_id", prepay_id);
+									var timeStamp = data6.timeStamp;
+									var appId = data6.appId;
+									var nonceStr = data6.nonceStr;
+									var pg = data6.package;
+									var paySign = data6.paySign;
+									callpay();
+									// 调用微信支付
+									function callpay() {
+										try {
+											if (typeof WeixinJSBridge == "undefined") {
+												if (document.addEventListener) {
+													document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+												} else if (document.attachEvent) {
+													document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+													document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+												}
+											} else {
+												jsApiCall();
+											}
+										} catch (e) {
+											alert((0, _stringify2.default)(e));
+										}
+										function jsApiCall() {
+											try {
+												WeixinJSBridge.invoke('getBrandWCPayRequest', {
+													"appId": appId, // 公众号名称，由商户传入
+													"timeStamp": timeStamp, // 时间戳，自1970年以来的秒数
+													"nonceStr": nonceStr, // 随机串
+													"package": pg, // 预支付交易会话标识
+													"signType": "MD5", // 微信签名方式
+													"paySign": paySign }, function (res) {
+													//				                WeixinJSBridge.log(res.err_msg);
+													if (res.err_msg == "get_brand_wcpay_request:ok") {
+														WeixinJSBridge.log(res.err_msg);
+														var xq1 = location.href;
+														var xq = xq1.split("dingdan")[0];
+														window.location.href = xq + "pintuan?v=" + new Date().getTime();
+													}
+													// 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。
+												});
+											} catch (e) {
+												alert((0, _stringify2.default)(e));
+											}
+										}
+									}
 								},
 								error: function error(msg) {
-									//ajax请求失败后触发的方法
+									// ajax请求失败后触发的方法
 									console.log(msg);
 									alert((0, _stringify2.default)(msg));
 								}
 							});
 						},
 						error: function error(msg) {
-							//ajax请求失败后触发的方法
+							// ajax请求失败后触发的方法
 							console.log(msg);
+							alert((0, _stringify2.default)(msg));
 						}
 					});
 				} else {
 					$(".fuceng1").css("display", "block");
-				}
-			},
-			// 调用微信支付
-			callpay: function callpay() {
-				try {
-					if (typeof WeixinJSBridge == "undefined") {
-						if (document.addEventListener) {
-							document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
-						} else if (document.attachEvent) {
-							document.attachEvent('WeixinJSBridgeReady', jsApiCall);
-							document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
-						}
-					} else {
-						jsApiCall();
-					}
-				} catch (e) {
-					alert(e + "aaaaa");
-					//					alert(JSON.stringify(e));
-				}
-				function jsApiCall() {
-					var appId1 = localStorage.getItem("appId");
-					var paySign1 = localStorage.getItem("paySign");
-					var timeStamp1 = localStorage.getItem("timeStamp");
-					var nonceStr1 = localStorage.getItem("nonceStr");
-					var prepay_id1 = localStorage.getItem("prepay_id");
-					alert("appId1=" + appId1);
-					alert("paySign1=" + paySign1);
-					alert("timeStamp1=" + timeStamp1);
-					alert("nonceStr1=" + nonceStr1);
-					alert("prepay_id1=" + prepay_id1);
-					try {
-						WeixinJSBridge.invoke('getBrandWCPayRequest', {
-							"appId": appId1, // 公众号名称，由商户传入
-							"timeStamp": timeStamp1, // 时间戳，自1970年以来的秒数
-							"nonceStr": nonceStr1, // 随机串
-							"package": prepay_id1, // 预支付交易会话标识
-							"signType": "MD5", // 微信签名方式
-							"paySign": paySign1 }, function (res) {
-							//				                WeixinJSBridge.log(res.err_msg);
-							alert(res.err_code + res.err_desc + res.err_msg);
-							if (res.err_msg == "get_brand_wcpay_request:ok") {
-								WeixinJSBridge.log(res.err_msg);
-								alert('支付成功');
-							}
-							// 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。
-						});
-					} catch (e) {
-						alert(e + "bbbbb");
-						//		                alert(JSON.stringify(e));
-					}
 				}
 			}
 
@@ -623,9 +590,9 @@ webpackJsonp([51],{
 
 			//			$(".youfei span")[0].innerHTML = shipping_fee;
 			var shop_price = localStorage.getItem("shop_price1");
-			var allprice = $(".sfprice")[0].innerHTML = (parseFloat($(".youfei span")[0].innerHTML) + parseFloat(shop_price)).toFixed(2); // toFixed(2)---保留两位小数
+			//			var allprice = $(".sfprice")[0].innerHTML = (parseFloat(shop_price)).toFixed(2); // toFixed(2)---保留两位小数
 			//			console.log($(".shop_price span")[0].innerHTML);
-			$("#zongjia")[0].innerHTML = "总金额为：" + allprice;
+			//			$("#zongjia")[0].innerHTML = "总金额为：" + allprice;
 			console.log(shop_price);
 		}
 
@@ -634,7 +601,7 @@ webpackJsonp([51],{
 
 /***/ },
 
-/***/ 313:
+/***/ 329:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -668,14 +635,19 @@ webpackJsonp([51],{
 	    staticClass: "market_price"
 	  }, [_vm._v("￥"), _c('span', [_vm._v(_vm._s(_vm.data.shop_price))])]), _vm._v(" "), _c('span', {
 	    staticClass: "jinru"
-	  }, [_vm._v("X 1")])])])]), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _vm._m(4), _vm._v(" "), _c('div', {
+	  }, [_vm._v("X 1")])])])]), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('div', {
 	    staticClass: "bottom"
-	  }, [_vm._m(5), _vm._v(" "), _c('span', {
+	  }, [_c('span', {
+	    staticClass: "bottom_left"
+	  }, [_vm._v("实付款： ￥"), _vm._l((_vm.data.pintuan), function(i) {
+	    return _c('span', {
+	      staticClass: "sfprice"
+	    }, [_vm._v(_vm._s(i.tuan_price))])
+	  })], 2), _vm._v(" "), _c('span', {
 	    staticClass: "bottom_right",
 	    on: {
 	      "click": function($event) {
-	        _vm.zhifu();
-	        _vm.show1()
+	        _vm.zhifu()
 	      }
 	    }
 	  }, [_vm._v("立即支付")])])]), _vm._v(" "), _c('div', {
@@ -686,14 +658,14 @@ webpackJsonp([51],{
 	    }
 	  }, [_c('div', {
 	    staticClass: "container"
-	  }, [_c('h3', [_vm._v("支付前请填写收货地址")]), _vm._v(" "), _vm._m(6), _vm._v(" "), _c('p', {
+	  }, [_c('h3', [_vm._v("支付前请填写收货地址")]), _vm._v(" "), _vm._m(4), _vm._v(" "), _c('p', {
 	    staticClass: "address"
 	  }, [_vm._v("地址："), _c('select', {
 	    attrs: {
 	      "id": "sheng"
 	    },
 	    on: {
-	      "change": _vm.city
+	      "click": _vm.city
 	    }
 	  }, _vm._l((_vm.dataprovince), function(i) {
 	    return _c('option', {
@@ -730,36 +702,14 @@ webpackJsonp([51],{
 	        "value": i.region_id
 	      }
 	    }, [_vm._v(_vm._s(i.region_name))])
-	  }))]), _vm._v(" "), _vm._m(7), _vm._v(" "), _c('p', {
+	  }))]), _vm._v(" "), _vm._m(5), _vm._v(" "), _c('p', {
 	    attrs: {
 	      "id": "baocun"
 	    },
 	    on: {
 	      "click": _vm.address
 	    }
-	  }, [_vm._v("保存")])])])]), _vm._v(" "), _c('div', {
-	    staticClass: "fuceng2"
-	  }, [_c('div', {
-	    staticClass: "container"
-	  }, [_c('h3', [_vm._v("请您确认订单金额")]), _vm._v(" "), _c('p', {
-	    attrs: {
-	      "id": "zongjia"
-	    }
-	  }, [_vm._v("总金额为：")]), _vm._v(" "), _c('p', {
-	    attrs: {
-	      "id": "quxiao"
-	    },
-	    on: {
-	      "click": _vm.show2
-	    }
-	  }, [_vm._v("取消")]), _vm._v(" "), _c('p', {
-	    attrs: {
-	      "id": "queren"
-	    },
-	    on: {
-	      "click": _vm.callpay
-	    }
-	  }, [_vm._v("确认")])])])])
+	  }, [_vm._v("保存")])])])])])
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('header', {
 	    attrs: {
@@ -814,16 +764,6 @@ webpackJsonp([51],{
 	  return _c('div', {
 	    staticClass: "peixong"
 	  }, [_c('h3', [_vm._v("配送")]), _vm._v(" "), _c('span', [_vm._v("快递")])])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "youfei"
-	  }, [_c('h3', [_vm._v("邮费")]), _vm._v(" "), _c('span', [_vm._v("10.00")])])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('span', {
-	    staticClass: "bottom_left"
-	  }, [_vm._v("实付款： ￥"), _c('span', {
-	    staticClass: "sfprice"
-	  })])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('p', {
 	    staticClass: "content"

@@ -20,24 +20,24 @@ webpackJsonp([12],{
 
 /***/ },
 
-/***/ 117:
+/***/ 118:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(118)
+	__webpack_require__(119)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(119),
-	  /* template */
 	  __webpack_require__(120),
+	  /* template */
+	  __webpack_require__(121),
 	  /* scopeId */
 	  "data-v-b37a0bea",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\home\\children\\muying.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\home\\children\\muying.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] muying.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -59,14 +59,14 @@ webpackJsonp([12],{
 
 /***/ },
 
-/***/ 118:
+/***/ 119:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 119:
+/***/ 120:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
@@ -148,7 +148,7 @@ webpackJsonp([12],{
 		},
 		components: {},
 		mounted: function mounted() {
-			this.$http.jsonp('https://a1.t.jiayou9.com/channel/baby?debug=1&format=jsonp').then(function (res) {
+			this.$http.jsonp(this.baseUrl + '.t.jiayou9.com/channel/baby?debug=1&format=jsonp').then(function (res) {
 				this.data = res.body.data;
 				//        console.log(res.body.data);
 				// 轮播图
@@ -167,7 +167,7 @@ webpackJsonp([12],{
 
 /***/ },
 
-/***/ 120:
+/***/ 121:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

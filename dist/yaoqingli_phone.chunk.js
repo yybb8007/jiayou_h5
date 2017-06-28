@@ -1,4 +1,4 @@
-webpackJsonp([29],{
+webpackJsonp([31],{
 
 /***/ 52:
 /***/ function(module, exports, __webpack_require__) {
@@ -20,24 +20,24 @@ webpackJsonp([29],{
 
 /***/ },
 
-/***/ 205:
+/***/ 221:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(206)
+	__webpack_require__(222)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(207),
+	  __webpack_require__(223),
 	  /* template */
-	  __webpack_require__(208),
+	  __webpack_require__(224),
 	  /* scopeId */
 	  "data-v-00169872",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\home\\children2\\yaoqingli_phone.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\home\\children2\\yaoqingli_phone.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] yaoqingli_phone.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -59,14 +59,14 @@ webpackJsonp([29],{
 
 /***/ },
 
-/***/ 206:
+/***/ 222:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 207:
+/***/ 223:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
@@ -105,126 +105,100 @@ webpackJsonp([29],{
 	//
 	//
 	//
-	//
-	//
-	//
 
 	var countdown = 60; // 全局定义倒计时时间
-	var code; //在全局定义验证码   
+	var code; // 在全局定义验证码   
+	var yq_name = localStorage.getItem("yq_name");
+	var user_id = localStorage.getItem("user_id");
 	exports.default = {
 		data: function data() {
-			return {};
+			return {
+				data: [],
+				data1: []
+			};
 		},
 
 		computed: {},
 		methods: {
 			settime: function settime(val) {
+				var phone_num = $("#phone")[0].value;
+				var sms1 = $("#verification")[0].value;
+				localStorage.setItem("jy_userName", phone_num);
+				localStorage.setItem("sms", sms1);
 				var timer = setInterval(function () {
 					if (countdown == 0) {
 						$("#obtain")[0].innerHTML = "获取验证码";
 						countdown = 60;
-						alert("重新获取");
 						// 清除定时器
 						clearInterval(timer);
-						console.log($("#obtain")[0].innerHTML);
+						//							console.log($("#obtain")[0].innerHTML);
 					} else {
 						$("#obtain")[0].innerHTML = countdown + "秒后重新获取";
 						countdown--;
-						console.log(countdown);
-						console.log($("#obtain")[0].innerHTML);
+						//							console.log(countdown);
+						//							console.log($("#obtain")[0].innerHTML);
 					};
 				}, 1000);
 			},
 
-			//校验验证码  
-			validate: function validate() {
-				var inputCode = document.getElementById("input").value.toUpperCase(); //取得输入的验证码并转化为大写        
-				if (inputCode.length <= 0) {
-					//若输入的验证码长度为0  
-					alert("请输入验证码！"); //则弹出请输入验证码  
-				} else if (inputCode != code.toUpperCase()) {
-					//若输入的验证码与产生的验证码不一致时  
-					alert("验证码输入错误！@_@"); //则弹出验证码输入错误  
-					createCode(); //刷新验证码  
-					document.getElementById("input").value = ""; //清空文本框  
-				} else {
-					//输入正确时  
-					alert("^-^"); //弹出^-^  
-				}
-				// 产生验证码
-				function createCode() {
-					code = "";
-					var codeLength = 4; //验证码的长度  
-					var checkCode = document.getElementById("code");
-					var random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); // 随机数  
-					for (var i = 0; i < codeLength; i++) {
-						//循环操作  
-						var index = Math.floor(Math.random() * 61); //取得随机数的索引（0~35）  
-						code += random[index]; //根据索引取得随机数加到code上  
-					}
-					var r = parseInt(Math.random(0, 255) * 255);
-					var g = parseInt(Math.random(0, 255) * 255);
-					var b = parseInt(Math.random(0, 255) * 255);
-					checkCode.style.color = "rgb(" + r + "," + g + "," + b + ")";
-					checkCode.innerHTML = code; //把code值赋给验证码
-					checkCode.style.borderColor = "rgb(" + r + "," + g + "," + b + ")";
-					// 图片验证码位置
-					var rz = parseInt(Math.random(-45, 45) * 90 - 45);
-					checkCode.style.transform = "rotateZ(" + rz + "deg)";
-				}
+			// 短信验证码
+			getsms: function getsms() {
+				var jy_userName = localStorage.getItem("jy_userName");
+				this.$http.jsonp('https://a2.t.jiayou9.com/home/sms/index?debug=1&device_type=3', { // 请求参数
+					params: {
+						// 手机号
+						jy_userName: jy_userName
+					},
+					jsonp: 'callback'
+				}).then(function (res) {
+					this.data = res.body;
+					console.log(res.body);
+				});
 			},
 
-			// 产生验证码
-			createCode: function createCode() {
-				code = "";
-				var codeLength = 4; //验证码的长度  
-				var checkCode = document.getElementById("code");
-				var random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); // 随机数  
-				for (var i = 0; i < codeLength; i++) {
-					//循环操作  
-					var index = Math.floor(Math.random() * 61); //取得随机数的索引（0~60）  
-					code += random[index]; //根据索引取得随机数加到code上  
-				}
-				var r = parseInt(Math.random(0, 255) * 255);
-				var g = parseInt(Math.random(0, 255) * 255);
-				var b = parseInt(Math.random(0, 255) * 255);
-				checkCode.style.color = "rgb(" + r + "," + g + "," + b + ")";
-				checkCode.innerHTML = code; //把code值赋给验证码  
-				checkCode.style.borderColor = "rgb(" + r + "," + g + "," + b + ")";
-				// 图片验证码位置
-				var rz = parseInt(Math.random(-45, 45) * 90 - 45);
-				checkCode.style.transform = "rotateZ(" + rz + "deg)";
+			// 绑定手机号
+			binding: function binding() {
+				var jy_userName = localStorage.getItem("jy_userName");
+				var sms1 = $("#verification")[0].value;
+				//					localStorage.setItem("sms", sms1);
+				//					var sms = localStorage.getItem("sms");
+				this.$http.jsonp('https://a2.t.jiayou9.com/home/invitationpolite/lyhlqyhq?debug=1&device_type=3', { // 请求参数
+					params: {
+						user_id: user_id, // 用户ID
+						yq_name: yq_name, // 邀请人ID
+						mobile_phone: jy_userName, // 手机号
+						sms: sms1 // 短信验证码
+					},
+					jsonp: 'callback'
+				}).then(function (res) {
+					this.data1 = res.body;
+					var data11 = res.body;
+					localStorage.setItem("act_type_ext", data11.data.act_type_ext);
+					localStorage.setItem("zhanghao", data11.data.user_name);
+					console.log(data11);
+					console.log(sms1);
+					console.log(jy_userName);
+					if (data11.code == 1) {
+						$("#prompt")[0].innerHTML = "验证码错误！";
+					} else if (data11.code == 0) {
+						var old1 = location.href;
+						var old2 = old1.split("yaoqingli_phone")[0];
+						var old = old2 + "yaoqingli_download";
+						window.location.href = old + "?v=" + new Date().getTime();
+						//							$("#want").attr("href","https://m2.t.jiayou9.com/#/yaoqingli_download");
+						//							var h = document.getElementById("want").getAttribute("href") + old;
+						//							$("#want").attr("href",old);
+					}
+				});
 			}
 		},
 		components: {}
-	};
-	// 产生验证码
-
-	window.onload = function createCode() {
-		code = "";
-		var codeLength = 4; //验证码的长度  
-		var checkCode = document.getElementById("code");
-		var random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); //随机数  
-		for (var i = 0; i < codeLength; i++) {
-			//循环操作  
-			var index = Math.floor(Math.random() * 61); //取得随机数的索引（0~60）  
-			code += random[index]; //根据索引取得随机数加到code上  
-		}
-		var r = parseInt(Math.random(0, 255) * 255);
-		var g = parseInt(Math.random(0, 255) * 255);
-		var b = parseInt(Math.random(0, 255) * 255);
-		checkCode.style.color = "rgb(" + r + "," + g + "," + b + ")";
-		checkCode.innerHTML = code; //把code值赋给验证码  
-		checkCode.style.borderColor = "rgb(" + r + "," + g + "," + b + ")";
-		// 图片验证码位置
-		var rz = parseInt(Math.random(-45, 45) * 90 - 45);
-		checkCode.style.transform = "rotateZ(" + rz + "deg)";
 	};
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)))
 
 /***/ },
 
-/***/ 208:
+/***/ 224:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -232,9 +206,9 @@ webpackJsonp([29],{
 	    attrs: {
 	      "id": "wrapper"
 	    }
-	  }, [_vm._m(0), _vm._v(" "), _c('main', {
+	  }, [_c('main', {
 	    staticClass: "main1"
-	  }, [_vm._m(1), _vm._v(" "), _c('form', {
+	  }, [_vm._m(0), _vm._v(" "), _c('form', {
 	    attrs: {
 	      "action": ""
 	    }
@@ -243,6 +217,7 @@ webpackJsonp([29],{
 	  }, [_vm._v("手机号\n        \t\t\t\t\t"), _c('input', {
 	    attrs: {
 	      "type": "tel",
+	      "id": "phone",
 	      "placeholder": "请填写绑定手机号"
 	    }
 	  }), _vm._v(" "), _c('span', {
@@ -251,40 +226,27 @@ webpackJsonp([29],{
 	    },
 	    on: {
 	      "click": function($event) {
-	        _vm.settime(this)
+	        _vm.settime(this);
+	        _vm.getsms()
 	      }
 	    }
-	  }, [_vm._v("获取验证码")])]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('li', {
-	    staticClass: "images"
-	  }, [_vm._v("图片验证码\n        \t\t\t\t \t"), _c('input', {
+	  }, [_vm._v("获取验证码")])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('p', {
 	    attrs: {
-	      "id": "input",
-	      "type": "text",
-	      "placeholder": "(点击图片刷新)"
+	      "id": "prompt"
 	    }
-	  }), _vm._v(" "), _c('span', {
+	  })])])]), _vm._v(" "), _c('div', {
+	    staticClass: "menu",
 	    attrs: {
-	      "id": "code"
+	      "id": "want"
 	    },
 	    on: {
-	      "click": _vm.createCode
+	      "click": _vm.binding
 	    }
-	  })])])])]), _vm._v(" "), _c('div', {
-	    staticClass: "menu",
-	    on: {
-	      "click": _vm.validate
-	    }
-	  }, [_vm._v("立刻绑定")]), _vm._v(" "), _vm._m(3)])])
+	  }, [_vm._v("立刻绑定")])])])
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('header', {
-	    attrs: {
-	      "id": "all_header"
-	    }
-	  }, [_c('p', [_vm._v("绑定手机")])])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('header', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(209)
+	      "src": __webpack_require__(225)
 	    }
 	  }), _vm._v("为了您的账号安全，请及时绑定手机号")])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -293,19 +255,10 @@ webpackJsonp([29],{
 	  }, [_vm._v("验证码\n        \t\t\t\t\t"), _c('input', {
 	    attrs: {
 	      "type": "text",
+	      "id": "verification",
 	      "placeholder": "请填写验证码"
 	    }
 	  })])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('p', {
-	    attrs: {
-	      "id": "footer"
-	    }
-	  }, [_vm._v("收不到短信？请拨打"), _c('a', {
-	    attrs: {
-	      "href": "tel:"
-	    }
-	  }, [_vm._v("客服")])])
 	}]}
 	module.exports.render._withStripped = true
 	if (false) {
@@ -317,7 +270,7 @@ webpackJsonp([29],{
 
 /***/ },
 
-/***/ 209:
+/***/ 225:
 /***/ function(module, exports) {
 
 	module.exports = "data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QMraHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkVCN0ZGNUY2NDY5RjExRTdBNDFEQzg3NEFGN0Y4ODdCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkVCN0ZGNUY3NDY5RjExRTdBNDFEQzg3NEFGN0Y4ODdCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RUI2RjFFQTA0NjlGMTFFN0E0MURDODc0QUY3Rjg4N0IiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RUI2RjFFQTE0NjlGMTFFN0E0MURDODc0QUY3Rjg4N0IiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAAGBAQEBQQGBQUGCQYFBgkLCAYGCAsMCgoLCgoMEAwMDAwMDBAMDg8QDw4MExMUFBMTHBsbGxwfHx8fHx8fHx8fAQcHBw0MDRgQEBgaFREVGh8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAAsACwDAREAAhEBAxEB/8QAegAAAQQDAQAAAAAAAAAAAAAABgADBAUBAgcIAQEBAAAAAAAAAAAAAAAAAAAAARAAAQIEAwUDBg8BAAAAAAAAAQIDABESBCETBTFBFBUGUXEWYaGxMqIzgZHB0SJSgrIjQ2OjRIQlJhEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A9LwAz1F1bwTyrSySlb6feuKxSk9gG8wFA31lryHKlPJcT9RSEgeyEnzwBjoOusatblSRlvtyDrU5ynsI8hgLSAUAoDkTy3HHnFue8UoqXPtJmYK0gL/olbidbCU+qttYX3DH0iCOgwCgFAA/UvS10i6cvLJsusukrW2gTUhRxMhvHdAD7Wn3zrmW3buKXspCFT9EFHHSvTy9NbXcXMuLdFNIxoTtlPtO+CCCAUBC1PVrLTWM25XKeCEJxUo+QQA0/wBfuVEW9oAncXFEn4gB6YBkdfahPG2Zl9r54CbZ9e261hN3bFoH8xBrA70kAwBQy80+0l1lYW2sTSsYgiA3gObdVXi7nW7gEzQycpsdgTt9qcBUQVO020t3EXF1dVG2tUpKm0GSlqWZJTPcO0wRdL0R5DOc5pFuy0ACVO3LglPZM5gEBZaMu/asrm305hLdyw8EuWr6ypCJgzKFDEg4YTgM+Kb2rgeFTzfNysur8OUp1z+ScBFvvBXG3HE5nEZi86WbKuo1bMNsAx/wX6n7sA+jwhy6+4fMyqE50q5zq+hTXhVVAYtOYcrvee53LspOVVTXOoUy31TltgIrfiekZXG5MhR6tUpYT+CAX+VwX8rnef8A2M2X3fPAf//Z"

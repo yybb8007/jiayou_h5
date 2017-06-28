@@ -1,23 +1,23 @@
-webpackJsonp([43],{
+webpackJsonp([45],{
 
-/***/ 264:
+/***/ 280:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(265)
+	__webpack_require__(281)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(266),
+	  __webpack_require__(282),
 	  /* template */
-	  __webpack_require__(267),
+	  __webpack_require__(283),
 	  /* scopeId */
 	  "data-v-64383cac",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\group\\children\\region.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\group\\children\\region.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] region.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -39,14 +39,14 @@ webpackJsonp([43],{
 
 /***/ },
 
-/***/ 265:
+/***/ 281:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 266:
+/***/ 282:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -145,7 +145,7 @@ webpackJsonp([43],{
 
 /***/ },
 
-/***/ 267:
+/***/ 283:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -160,7 +160,7 @@ webpackJsonp([43],{
 	    staticClass: "gp_region"
 	  }, [_c('ul', [_c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(268),
+	      "src": __webpack_require__(284),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -169,7 +169,7 @@ webpackJsonp([43],{
 	    staticClass: "reg_explain"
 	  }, [_vm._v("贵州西部旅游中心")])])]), _vm._v(" "), _c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(268),
+	      "src": __webpack_require__(284),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -178,7 +178,7 @@ webpackJsonp([43],{
 	    staticClass: "reg_explain"
 	  }, [_vm._v("贵州西部旅游中心")])])]), _vm._v(" "), _c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(268),
+	      "src": __webpack_require__(284),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -187,7 +187,7 @@ webpackJsonp([43],{
 	    staticClass: "reg_explain"
 	  }, [_vm._v("贵州西部旅游中心")])])]), _vm._v(" "), _c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(268),
+	      "src": __webpack_require__(284),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -196,7 +196,7 @@ webpackJsonp([43],{
 	    staticClass: "reg_explain"
 	  }, [_vm._v("贵州西部旅游中心")])])]), _vm._v(" "), _c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(268),
+	      "src": __webpack_require__(284),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -205,7 +205,7 @@ webpackJsonp([43],{
 	    staticClass: "reg_explain"
 	  }, [_vm._v("贵州西部旅游中心")])])]), _vm._v(" "), _c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(268),
+	      "src": __webpack_require__(284),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -214,7 +214,7 @@ webpackJsonp([43],{
 	    staticClass: "reg_explain"
 	  }, [_vm._v("贵州西部旅游中心")])])]), _vm._v(" "), _c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(268),
+	      "src": __webpack_require__(284),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -223,7 +223,7 @@ webpackJsonp([43],{
 	    staticClass: "reg_explain"
 	  }, [_vm._v("贵州西部旅游中心")])])]), _vm._v(" "), _c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(268),
+	      "src": __webpack_require__(284),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -232,7 +232,7 @@ webpackJsonp([43],{
 	    staticClass: "reg_explain"
 	  }, [_vm._v("贵州西部旅游中心")])])]), _vm._v(" "), _c('li', [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(268),
+	      "src": __webpack_require__(284),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('div', [_c('p', {
@@ -251,7 +251,7 @@ webpackJsonp([43],{
 
 /***/ },
 
-/***/ 268:
+/***/ 284:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/region.png?v=5af19ecd";

@@ -45,7 +45,7 @@
 		},
 		components: {},
 		mounted: function() {
-			this.$http.jsonp('https://a1.t.jiayou9.com/channel/banshouli_goods?debug=1&format=jsonp&tag=3').then(function(res) {
+			this.$http.jsonp(this.baseUrl + '.t.jiayou9.com/channel/banshouli_goods?debug=1&format=jsonp&tag=3').then(function(res) {
 				this.data = res.body;
 				console.log(JSON.parse(JSON.stringify(this.data)));
 

@@ -2,19 +2,25 @@
     <div >
         <section id="wrapper" class="sy_main" @click = "callback">
             <div id="div_img">
-                <img src="../../../assets/images/components/duanwu (1).jpg" alt=""  @click = "returnTop"/>
-                <img src="../../../assets/images/components/duanwu (2).jpg" alt="" />
-                <img src="../../../assets/images/components/duanwu (3).jpg" alt="" />
-                <img src="../../../assets/images/components/duanwu (4).jpg" alt="" id = "645" target = "3"  />
-                <img src="../../../assets/images/components/duanwu (5).jpg" alt="" id = "627" target = "3" />
-                <img src="../../../assets/images/components/duanwu (6).jpg" alt="" id = "555" target = "3"  />
-                <img src="../../../assets/images/components/duanwu (7).jpg" alt=""  id = "796" target = "3"/>
-                <img src="../../../assets/images/components/duanwu (8).jpg" alt="" />
-                <img src="../../../assets/images/components/duanwu (9).jpg" alt=""  id = "548" target = "3"/>
-                <img src="../../../assets/images/components/duanwu (10).jpg" alt="" id = "921" target = "3" />
-                <img src="../../../assets/images/components/duanwu (11).jpg" alt="" id = "791" target = "3"/>
-                <img src="../../../assets/images/components/duanwu (12).jpg" alt="" id = "759" target = "3"/>              
-                <img src="../../../assets/images/components/duanwu (13).jpg" alt=""  @click = "returnTop"/>
+                <img src="../../../assets/images/components/ditan (1).jpg" alt=""  @click = "returnTop"/>
+                <img src="../../../assets/images/components/ditan (2).jpg" alt="" />
+                <img src="../../../assets/images/components/ditan (3).jpg" alt="" />
+                <img src="../../../assets/images/components/ditan (4).jpg" alt=""  />
+                <img src="../../../assets/images/components/ditan (5).jpg" alt="" />
+                <img src="../../../assets/images/components/ditan (6).jpg" alt="" id = "861" target = "3"  />
+                <img src="../../../assets/images/components/ditan (7).jpg" alt="" />
+                <img src="../../../assets/images/components/ditan (8).jpg" alt=""  id = "934" target = "3"/>
+                <img src="../../../assets/images/components/ditan (9).jpg" alt="" />
+                <img src="../../../assets/images/components/ditan (10).jpg" alt="" />
+                <img src="../../../assets/images/components/ditan (11).jpg" alt="" id = "863" target = "3"/>
+                <img src="../../../assets/images/components/ditan (12).jpg" alt="" id = "910" target = "3"/>              
+                <img src="../../../assets/images/components/ditan (13).jpg" alt="" />              
+                <img src="../../../assets/images/components/ditan (14).jpg" alt="" id = "971" target = "3"/>              
+                <img src="../../../assets/images/components/ditan (15).jpg" alt=""/>              
+                <img src="../../../assets/images/components/ditan (16).jpg" alt=""/>              
+                <img src="../../../assets/images/components/ditan (17).jpg" alt="" id = "855" target = "3"/>              
+                <img src="../../../assets/images/components/ditan (18).jpg" alt="" />              
+                <img src="../../../assets/images/components/ditan (19).jpg" alt=""  @click = "returnTop"/>
                 
             </div>
 
@@ -65,7 +71,7 @@
 //              "nvHead": require('../../../components/header.vue'),
             },
             mounted: function() {
-                this.$http.jsonp('https://a1.t.jiayou9.com/page/index?debug=1&format=jsonp').then(function(res) {
+                this.$http.jsonp(this.baseUrl + '.t.jiayou9.com/page/index?debug=1&format=jsonp').then(function(res) {
                     this.data = res.body.data;
 //                  console.log(JSON.parse(JSON.stringify(this.data)));
 

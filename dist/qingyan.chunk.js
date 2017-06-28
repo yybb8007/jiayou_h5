@@ -1,4 +1,4 @@
-webpackJsonp([34],{
+webpackJsonp([36],{
 
 /***/ 52:
 /***/ function(module, exports, __webpack_require__) {
@@ -37,7 +37,7 @@ webpackJsonp([34],{
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "D:\\mywork\\jiayou_h5\\src\\components\\header.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\components\\header.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] header.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -172,24 +172,24 @@ webpackJsonp([34],{
 
 /***/ },
 
-/***/ 226:
+/***/ 242:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(227)
+	__webpack_require__(243)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(228),
+	  __webpack_require__(244),
 	  /* template */
-	  __webpack_require__(229),
+	  __webpack_require__(245),
 	  /* scopeId */
 	  "data-v-0597fe6c",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "D:\\mywork\\jiayou_h5\\src\\views\\home\\children3\\children4\\qingyan.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\home\\children3\\children4\\qingyan.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] qingyan.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -211,14 +211,14 @@ webpackJsonp([34],{
 
 /***/ },
 
-/***/ 227:
+/***/ 243:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 228:
+/***/ 244:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
@@ -368,9 +368,9 @@ webpackJsonp([34],{
 				var URL = url + '\n' + arg + '\n' + arg_val;
 				return URL;
 			};
-			changeURLArg('https://a1.t.jiayou9.com/scenicspot/index?id=189&debug=1&device_type=3&format=jsonp', 'id', id);
+			changeURLArg('https://a2.t.jiayou9.com/scenicspot/index?id=189&debug=1&device_type=3&format=jsonp', 'id', id);
 
-			this.$http.jsonp(changeURLArg('https://a1.t.jiayou9.com/scenicspot/index?id=189&debug=1&device_type=3&format=jsonp', 'id', id)).then(function (res) {
+			this.$http.jsonp(changeURLArg('https://a2.t.jiayou9.com/scenicspot/index?id=189&debug=1&device_type=3&format=jsonp', 'id', id)).then(function (res) {
 				this.data = res.body.data;
 				console.log(res.body.data);
 			});
@@ -380,7 +380,7 @@ webpackJsonp([34],{
 
 /***/ },
 
-/***/ 229:
+/***/ 245:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

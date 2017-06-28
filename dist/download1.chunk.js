@@ -1,30 +1,30 @@
 webpackJsonp([23],{
 
-/***/ 166:
+/***/ 167:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/download.jpg?v=91e48066";
 
 /***/ },
 
-/***/ 167:
+/***/ 168:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(168)
+	__webpack_require__(169)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(169),
-	  /* template */
 	  __webpack_require__(170),
+	  /* template */
+	  __webpack_require__(171),
 	  /* scopeId */
 	  "data-v-bb3cf392",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\home\\children2\\download1.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\home\\children2\\download1.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] download1.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -46,14 +46,14 @@ webpackJsonp([23],{
 
 /***/ },
 
-/***/ 168:
+/***/ 169:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 169:
+/***/ 170:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -113,7 +113,7 @@ webpackJsonp([23],{
 
 /***/ },
 
-/***/ 170:
+/***/ 171:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -126,7 +126,7 @@ webpackJsonp([23],{
 	    }
 	  }, [_c('img', {
 	    attrs: {
-	      "src": __webpack_require__(166),
+	      "src": __webpack_require__(167),
 	      "alt": ""
 	    }
 	  }), _vm._v(" "), _c('article', {

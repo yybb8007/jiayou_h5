@@ -1,23 +1,23 @@
-webpackJsonp([53],{
+webpackJsonp([55],{
 
-/***/ 318:
+/***/ 334:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(319)
+	__webpack_require__(335)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(320),
+	  __webpack_require__(336),
 	  /* template */
-	  __webpack_require__(321),
+	  __webpack_require__(337),
 	  /* scopeId */
 	  "data-v-78e9b684",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\team\\children\\children2\\qbpinglun.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\team\\children\\children2\\qbpinglun.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] qbpinglun.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -39,14 +39,14 @@ webpackJsonp([53],{
 
 /***/ },
 
-/***/ 319:
+/***/ 335:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 320:
+/***/ 336:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -135,7 +135,7 @@ webpackJsonp([53],{
 			};
 			//				changeURLArg('https://a2.t.jiayou9.com/product/comment_text?debug=1&id=658&data_format=1','id',id);
 
-			this.$http.jsonp(changeURLArg('https://a2.t.jiayou9.com/product/comment_text?debug=1&id=658&data_format=1', 'id', goods_id)).then(function (res) {
+			this.$http.jsonp(changeURLArg(this.baseUrl + '.t.jiayou9.com/product/comment_text?debug=1&id=658&data_format=1', 'id', goods_id)).then(function (res) {
 				this.data = res.body.data;
 				console.log(res.body.data.goods_id);
 				//					console.log(res.body.data[8]);
@@ -156,7 +156,7 @@ webpackJsonp([53],{
 
 /***/ },
 
-/***/ 321:
+/***/ 337:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

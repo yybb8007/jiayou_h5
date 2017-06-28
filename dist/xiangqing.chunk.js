@@ -20,24 +20,24 @@ webpackJsonp([21],{
 
 /***/ },
 
-/***/ 158:
+/***/ 159:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(159)
+	__webpack_require__(160)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(160),
-	  /* template */
 	  __webpack_require__(161),
+	  /* template */
+	  __webpack_require__(162),
 	  /* scopeId */
 	  "data-v-1f1780b0",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "D:\\mywork\\jiayou_h5\\src\\views\\home\\children2\\xiangqing.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\home\\children2\\xiangqing.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] xiangqing.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -59,14 +59,14 @@ webpackJsonp([21],{
 
 /***/ },
 
-/***/ 159:
+/***/ 160:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 160:
+/***/ 161:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
@@ -175,10 +175,10 @@ webpackJsonp([21],{
 				var URL = url + '\n' + arg + '\n' + arg_val;
 				return URL;
 			};
-			changeURLArg('https://a1.t.jiayou9.com/product/description?id=378&debug=1&device_type=3&format=jsonp', 'id', Request.goods_id);
+			changeURLArg(this.baseUrl + '.t.jiayou9.com/product/description?id=378&debug=1&device_type=3&format=jsonp', 'id', Request.goods_id);
 
 			// 获取数据
-			this.$http.jsonp(changeURLArg('https://a1.t.jiayou9.com/product/description?id=378&debug=1&device_type=3&format=jsonp', 'id', Request.goods_id)).then(function (res) {
+			this.$http.jsonp(changeURLArg(this.baseUrl + '.t.jiayou9.com/product/description?id=378&debug=1&device_type=3&format=jsonp', 'id', Request.goods_id)).then(function (res) {
 				this.data = res.body.data;
 			});
 		}
@@ -190,7 +190,7 @@ webpackJsonp([21],{
 
 /***/ },
 
-/***/ 161:
+/***/ 162:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -198,11 +198,15 @@ webpackJsonp([21],{
 	    attrs: {
 	      "id": "xiangqingye"
 	    }
+	  }, [_c('section', {
+	    attrs: {
+	      "id": "wrapper1"
+	    }
 	  }, [_c('div', {
 	    domProps: {
 	      "innerHTML": _vm._s(_vm.data.goods_desc)
 	    }
-	  })])
+	  })])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {

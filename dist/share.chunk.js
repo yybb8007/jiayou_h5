@@ -1,4 +1,4 @@
-webpackJsonp([52],{
+webpackJsonp([54],{
 
 /***/ 52:
 /***/ function(module, exports, __webpack_require__) {
@@ -20,24 +20,24 @@ webpackJsonp([52],{
 
 /***/ },
 
-/***/ 314:
+/***/ 330:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(315)
+	__webpack_require__(331)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(316),
+	  __webpack_require__(332),
 	  /* template */
-	  __webpack_require__(317),
+	  __webpack_require__(333),
 	  /* scopeId */
 	  "data-v-64c9fa12",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\team\\children\\share.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\team\\children\\share.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] share.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -59,14 +59,14 @@ webpackJsonp([52],{
 
 /***/ },
 
-/***/ 315:
+/***/ 331:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 316:
+/***/ 332:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
@@ -162,7 +162,7 @@ webpackJsonp([52],{
 			},
 			onscroll_fixed: function onscroll_fixed() {
 				var top = $("#box").scrollTop();
-				console.log(top);
+				//					console.log(top)
 				if (top >= 629) {
 					$("#fixedtop").css({
 						"position": "fixed",
@@ -182,9 +182,6 @@ webpackJsonp([52],{
 					$("#wrapper1").css("margin-top", 0);
 					$("#wrapper2").css("margin-top", 0);
 				}
-			},
-			onScroll: function onScroll() {
-				console.log("aa");
 			}
 		},
 		components: {
@@ -218,10 +215,8 @@ webpackJsonp([52],{
 			};
 			//				changeURLArg('https://a2.t.jiayou9.com/product/info?id=330&debug=1&data_format=1','id',id);
 
-			this.$http.jsonp(changeURLArg('https://a2.t.jiayou9.com/product/info?id=330&debug=1&data_format=1', 'id', goods_id)).then(function (res) {
+			this.$http.jsonp(changeURLArg(this.baseUrl + '.t.jiayou9.com/product/info?id=330&debug=1&data_format=1', 'id', goods_id)).then(function (res) {
 				this.data = res.body.data;
-				//					console.log(res.body.data.goods_id);
-				//					console.log(res.body.data[8]);
 				// 轮播图
 				var mySwiper = new Swiper('.swiper-container', {
 					direction: 'horizontal',
@@ -232,41 +227,16 @@ webpackJsonp([52],{
 					pagination: '.swiper-pagination'
 				});
 			});
-			this.$http.jsonp(changeURLArg('https://a1.t.jiayou9.com/product/description?id=410&debug=1&device_type=3&format=jsonp', 'id', goods_id)).then(function (res) {
+			this.$http.jsonp(changeURLArg(this.baseUrl + '.t.jiayou9.com/product/description?id=410&debug=1&device_type=3&format=jsonp', 'id', goods_id)).then(function (res) {
 				this.data2 = res.body.data;
-				//					console.log(res.body.data.goods_id);
-				//					console.log(res.body.data[8]);
 			});
-			//				setInterval(function(){
-			//					var top = $("#goods_main").offset().top;
-			////					console.log(top)
-			//					if (top <= (-626)) {
-			//						$("#fixedtop").css({
-			//							"position":"fixed",
-			//							"top": "0",
-			//							"left": "0",
-			//							"right": "0",
-			//							"background": "#fff"
-			//						});
-			//						$("#wrapper1").css("margin-top",$("#fixedtop").height() + "px");
-			//						$("#wrapper2").css("margin-top",$("#fixedtop").height() + "px");
-			////						console.log($("#fixedtop").height())
-			//					} else if (top > (-626)) {
-			//						$("#fixedtop").css({
-			//							"position":"static",
-			//							"background": "#fff"
-			//						});
-			//						$("#wrapper1").css("margin-top", 0);
-			//						$("#wrapper2").css("margin-top", 0);
-			//					}
-			//				},1)
 		}
 	};
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)))
 
 /***/ },
 
-/***/ 317:
+/***/ 333:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

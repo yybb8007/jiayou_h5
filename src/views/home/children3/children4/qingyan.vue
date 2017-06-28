@@ -139,9 +139,9 @@
 					var URL = url + '\n' + arg + '\n' + arg_val;
 					return URL;
 				};
-				changeURLArg('https://a1.t.jiayou9.com/scenicspot/index?id=189&debug=1&device_type=3&format=jsonp','id',id);
+				changeURLArg('https://a2.t.jiayou9.com/scenicspot/index?id=189&debug=1&device_type=3&format=jsonp','id',id);
 
-				this.$http.jsonp(changeURLArg('https://a1.t.jiayou9.com/scenicspot/index?id=189&debug=1&device_type=3&format=jsonp','id',id)).then(function(res) {
+				this.$http.jsonp(changeURLArg('https://a2.t.jiayou9.com/scenicspot/index?id=189&debug=1&device_type=3&format=jsonp','id',id)).then(function(res) {
 					this.data = res.body.data;
 					console.log(res.body.data);
 					

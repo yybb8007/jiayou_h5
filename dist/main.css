@@ -3810,7 +3810,7 @@ div header ul li[data-v-1f1780b0]:first-of-type {
 div #wrapper1[data-v-1f1780b0] {
   overflow-y: auto;
   width: 100%;
-  margin-top: 1.17333333rem;
+  /*margin-top: 88px;*/
 }
 div #wrapper1 div[data-v-1f1780b0] {
   overflow-y: auto;
@@ -4061,7 +4061,7 @@ section div ul li .indent[data-v-549626f8] {
 }
 @charset "UTF-8";
 section[data-v-269393c3] {
-  /*background: rgb(255,255,255);*/
+  background: #fff;
   /* 主体 */
   /* 立刻邀请按钮 */
   /* 底部信息 */
@@ -4097,86 +4097,10 @@ section #all_header #guize[data-v-269393c3] {
 }
 section .main1[data-v-269393c3] {
   width: 100%;
-  height: 9.38666667rem;
-  background: skyblue;
-  padding-top: 3.86666667rem;
-}
-section .main1 .box1[data-v-269393c3] {
-  width: 8.32rem;
-  height: 2.29333333rem;
-  border-radius: 0.2rem;
-  background: #fff;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 0.38666667rem;
-}
-section .main1 .box1 .title1[data-v-269393c3] {
-  font-size: 0.49333333rem;
-  color: #717370;
-}
-section .main1 .box1 .title1 span[data-v-269393c3] {
-  color: #d2d2d2;
-}
-section .main1 .box1 .title2[data-v-269393c3] {
-  font-size: 0.77333333rem;
-  color: #92cb40;
-  font-weight: bolder;
-}
-section .main1 .box2[data-v-269393c3] {
-  width: 8.32rem;
-  height: 7rem;
-  border-radius: 0.2rem;
-  background: #fff;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 0.06666667rem;
-}
-section .main1 .box2 header[data-v-269393c3] {
-  height: 1.16rem;
-  text-align: center;
-  font-size: 0.37333333rem;
-  color: #939393;
-  line-height: 1.16rem;
-}
-section .main1 .box2 main .left[data-v-269393c3] {
-  height: 5.8rem;
-  width: 3.96rem;
-  background: aquamarine;
-  float: left;
-  margin-left: 0.76rem;
-}
-section .main1 .box2 main .left img[data-v-269393c3] {
-  width: 100%;
-  height: 100%;
-}
-section .main1 .box2 main .right[data-v-269393c3] {
-  float: right;
-  height: 5.8rem;
-  width: 3.06666667rem;
-  margin-right: 0.50666667rem;
-  text-align: right;
-}
-section .main1 .box2 main .right .first[data-v-269393c3] {
-  font-size: 0.30666667rem;
-  color: #6f6f6f;
-  margin-top: 0.86666667rem;
-}
-section .main1 .box2 main .right .second[data-v-269393c3] {
-  font-size: 0.48rem;
-  color: #737572;
-  font-weight: bold;
-}
-section .main1 .box2 main .right .third[data-v-269393c3] {
-  font-size: 0.70666667rem;
-  color: #85b93a;
-  font-weight: bolder;
-}
-section .main1 .box2 main .right .third span[data-v-269393c3] {
-  font-size: 0.48rem;
-}
-section .main1 .box2 main .right .fourth[data-v-269393c3] {
-  font-size: 0.36rem;
-  color: #6e706f;
+  height: 4.74666667rem;
+  background: url(http://m2.t.jiayou9.com/dist/assets/yqyl_yq.jpg) no-repeat;
+  background-size: cover;
+  padding-top: 8.50666667rem;
 }
 section .menu[data-v-269393c3] {
   height: 1.06666667rem;
@@ -4195,15 +4119,22 @@ section #footer[data-v-269393c3] {
   font-size: 0.37333333rem;
   color: #979795;
   margin-top: 0.26666667rem;
+  padding-bottom: 0.66666667rem;
 }
 section #footer a[data-v-269393c3] {
   font-size: 0.32rem;
   font-weight: bolder;
   color: #85b93a;
 }
+section #footer span[data-v-269393c3] {
+  font-size: 0.32rem;
+  font-weight: bolder;
+  color: #85b93a;
+}
 @charset "UTF-8";
 section[data-v-319a86ac] {
-  background: black;
+  background: url(https://m2.t.jiayou9.com/dist/assets/yqyl_gz.jpg) no-repeat;
+  background-size: cover;
   /* 顶部标题行 */
   /* 主体 */
 }
@@ -4234,10 +4165,10 @@ section #all_header .icon_fenxiang[data-v-319a86ac]::before {
 }
 section main[data-v-319a86ac] {
   width: 8.49333333rem;
-  height: 12.66666667rem;
-  background: #fff;
+  height: 10.01333333rem;
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 0.24rem;
-  margin: 1.57333333rem auto;
+  margin: 2.10666667rem auto;
   padding-top: 0.66666667rem;
 }
 section main .title1[data-v-319a86ac],
@@ -4258,11 +4189,20 @@ section main .title3[data-v-319a86ac] {
   font-size: 0.37333333rem;
   color: #a4d361;
 }
+section main .img[data-v-319a86ac] {
+  width: 4.93333333rem;
+  margin: 0 auto;
+  margin-top: 0.16rem;
+}
+section main .img img[data-v-319a86ac] {
+  width: 100%;
+}
 section main h3[data-v-319a86ac] {
   text-align: center;
   font-size: 0.44rem;
   color: #424441;
   font-weight: bolder;
+  margin-top: 0.68rem;
 }
 section main ul[data-v-319a86ac] {
   margin: 0.53333333rem 0.66666667rem;
@@ -4270,12 +4210,12 @@ section main ul[data-v-319a86ac] {
   color: #979797;
   line-height: 0.48rem;
 }
-section main ul li[data-v-319a86ac] {
-  margin-bottom: 0.26666667rem;
+section main ul li[data-v-319a86ac]:first-of-type {
+  margin-bottom: 0.68rem;
 }
 @charset "UTF-8";
 section[data-v-1f84c673] {
-  /*background: rgb(255,255,255);*/
+  background: #fff;
   /*#all_header{
     	width: 100%;
     	height: 88px;
@@ -4311,7 +4251,8 @@ section[data-v-1f84c673] {
 section .main1[data-v-1f84c673] {
   width: 100%;
   height: 5.08rem;
-  background: skyblue;
+  background: url(http://m2.t.jiayou9.com/dist/assets/yqyl_lq.jpg) no-repeat;
+  background-size: cover;
   padding-top: 8.17333333rem;
 }
 section .main1 .box1[data-v-1f84c673] {
@@ -4347,6 +4288,7 @@ section .main1 .box2[data-v-1f84c673] {
   font-weight: bold;
 }
 section .menu[data-v-1f84c673] {
+  display: block;
   height: 1.06666667rem;
   width: 8.53333333rem;
   margin-top: 0.37333333rem;
@@ -4358,106 +4300,187 @@ section .menu[data-v-1f84c673] {
   font-size: 0.44rem;
   color: #fff;
 }
-.fuceng1[data-v-1f84c673] {
+@charset "UTF-8";
+section[data-v-8320bf98] {
+  background: white;
+  /* 主体 */
+  /* 立刻邀请按钮 */
+  /* 底部信息 */
+}
+section #all_header[data-v-8320bf98] {
   width: 100%;
-  height: 17.78666667rem;
-  background: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 111;
-  display: none;
-}
-.fuceng1 .lingquan[data-v-1f84c673] {
-  width: 8.29333333rem;
-  height: 4.2rem;
-  margin: 0 auto;
-  margin-top: 6.86666667rem;
-  background: #93bf4e;
-}
-.fuceng1 .lingquan .fuceng1_top[data-v-1f84c673] {
-  padding: 0.61333333rem 1rem 0 0.94666667rem;
-  height: 2.78666667rem;
-}
-.fuceng1 .lingquan .fuceng1_top .left[data-v-1f84c673] {
-  font-size: 1.33333333rem;
-  color: #fff;
-  padding-left: 0.26666667rem;
-  line-height: 2.17333333rem;
-  width: 3.32rem;
+  height: 1.17333333rem;
+  line-height: 1.17333333rem;
+  padding: 0 0.32rem;
+  font-size: 0.48rem;
+  background: #fff;
+  text-align: center;
+  z-index: 100;
+  border-bottom: 0.01333333rem solid #ededed;
+  over-flow: hidden;
   position: relative;
+}
+section #all_header .icon_header[data-v-8320bf98]::before {
+  font-family: 'jyzx-iconfont';
+  content: "\E604";
+  font-size: 0.48rem;
+}
+section #all_header #back[data-v-8320bf98] {
   float: left;
 }
-.fuceng1 .lingquan .fuceng1_top .left span[data-v-1f84c673] {
-  position: absolute;
-  top: -0.33333333rem;
-  left: -0.25333333rem;
-  font-size: 0.68rem;
-}
-.fuceng1 .lingquan .fuceng1_top .right[data-v-1f84c673] {
-  width: 2.97333333rem;
-  height: 2.17333333rem;
+section #all_header #guize[data-v-8320bf98] {
   float: right;
+  font-size: 0.37333333rem;
+  color: #333333;
+  position: absolute;
+  right: 0.32rem;
+  top: 0.06666667rem;
 }
-.fuceng1 .lingquan .fuceng1_top .right header[data-v-1f84c673] {
+section .main1[data-v-8320bf98] {
+  width: 100%;
+  height: 4.68rem;
+  background: url(http://m2.t.jiayou9.com/dist/assets/yqyl_xz.jpg) no-repeat;
+  background-size: cover;
+  padding-top: 8.21333333rem;
+  position: relative;
+}
+section .main1 .box1[data-v-8320bf98] {
+  width: 4.76rem;
   height: 0.56rem;
   line-height: 0.56rem;
+  border-radius: 0.22666667rem;
+  background: #fff;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.29333333rem;
+  color: #84b83c;
+  /* padding-top: 29px; */
+}
+section .main1 .box2[data-v-8320bf98] {
+  width: 6rem;
+  line-height: 0.53333333rem;
+  margin-top: 0.06666667rem;
+  font-size: 0.34666667rem;
+  color: #fff;
+  margin-top: 0.66666667rem;
+  margin-left: 1.52rem;
+}
+section .main1 .box3[data-v-8320bf98] {
+  font-size: 1.6rem;
+  color: #fff;
+  display: inline-block;
+  position: absolute;
+  top: 5.06666667rem;
+  right: 2.66666667rem;
+  font-family: "\5B8B\4F53";
+  width: 2.26666667rem;
+  overflow: hidden;
+  /*display: none;*/
+}
+section .menu[data-v-8320bf98] {
+  display: block;
+  height: 0.96rem;
+  width: 5.33333333rem;
+  margin: 0 auto;
+  margin-top: 0.84rem;
+  line-height: 0.96rem;
+  text-align: center;
+  border-radius: 0.37333333rem;
+  background: #84b83a;
+  font-size: 0.44rem;
+  color: #fff;
+}
+section #footer[data-v-8320bf98] {
+  text-align: center;
+  font-size: 0.37333333rem;
+  color: #979795;
+  margin-top: 0.26666667rem;
+}
+section #footer a[data-v-8320bf98] {
+  font-size: 0.32rem;
+  font-weight: bolder;
+  color: #85b93a;
+}
+section #footer span[data-v-8320bf98] {
+  font-size: 0.32rem;
+  font-weight: bolder;
+  color: #85b93a;
+}
+@charset "UTF-8";
+section[data-v-5dc4cc64] {
+  background: #fff;
+  /* 主体 */
+  /* 立刻邀请按钮 */
+}
+section .main1[data-v-5dc4cc64] {
   width: 100%;
-  background: #618f4e;
+  height: 5.08rem;
+  background: url(http://m2.t.jiayou9.com/dist/assets/yqyl_lq.jpg) no-repeat;
+  background-size: cover;
+  padding-top: 8.17333333rem;
+}
+section .main1 .box1[data-v-5dc4cc64] {
+  width: 8.32rem;
+  height: 2.73333333rem;
+  border-radius: 0.2rem;
+  border-top-left-radius: 0.02666667rem;
+  border-top-right-radius: 0.02666667rem;
+  background: #fff;
+  margin: 0 auto;
   text-align: center;
+  padding-top: 0.38666667rem;
+}
+section .main1 .box1 .title1[data-v-5dc4cc64] {
+  font-size: 0.49333333rem;
+  color: #717370;
+}
+section .main1 .box1 .title1 span[data-v-5dc4cc64] {
+  color: #d2d2d2;
+}
+section .main1 .box1 .title2[data-v-5dc4cc64] {
+  font-size: 0.77333333rem;
+  color: #92cb40;
+  font-weight: bolder;
+}
+section .main1 .box2[data-v-5dc4cc64] {
+  margin-top: 0.54666667rem;
+  font-size: 0.41333333rem;
+  color: #fff;
+  text-decoration: underline;
+  text-align: center;
+  letter-spacing: 0.12rem;
+  font-weight: bold;
+}
+section .menu[data-v-5dc4cc64] {
+  display: block;
+  height: 1.06666667rem;
+  width: 8.53333333rem;
+  margin-top: 0.37333333rem;
+  margin-left: 0.73333333rem;
+  line-height: 1.06666667rem;
+  text-align: center;
+  border-radius: 0.06666667rem;
+  background: #84b83a;
+  font-size: 0.44rem;
   color: #fff;
 }
-.fuceng1 .lingquan .fuceng1_top .right main[data-v-1f84c673] {
-  font-size: 0.56rem;
-  color: #fff;
-  margin-top: 0.17333333rem;
-}
-.fuceng1 .lingquan .fuceng1_bottom[data-v-1f84c673] {
-  margin: 0 1rem 0 0.94666667rem;
-  height: 0.65333333rem;
-  text-align: center;
-  font-size: 0.45333333rem;
-  color: #6ebb55;
-  background: #fdfef9;
-  margin-top: 0.24rem;
-  border-radius: 0.04rem;
-}
-.fuceng2[data-v-1f84c673] {
+.fuceng3[data-v-5dc4cc64] {
   width: 100%;
   height: 17.78666667rem;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 111;
   display: none;
 }
-.fuceng2 main[data-v-1f84c673] {
-  margin: 7.08rem 1.34666667rem 0 1.18666667rem;
-  height: 4.01333333rem;
-  background: #f1f1f1;
-  border-radius: 0.04rem;
-  font-size: 0.44rem;
-  color: #83ba3b;
-  line-height: 4.01333333rem;
-  text-align: center;
-}
-.fuceng2 main span[data-v-1f84c673] {
-  font-weight: bold;
-}
-.fuceng3[data-v-1f84c673] {
-  width: 100%;
-  height: 17.78666667rem;
-  background: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 111;
-}
-.fuceng3 main[data-v-1f84c673] {
-  margin: 7.08rem 1.34666667rem 0 1.18666667rem;
-  height: 2.68rem;
-  background: #f1f1f1;
+.fuceng3 main[data-v-5dc4cc64] {
+  margin: 0 auto;
+  margin-top: 4.93333333rem;
+  width: 8.26666667rem;
+  height: 4.13333333rem;
+  /*background: url(https://m2.t.jiayou9.com/dist/assets/yqyl_bj.png) no-repeat;
+	   	background-size: cover;*/
   border-radius: 0.04rem;
   font-size: 0.44rem;
   color: #83ba3b;
@@ -4465,9 +4488,13 @@ section .menu[data-v-1f84c673] {
   text-align: center;
   padding-top: 1.33333333rem;
 }
+.fuceng3 main img[data-v-5dc4cc64] {
+  width: 100%;
+  height: 100%;
+}
 @charset "UTF-8";
 section[data-v-00169872] {
-  /*background: rgb(255,255,255);*/
+  background: #fff;
   /* 主体 */
   /* 立刻绑定按钮 */
   /* 底部信息 */
@@ -4540,10 +4567,19 @@ section .main1 form ul li #code[data-v-00169872] {
 section .main1 form ul li[data-v-00169872]:last-of-type {
   border: none;
 }
+section .main1 form ul p[data-v-00169872] {
+  text-align: center;
+  color: red;
+  width: 100%;
+  height: 0.53333333rem;
+  line-height: 0.53333333rem;
+  background: #f1f1f1;
+}
 section .menu[data-v-00169872] {
+  display: block;
   height: 1.06666667rem;
   width: 8.53333333rem;
-  margin-top: 0.85333333rem;
+  margin-top: 0.32rem;
   margin-left: 0.73333333rem;
   line-height: 1.06666667rem;
   text-align: center;
@@ -4551,6 +4587,9 @@ section .menu[data-v-00169872] {
   background: #84b83a;
   font-size: 0.44rem;
   color: #fff;
+}
+section #want2[data-v-00169872] {
+  display: none;
 }
 section #footer[data-v-00169872] {
   text-align: center;

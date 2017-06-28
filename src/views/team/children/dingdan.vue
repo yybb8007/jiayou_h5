@@ -65,14 +65,14 @@
 				<span>快递</span>
 			</div>
 			
-			<div class="youfei">
+			<!--<div class="youfei">
 				<h3>邮费</h3>
 				<span>10.00</span>
-			</div>
+			</div>-->
 			<div class="bottom">
-				<span class="bottom_left">实付款： ￥<span class="sfprice"></span></span>
+				<span class="bottom_left">实付款： ￥<span class="sfprice" v-for="i in data.pintuan">{{ i.tuan_price }}</span></span>
 				<!--<a href="http://m2.t.jiayou9.com/#/download" class="bottom_left"><i class="jy_iconfont main_pintuan"></i>更多拼团</a>-->
-				<span class="bottom_right" @click="zhifu();show1()">立即支付</span>
+				<span class="bottom_right" @click="zhifu()">立即支付</span>
 			</div>
 		</section>
 		<div class="fuceng1">
@@ -81,7 +81,7 @@
 					<h3>支付前请填写收货地址</h3>
 					<p class="content">姓名：<input id="name" type="text" value="" />电话：<input id="number" type="tel" value="" /></p>
 					<!--<p class="address">地址：<input type="text" id="sheng" value="" />省(市)<input type="text" id="shi" value="" />市<input type="text" id="xian" value="" />县(区)</p>-->
-					<p class="address">地址：<select id="sheng" @change="city">
+					<p class="address">地址：<select id="sheng" @click="city">
 						<option v-for="i in dataprovince" :value="i.region_id">{{ i.region_name }}</option>
 					</select><select id="shi" @click="qu">
 						<option v-for="i in listMe(datacity)" :title="i.parent_id" :value="i.region_id">{{ i.region_name }}</option>
@@ -95,15 +95,14 @@
 				</div>
 			</form>
 		</div>
-		<div class="fuceng2">
+		<!--<div class="fuceng2">
 			<div class="container">
 				<h3>请您确认订单金额</h3>
-				<p id="zongjia">总金额为：</p>
+				<p id="zongjia">总金额为：<span v-for="i in data.pintuan">{{ i.tuan_price }}</span></p>
 				<p id="quxiao" @click="show2">取消</p>
 				<p id="queren" @click="callpay">确认</p>
-				<!--<p id="queren">确认</p>-->
 			</div>
-		</div>
+		</div>-->
 	</div>
 </template>
 <script>
@@ -114,6 +113,7 @@
 	var tuan_rule_id = localStorage.getItem("tuan_rule_id");
 	var tuan_head_uid = localStorage.getItem("tuan_head_uid");
 	var userOpenid = localStorage.getItem("userOpenid");
+	var userUnionid = localStorage.getItem("userUnionid");
 
 export default {
 	data() {
@@ -135,18 +135,6 @@ export default {
 			// 填写地址
 			show: function() {
 				$(".fuceng1").css("display", "block");
-			},
-			show1: function() {
-				if($(".tjdizhi").css("display") == "none") {
-					setTimeout(function(){
-						$(".fuceng2").css("display", "block");
-					},3000);
-				}else{
-					$(".fuceng2").css("display", "none");
-				}
-			},
-			show2: function() {
-				$(".fuceng2").css("display", "none");
 			},
 			// 省级选框改变，市级获取数据
 			city: function() {
@@ -202,8 +190,8 @@ export default {
 				if($(".tjdizhi").css("display") == "none") {
 					// 请求订单接口
 					$.ajax({
-						type: "get", //数据发送的方式（post 或者 get）
-						url: "https://a2.t.jiayou9.com/home/orderinfo/orderinfo?debug=1&device_type=3", //要发送的后台地址
+						type: "get", // 数据发送的方式（post 或者 get）
+						url: 'http://a2.t.jiayou9.com/home/orderinfo/orderinfo?debug=1&device_type=3', // 要发送的后台地址
 						data: {
 							"user_id": userId,
 							"goods_id": goods_id,
@@ -221,14 +209,15 @@ export default {
 							"activity_id": activity_id,
 							"tuan_rule_id": tuan_rule_id,
 							"tuan_head_uid": tuan_head_uid
-						}, //要发送的数据（参数）格式为{'val1':"1","val2":"2"}
-						dataType: "jsonp", //后台处理后返回的数据格式
-						success: function(data5) { //ajax请求成功后触发的方法
-							alert(data5.data);
+						}, // 要发送的数据（参数）格式为{'val1':"1","val2":"2"}
+						dataType: "jsonp", // 后台处理后返回的数据格式
+						success: function(data5) { // ajax请求成功后触发的方法
+							// data5.data===订单号
+//							alert(data5.data);
 							// 请求微信支付接口
 							$.ajax({
 								type: "get",
-								url: "https://wxp.t.jiayou9.com/WxpayAPI_php_v3/example/jsapi.php",
+								url: 'https://wxp.t.jiayou9.com/Wxpay/example/jsapi.php',
 								data: {
 									"order_sn": data5.data,
 									"allprice": $(".sfprice")[0].innerHTML,
@@ -237,33 +226,65 @@ export default {
 								},
 								dataType: "jsonp",
 								success: function(data6) {
-									var datazf = data6.data
-									console.log(datazf.appid);
-									var appId = datazf.appid;
-									var paySign = datazf.noncestr;
-									var pg = datazf.package;
-									var partnerid = datazf.partnerid;
-									var prepayid = datazf.prepayid;
-									var paySign = datazf.sign;
-									var timeStamp = datazf.timestamp;
-									var prepay_id = "prepay_id=" + prepayid;
-									localStorage.setItem("appId", appId);
-									localStorage.setItem("paySign", paySign);
-									localStorage.setItem("pg", pg);
-									localStorage.setItem("partnerid", partnerid);
-									localStorage.setItem("prepayid", prepayid);
-									localStorage.setItem("paySign", paySign);
-									localStorage.setItem("timeStamp", timeStamp);
-									localStorage.setItem("prepay_id", prepay_id);
+									var timeStamp = data6.timeStamp;
+									var appId = data6.appId;
+									var nonceStr = data6.nonceStr;
+									var pg = data6.package;
+									var paySign = data6.paySign;
+									callpay();
+									// 调用微信支付
+								   	function callpay (){
+								        try {
+							                if (typeof WeixinJSBridge == "undefined") {
+							                    if (document.addEventListener) {
+							                        document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+							                    } else if (document.attachEvent) {
+							                        document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+							                        document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+							                    }
+							                } else {
+							                    jsApiCall();
+							                }
+							            } catch (e) {
+											alert(JSON.stringify(e));
+							            }
+							            function jsApiCall(){
+								            try {
+									            WeixinJSBridge.invoke(
+										            'getBrandWCPayRequest', {
+										            	"appId": appId,	// 公众号名称，由商户传入
+										            	"timeStamp": timeStamp,	// 时间戳，自1970年以来的秒数
+										            	"nonceStr": nonceStr,	// 随机串
+										            	"package": pg,	// 预支付交易会话标识
+										            	"signType": "MD5",	// 微信签名方式
+										            	"paySign": paySign,	// 微信签名
+										            },
+										            function(res){
+						//				                WeixinJSBridge.log(res.err_msg);
+														if(res.err_msg == "get_brand_wcpay_request:ok") {
+													 		WeixinJSBridge.log(res.err_msg);
+													 		var xq1 = location.href;
+															var xq = xq1.split("dingdan")[0];
+															window.location.href = xq + "pintuan?v=" + (new Date().getTime());
+														}
+														// 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。
+										            }
+										        );
+								            } catch (e) {
+								                alert(JSON.stringify(e));
+								            }
+								        }
+							        }
 								},
-								error: function(msg) { //ajax请求失败后触发的方法
+								error: function(msg) { // ajax请求失败后触发的方法
 									console.log(msg);
 									alert(JSON.stringify(msg));
 								}
 							});
 						},
-						error: function(msg) { //ajax请求失败后触发的方法
+						error: function(msg) { // ajax请求失败后触发的方法
 							console.log(msg);
+							alert(JSON.stringify(msg));
 						}
 					});
 				} else {
@@ -271,60 +292,6 @@ export default {
 				}
 
 			},
-			// 调用微信支付
-		   	callpay: function(){
-		        try {
-	                if (typeof WeixinJSBridge == "undefined") {
-	                    if (document.addEventListener) {
-	                        document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
-	                    } else if (document.attachEvent) {
-	                        document.attachEvent('WeixinJSBridgeReady', jsApiCall);
-	                        document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
-	                    }
-	                } else {
-	                    jsApiCall();
-	                }
-	            } catch (e) {
-	                alert(e + "aaaaa");
-//					alert(JSON.stringify(e));
-	            }
-	            function jsApiCall(){
-		        	var appId1 = localStorage.getItem("appId");
-		        	var paySign1 = localStorage.getItem("paySign");
-		        	var timeStamp1 = localStorage.getItem("timeStamp");
-		        	var nonceStr1 = localStorage.getItem("nonceStr");
-		        	var prepay_id1 = localStorage.getItem("prepay_id");
-		        	alert("appId1="+appId1);
-		        	alert("paySign1="+paySign1);
-		        	alert("timeStamp1="+timeStamp1);
-		        	alert("nonceStr1="+nonceStr1);
-		        	alert("prepay_id1="+prepay_id1);
-		            try {
-			            WeixinJSBridge.invoke(
-				            'getBrandWCPayRequest', {
-				            	"appId": appId1,	// 公众号名称，由商户传入
-				            	"timeStamp": timeStamp1,	// 时间戳，自1970年以来的秒数
-				            	"nonceStr": nonceStr1,	// 随机串
-				            	"package": prepay_id1,	// 预支付交易会话标识
-				            	"signType": "MD5",	// 微信签名方式
-				            	"paySign": paySign1,	// 微信签名
-				            },
-				            function(res){
-//				                WeixinJSBridge.log(res.err_msg);
-                        		alert(res.err_code + res.err_desc + res.err_msg);
-									if(res.err_msg == "get_brand_wcpay_request:ok" ) {
-								 		WeixinJSBridge.log(res.err_msg);
-								 		alert('支付成功')
-									}
-								 // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。
-				            }
-				        );
-		            } catch (e) {
-		                alert(e + "bbbbb");
-//		                alert(JSON.stringify(e));
-		            }
-		        }
-	        },
 		    
 		},
 		components: {
@@ -374,14 +341,10 @@ export default {
 			
 //			$(".youfei span")[0].innerHTML = shipping_fee;
 			var shop_price = localStorage.getItem("shop_price1");
-			var allprice = $(".sfprice")[0].innerHTML = (parseFloat($(".youfei span")[0].innerHTML) + parseFloat(shop_price)).toFixed(2); // toFixed(2)---保留两位小数
+//			var allprice = $(".sfprice")[0].innerHTML = (parseFloat(shop_price)).toFixed(2); // toFixed(2)---保留两位小数
 //			console.log($(".shop_price span")[0].innerHTML);
-			$("#zongjia")[0].innerHTML = "总金额为：" + allprice;
+//			$("#zongjia")[0].innerHTML = "总金额为：" + allprice;
 			console.log(shop_price);
-			
-			
-			
-			
 		},
 		
 }

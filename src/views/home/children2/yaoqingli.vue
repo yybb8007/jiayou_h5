@@ -1,37 +1,18 @@
 <template>
-	<div >
+	<div>
 		<section id="wrapper">
-			<header id="all_header">
+			<!--<header id="all_header">
     			<router-link id="back" to="/"><i class="iconfont icon_header"></i></router-link>
     			<p>邀请有礼</p>
     			<router-link id="guize" to="/yaoqingli_guize"><span>奖励规则</span></router-link>
-        	</header>
+        	</header>-->
         	
         	<main class="main1">
-        		<div class="box1">
-        			<p class="title1"><span>—</span> 邀请新朋友各得 <span>—</span></p>
-        			<p class="title2">满99减80元券</p>
-        		</div>
-        		<div class="box2">
-        			<header>活动时间：2017.1.18至2017.1.18</header>
-        			<main>
-        				<div class="left">
-        					<img src="../../../../dist/assets/iphone7.jpg"/>
-        				</div>
-        				<div class="right">
-        					<p class="first">分享达20人</p>
-        					<p class="second">可赢得价值</p>
-        					<p class="third"><span>￥</span>7199</p>
-        					<p class="fourth">iphone 7 plus</p>
-        				</div>
-        			</main>
-        		</div>
-        		
         	</main>
         	
-        	<div class="menu">立刻邀请</div>
+        	<div class="menu" @click="callback" target="777777">立刻邀请</div>
         	
-        	<p id="footer">您已成功邀请<router-link id="person" to="/">12</router-link>人，累计获得<router-link id="quan" to="/">12</router-link>张券</p>
+        	<p id="footer">您已成功邀请<span @click="callback" id="person" target="888888"> {{ data.yqrs }} </span>人，累计获得<span @click="callback" id="quan" target="999999"> {{ data.yhq }} </span>张券</p>
 		</section>
 	</div>
 </template>
@@ -39,18 +20,55 @@
 	export default {
 		data() {
 				return {
-					
+					data: [],
+					data1: []
 				}
 			},
 			computed: {},
-			methods: {},
+			methods: {
+				// 全局点击
+				callback: function(e) {
+					var id = $(e.target).attr("id"),
+						target = $(e.target).attr("target"),
+						value = ('cmd:{"data":"' + target + '","target":"' + target + '"}');
+					window.location.href = value;
+//					if (id !== undefined || target !== undefined) {
+//						window.location.href = value;
+//						console.log(value)
+//					}
+				},
+			},
 			components: {
 			},
+			mounted: function(){
+				var str = location.href; //取得整个地址栏
+				var user_id = str.split('user_id=')[1];
+				console.log(user_id);
+				// 邀请人数、优惠券个数
+				this.$http.jsonp('https://a2.t.jiayou9.com/home/invitationpolite/yqrs?debug=1&device_type=3', 
+				{// 请求参数
+			        params: {
+			          user_id: user_id
+			        },
+			        jsonp:'callback'
+				}).then(function(res) {
+					this.data = res.body.data;
+					console.log(res.body);
+					// 请求数据失败，邀请人数和领券数均为0
+					if (res.body.code == 1) {
+						$("#person")[0].innerHTML = " 0 ";
+						$("#quan")[0].innerHTML = " 0 ";
+//						$("#footer span:eq(0)")[0].innerHTML = " 0 ";
+//						$("#footer span:eq(1)")[0].innerHTML = " 0 ";
+						console.log($("#person"));
+					}
+				})
+			}
 	}
 </script>
 <style lang="sass" scoped>
 	section {
-		/*background: rgb(255,255,255);*/
+		background: #fff;
 		#all_header{
 	    	width: 100%;
 	    	height: 88px;
@@ -83,88 +101,10 @@
 	    /* 主体 */
 	    .main1{
 		   	width: 100%;
-		   	height: 704px;
-		   	background: skyblue;
-		   	padding-top: 290px;
-		   	.box1{
-		   		width: 624px;
-		   		height: 172px;
-		   		border-radius: 15px;
-		   		background: #fff;
-		   		margin: 0 auto;
-		   		text-align: center;
-		   		padding-top: 29px;
-		   		.title1{
-		    		font-size: 37px;
-		    		color: #717370;
-		    		span{
-		    			color: #d2d2d2;
-		    		}
-		    	}
-		    	.title2{
-		    		font-size: 58px;
-		    		color: #92cb40;
-		    		font-weight: bolder;
-		    	}
-		   	}
-		   	.box2{
-		   		width: 624px;
-		   		height: 525px;
-		   		border-radius: 15px;
-		   		background: #fff;
-		   		margin: 0 auto;
-		   		text-align: center;
-		   		margin-top: 5px;
-		   		header{
-		   			height: 87px;
-		   			text-align: center;
-		   			font-size: 28px;
-		   			color: #939393;
-		   			line-height: 87px;
-		   		}
-		   		main{
-		   			.left{
-		   				height: 435px;
-		   				width: 297px;
-		   				background: aquamarine;
-		   				float: left;
-		   				margin-left: 57px;
-		   				img{
-		   					width: 100%;
-		   					height: 100%;
-		   				}
-		   			}
-		   			.right{
-		   				float: right;
-		   				height: 435px;
-		   				width: 230px;
-		   				margin-right: 38px;
-		   				text-align: right;
-		   				.first{
-		   					font-size: 23px;
-		   					color: #6f6f6f;
-		   					margin-top: 65px;
-		   				}
-		   				.second{
-		   					font-size: 36px;
-		   					color: #737572;
-		   					font-weight: bold;
-		   				}
-		   				.third{
-		   					font-size: 53px;
-		   					color: #85b93a;
-		   					font-weight: bolder;
-		   					span{
-		   						font-size: 36px;
-		   					}
-		   				}
-		   				.fourth{
-		   					font-size: 27px;
-		   					color: #6e706f;
-		   				}
-		   			}
-		   		}
-		   	}
+		   	height: 356px;
+		   	background: url(http://m2.t.jiayou9.com/dist/assets/yqyl_yq.jpg) no-repeat;
+		   	background-size: cover;
+		   	padding-top: 638px;
 	    }
 	   /* 立刻邀请按钮 */
 		.menu{
@@ -185,7 +125,13 @@
 		 	font-size: 28px;
 		 	color: #979795;
 		 	margin-top: 20px;
+		 	padding-bottom: 50px;
 		 	a{
+		 		font-size: 24px;
+		 		font-weight: bolder;
+		 		color: #85b93a;
+		 	}
+		 	span{
 		 		font-size: 24px;
 		 		font-weight: bolder;
 		 		color: #85b93a;

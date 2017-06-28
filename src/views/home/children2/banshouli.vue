@@ -73,7 +73,7 @@
 <script>
 	export default {
 		data() {
-			return {
+			return{
 				headTit: {
 					title: '伴手礼',
 					back: 'ok',
@@ -100,9 +100,9 @@
 			"nvHead": require('../../../components/header.vue'),
 		},
 		mounted: function() {
-			this.$http.jsonp('https://a1.t.jiayou9.com/channel/banshouli?debug=1&format=jsonp').then(function(res) {
+			this.$http.jsonp(this.baseUrl + '.t.jiayou9.com/channel/banshouli?debug=1&format=jsonp').then(function(res) {
 				this.data = res.body.data;
-				console.log(res.body.data[0].goods_detaill_arr);
+//				console.log(res.body.data[0].goods_detaill_arr);
 			})
 		}
 	}

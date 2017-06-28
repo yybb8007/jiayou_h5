@@ -1,4 +1,4 @@
-webpackJsonp([55],{
+webpackJsonp([57],{
 
 /***/ 69:
 /***/ function(module, exports, __webpack_require__) {
@@ -17,7 +17,7 @@ webpackJsonp([55],{
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\components\\header.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\components\\header.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] header.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -152,24 +152,24 @@ webpackJsonp([55],{
 
 /***/ },
 
-/***/ 326:
+/***/ 342:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(327)
+	__webpack_require__(343)
 
 	var Component = __webpack_require__(42)(
 	  /* script */
-	  __webpack_require__(328),
+	  __webpack_require__(344),
 	  /* template */
-	  __webpack_require__(329),
+	  __webpack_require__(345),
 	  /* scopeId */
 	  "data-v-f218c154",
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\myhome\\children\\xiaoxi.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\myhome\\children\\xiaoxi.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] xiaoxi.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -191,14 +191,14 @@ webpackJsonp([55],{
 
 /***/ },
 
-/***/ 327:
+/***/ 343:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 328:
+/***/ 344:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -293,7 +293,7 @@ webpackJsonp([55],{
 
 /***/ },
 
-/***/ 329:
+/***/ 345:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

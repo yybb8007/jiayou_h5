@@ -85,7 +85,7 @@
 				},
 				onscroll_fixed: function(){
 					var top = $("#box").scrollTop();
-					console.log(top)
+//					console.log(top)
 					if (top >= 629) {
 						$("#fixedtop").css({
 							"position":"fixed",
@@ -106,9 +106,6 @@
 						$("#wrapper2").css("margin-top", 0);
 					}
 				},
-				onScroll(){
-					console.log("aa")
-								},
 			},
 			components: {
 //				"nvHead": require('../../components/header.vue'),
@@ -142,10 +139,8 @@
 				};
 //				changeURLArg('https://a2.t.jiayou9.com/product/info?id=330&debug=1&data_format=1','id',id);
 				
-				this.$http.jsonp(changeURLArg('https://a1.t.jiayou9.com/product/info?id=330&debug=1&data_format=1','id',goods_id)).then(function(res){
-					this.data=res.body.data;
-//					console.log(res.body.data.goods_id);
-//					console.log(res.body.data[8]);
+				this.$http.jsonp(changeURLArg(this.baseUrl + '.t.jiayou9.com/product/info?id=330&debug=1&data_format=1','id',goods_id)).then(function(res){
+					this.data = res.body.data;
 					// 轮播图
 					var mySwiper = new Swiper ('.swiper-container', {
 						direction: 'horizontal',
@@ -156,11 +151,8 @@
 						pagination: '.swiper-pagination'
 					});
 				});
-				this.$http.jsonp(changeURLArg('https://a1.t.jiayou9.com/product/description?id=410&debug=1&device_type=3&format=jsonp','id',goods_id)).then(function(res){
-					this.data2=res.body.data;
-//					console.log(res.body.data.goods_id);
-//					console.log(res.body.data[8]);
-					
+				this.$http.jsonp(changeURLArg(this.baseUrl + '.t.jiayou9.com/product/description?id=410&debug=1&device_type=3&format=jsonp','id',goods_id)).then(function(res){
+					this.data2 = res.body.data;
 				});
 			}
 	}

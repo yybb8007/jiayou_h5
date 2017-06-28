@@ -59,7 +59,7 @@
 				<!--<router-link :to="'/dingdan?goods_id=' + data.goods_id" id="want1">
 					<button class="want">继续参团</button>
 				</router-link>-->
-				<a id="want" class="want" href="">继续参团</a>
+				<a id="want" class="want" href="">我要参团</a>
 			</footer>
 		</section>
 		
@@ -190,33 +190,35 @@
 				})
 				// 根据code获取用户信息
 				$.ajax({
-					type: "get", //数据发送的方式（post 或者 get）
-					url: "https://a2.t.jiayou9.com/group/wx_oauth?debug=1&format=jsonp", //要发送的后台地址
+					type: "get", // 数据发送的方式（post 或者 get）
+					url: this.baseUrl + '.t.jiayou9.com/group/wx_oauth?debug=1&format=jsonp', // 要发送的后台地址
 					data: {
 						"code": code,
-					}, //要发送的数据（参数）格式为{'val1':"1","val2":"2"}
-					dataType: "jsonp", //后台处理后返回的数据格式
-					success: function(data5) { //ajax请求成功后触发的方法
+					}, // 要发送的数据（参数）格式为{'val1':"1","val2":"2"}
+					dataType: "jsonp", // 后台处理后返回的数据格式
+					success: function(data5) { // ajax请求成功后触发的方法
 						var userdata = data5.data;
 						var userOpenid = userdata.openid;
 						var userName = userdata.nickname;
 						var userImg = userdata.headimgurl;
 						var userSex = userdata.sex;
 						var userCity = userdata.city;
+						var userUnionid = userdata.unionid;
 						localStorage.setItem("userOpenid", userOpenid);
 						localStorage.setItem("userName", userName);
 						localStorage.setItem("userImg", userImg);
 						localStorage.setItem("userSex", userSex);
 						localStorage.setItem("userCity", userCity);
+						localStorage.setItem("userUnionid", userUnionid);
 						console.log(data5);
 						// 根据用户信息请求第三方登陆接口，获取user_id
 						$.ajax({
 							type:"get",
-							url:"https://a2.t.jiayou9.com/home/login/wechatlogin?debug=1&device_type=3",
+							url:this.baseUrl + '.t.jiayou9.com/home/login/wechatlogin?debug=1&device_type=3',
 							data: {
 								"name": userName,
 								"img": userImg,
-								"openids": userOpenid,
+								"openids": userUnionid,
 								"tool": "6"
 							},
 							dataType: "jsonp", 

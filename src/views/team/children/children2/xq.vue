@@ -51,7 +51,7 @@
 				};
 //				changeURLArg('https://a1.t.jiayou9.com/product/description?id=410&debug=1&device_type=3&format=jsonp','id',id);
 				
-				this.$http.jsonp(changeURLArg('https://a1.t.jiayou9.com/product/description?id=410&debug=1&device_type=3&format=jsonp','id',goods_id)).then(function(res){
+				this.$http.jsonp(changeURLArg(this.baseUrl + '.t.jiayou9.com/product/description?id=410&debug=1&device_type=3&format=jsonp','id',goods_id)).then(function(res){
 					this.data=res.body.data;
 					console.log(res.body.data.goods_id);
 //					console.log(res.body.data[8]);

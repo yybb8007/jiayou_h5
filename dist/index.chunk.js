@@ -17,7 +17,7 @@ webpackJsonp([1],{
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\views\\home\\index.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\views\\home\\index.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] index.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -207,7 +207,7 @@ webpackJsonp([1],{
 			}
 		},
 		mounted: function mounted() {
-			this.$http.jsonp('https://a1.t.jiayou9.com/page/index?debug=1&format=jsonp').then(function (res) {
+			this.$http.jsonp(this.baseUrl + '.t.jiayou9.com/page/index?debug=1&format=jsonp').then(function (res) {
 				this.data = res.body.data;
 				//					console.log(JSON.parse(JSON.stringify(this.data)));
 			});
@@ -269,7 +269,7 @@ webpackJsonp([1],{
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "C:\\jishubu\\jiayou_h5\\src\\components\\footer.vue"
+	Component.options.__file = "C:\\jishu\\jiayou_h5\\src\\components\\footer.vue"
 	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 	if (Component.options.functional) {console.error("[vue-loader] footer.vue: functional components are not supported with templates, they should use render functions.")}
 

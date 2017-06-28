@@ -81,7 +81,7 @@
 				};
 //				changeURLArg('https://a2.t.jiayou9.com/product/comment_text?debug=1&id=658&data_format=1','id',id);
 				
-				this.$http.jsonp(changeURLArg('https://a2.t.jiayou9.com/product/comment_text?debug=1&id=658&data_format=1','id',goods_id)).then(function(res){
+				this.$http.jsonp(changeURLArg(this.baseUrl + '.t.jiayou9.com/product/comment_text?debug=1&id=658&data_format=1','id',goods_id)).then(function(res){
 					this.data=res.body.data;
 					console.log(res.body.data.goods_id);
 //					console.log(res.body.data[8]);
